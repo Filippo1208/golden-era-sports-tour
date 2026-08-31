@@ -15,6 +15,8 @@ export const partners = [
     featuredImage: "/images/partners/heroespartner.jpg",
     featuredImageAlt:
       "Golden Era tennis portrait featuring HEROE'S sportswear and a vintage racquet",
+    featuredImageWidth: 1053,
+    featuredImageHeight: 1579,
   },
   {
     id: "sembrancher",
@@ -31,6 +33,8 @@ export const partners = [
     featuredImage: "/images/partners/sembrancherpartner.jpg",
     featuredImageAlt:
       "Sembrancher bottle photographed with tennis balls and a wooden tennis racquet",
+    featuredImageWidth: 1600,
+    featuredImageHeight: 2400,
   },
 ] satisfies Partner[];
 

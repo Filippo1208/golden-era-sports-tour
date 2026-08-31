@@ -137,4 +137,6 @@ export type Partner = {
   stageAssociation?: string[];
   featuredImage?: string | null;
   featuredImageAlt?: string;
+  featuredImageWidth?: number;
+  featuredImageHeight?: number;
 };

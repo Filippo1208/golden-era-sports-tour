@@ -86,8 +86,10 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
             <Image
               src={partner.featuredImage}
               alt={partner.featuredImageAlt ?? `${partner.name} partner photograph`}
-              fill
+              width={partner.featuredImageWidth ?? 1200}
+              height={partner.featuredImageHeight ?? 1800}
               loading="eager"
+              unoptimized
               sizes="(max-width: 980px) 100vw, 58vw"
               className="partner-editorial__image"
             />
