@@ -10,6 +10,34 @@ type ButtonProps = {
   onDark?: boolean;
 };
 
+function ButtonArrowIcon({ arrow }: { arrow: ButtonProps["arrow"] }) {
+  if (arrow === "up-right") {
+    return (
+      <svg
+        className="button__icon"
+        aria-hidden="true"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path d="M7 17 17 7" />
+        <path d="M9 7h8v8" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      className="button__icon"
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
+
 export function Button({
   children,
   href,
@@ -26,7 +54,7 @@ export function Button({
       } ${className}`.trim()}
     >
       <span>{children}</span>
-      <span aria-hidden="true">{arrow === "up-right" ? "\u2197" : "\u2192"}</span>
+      <ButtonArrowIcon arrow={arrow} />
     </Link>
   );
 }

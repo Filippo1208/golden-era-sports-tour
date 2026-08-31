@@ -80,6 +80,7 @@ export function Header({ heroTone = "dark" }: HeaderProps) {
               variant="primary"
               arrow="up-right"
               onDark
+              className="site-header__mobile-cta"
             >
               {primaryNavigationCta.label}
             </Button>
