@@ -1,0 +1,37 @@
+:root {
+  --color-ivory: #f3efe9;
+  --color-ivory-light: #faf8f4;
+  --color-stone: #dcd1c5;
+  --color-taupe: #c2a590;
+  --color-terracotta: #ca7345;
+  --color-rust: #8e5337;
+  --color-brown-dark: #5d3524;
+  --color-charcoal: #3e3a36;
+
+  --color-background: var(--color-ivory);
+  --color-background-secondary: var(--color-ivory-light);
+  --color-text: var(--color-charcoal);
+  --color-text-muted: #766b62;
+  --color-accent: var(--color-terracotta);
+  --color-accent-hover: var(--color-rust);
+  --color-border: rgba(93, 53, 36, 0.18);
+  --color-over-media: var(--color-ivory-light);
+  --color-over-media-muted: rgba(250, 248, 244, 0.76);
+
+  --font-serif: var(--font-editorial-serif), Georgia, serif;
+  --font-sans: var(--font-contemporary-sans), Arial, sans-serif;
+
+  --space-2xs: clamp(0.35rem, 0.25rem + 0.25vw, 0.5rem);
+  --space-xs: clamp(0.65rem, 0.55rem + 0.35vw, 0.9rem);
+  --space-sm: clamp(0.9rem, 0.75rem + 0.55vw, 1.25rem);
+  --space-md: clamp(1.35rem, 1rem + 1.15vw, 2rem);
+  --space-lg: clamp(2rem, 1.3rem + 2.4vw, 3.6rem);
+  --space-xl: clamp(3rem, 2rem + 4vw, 6rem);
+  --space-2xl: clamp(4.5rem, 3rem + 7vw, 10rem);
+
+  --container-standard: 1180px;
+  --container-wide: 1440px;
+  --container-narrow: 820px;
+  --page-gutter: clamp(1rem, 3vw, 3rem);
+  --header-safe-area: 5.5rem;
+}
