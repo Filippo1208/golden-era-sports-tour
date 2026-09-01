@@ -24,16 +24,25 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
       ? defaultStageSlug
       : stages[0]?.slug,
   );
-  const activeStage =
-    stages.find((stage) => stage.slug === activeStageSlug) ?? stages[0];
+  const [isEngaged, setIsEngaged] = useState(false);
 
-  if (!activeStage) {
+  if (!stages.length) {
     return null;
   }
 
+  const resetPanels = () => {
+    setActiveStageSlug(defaultStageSlug);
+    setIsEngaged(false);
+  };
+
+  const activateStage = (slug: string) => {
+    setActiveStageSlug(slug);
+    setIsEngaged(true);
+  };
+
   return (
     <section className="home-tour" aria-labelledby="home-tour-title">
-      <Container size="wide" className="home-tour__grid">
+      <Container size="wide" className="home-tour__inner">
         <div className="home-tour__intro">
           <Eyebrow>The Tour</Eyebrow>
           <h2 id="home-tour-title">
@@ -47,64 +56,87 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
           </p>
         </div>
 
-        <figure
-          id="home-tour-destination-image"
-          className="home-tour__media"
-          aria-label={`Current destination: ${activeStage.city}`}
+        <ol
+          className={`home-tour__panels ${
+            isEngaged ? "is-engaged" : ""
+          }`.trim()}
+          aria-label="2026 Tour destinations"
+          onMouseLeave={(event) => {
+            if (!event.currentTarget.contains(document.activeElement)) {
+              resetPanels();
+            }
+          }}
+          onBlur={(event) => {
+            const nextTarget = event.relatedTarget as Node | null;
+
+            if (!nextTarget || !event.currentTarget.contains(nextTarget)) {
+              resetPanels();
+            }
+          }}
         >
           {stages.map((stage) => {
-            const isActive = stage.slug === activeStage.slug;
-            const imageStyle = {
+            const isSelected = stage.slug === activeStageSlug;
+            const isNextStage = stage.status === "Next Stage";
+            const panelStyle = {
               "--home-tour-image-position":
                 stage.imagePosition ?? "center center",
             } as CSSProperties;
 
             return (
-              <Image
+              <li
                 key={stage.id}
-                src={stage.image}
-                alt={isActive ? stage.imageAlt : ""}
-                fill
-                sizes="(max-width: 980px) 100vw, 58vw"
-                className={`home-tour__image ${
-                  isActive ? "is-active" : ""
+                className={`home-tour__panel ${
+                  isSelected ? "is-selected" : ""
+                } ${
+                  isNextStage ? "is-next-stage" : ""
                 }`.trim()}
-                style={imageStyle}
-                aria-hidden={!isActive}
-              />
-            );
-          })}
-        </figure>
-
-        <ol className="home-tour__destinations" aria-label="2026 Tour destinations">
-          {stages.map((stage) => {
-            const isActive = stage.slug === activeStage.slug;
-
-            return (
-              <li key={stage.id}>
-                <button
-                  type="button"
-                  className={`home-tour__destination ${
-                    isActive ? "is-active" : ""
-                  }`.trim()}
-                  aria-controls="home-tour-destination-image"
-                  aria-pressed={isActive}
-                  onMouseEnter={() => setActiveStageSlug(stage.slug)}
-                  onFocus={() => setActiveStageSlug(stage.slug)}
-                  onClick={() => setActiveStageSlug(stage.slug)}
+                style={panelStyle}
+              >
+                <article
+                  className="home-tour__panel-content"
+                  tabIndex={0}
+                  aria-current={isNextStage ? "step" : undefined}
+                  onMouseEnter={() => activateStage(stage.slug)}
+                  onFocus={() => activateStage(stage.slug)}
                 >
-                  <span className="home-tour__destination-number">
-                    {stageNumber(stage.order)}
-                  </span>
-                  <span className="home-tour__destination-city">
-                    {stage.city}
-                  </span>
-                  {stage.status === "Next Stage" ? (
-                    <span className="home-tour__destination-status">
-                      Next Stage
-                    </span>
-                  ) : null}
-                </button>
+                  <Image
+                    src={stage.image}
+                    alt={stage.imageAlt}
+                    fill
+                    sizes="(max-width: 980px) 86vw, (max-width: 1200px) 38vw, 34vw"
+                    className="home-tour__panel-image"
+                  />
+
+                  <div className="home-tour__panel-copy">
+                    <div className="home-tour__panel-heading">
+                      <span className="home-tour__panel-number">
+                        {stageNumber(stage.order)}
+                      </span>
+                      {isNextStage ? (
+                        <span className="home-tour__panel-next">
+                          Next Stage
+                        </span>
+                      ) : null}
+                    </div>
+
+                    <h3>{stage.city}</h3>
+
+                    <div className="home-tour__panel-meta">
+                      <time>{stage.dateLabel}</time>
+                      <span>{stage.status}</span>
+                      {stage.pageAvailable ? (
+                        <Button
+                          href={stage.href}
+                          variant="text"
+                          onDark
+                          className="home-tour__panel-link"
+                        >
+                          Discover
+                        </Button>
+                      ) : null}
+                    </div>
+                  </div>
+                </article>
               </li>
             );
           })}

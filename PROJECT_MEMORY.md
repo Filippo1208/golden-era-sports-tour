@@ -156,11 +156,13 @@ The Tour homepage teaser:
 - Eyebrow: `THE TOUR`
 - Headline: `ONE GLOBAL CIRCUIT. FIVE ICONIC DESTINATIONS.`
 - CTA: `/tour`
-- Shows the five 2026 destinations as one compact editorial list with no destination links.
-- Uses the existing Tour photography with Monte-Carlo as the default image and next stage.
-- Desktop hover and keyboard focus update the large image through a restrained crossfade; mobile keeps one large image with the five destinations below it.
+- Shows the five 2026 destinations as one adjacent vertical photographic strip.
+- Monte-Carlo is slightly emphasized by default as the next stage.
+- Desktop hover and keyboard focus smoothly expand the selected panel, clarify its photography and reveal date, status and an individual CTA only when `pageAvailable` is true.
+- Mobile replaces the accordion behavior with a native horizontal 84-86vw `scroll-snap` strip; there is no autoplay or carousel library.
+- Only Monte-Carlo currently exposes a stage CTA at `/tour/monte-carlo`; the main section CTA remains `/tour`.
 - Uses exactly the same `var(--color-background)` warm ivory token as the Concept section, creating one continuous editorial Homepage canvas.
-- No cards, frames, shadows, carousel, countdown duplication or full event details.
+- No cards, frames, border radius, shadows, countdown duplication or full event details.
 
 ## Current Confirmed Events
 
