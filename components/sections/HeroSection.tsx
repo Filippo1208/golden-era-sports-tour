@@ -30,7 +30,7 @@ export function HeroSection({ nextEvent }: HeroSectionProps) {
               The Evolution of Tennis,
               <span>Played by Amateurs.</span>
             </h1>
-            <p>
+            <p className="hero-section__description">
               A global tennis tour celebrating the heritage and evolution of
               the game.
             </p>
@@ -44,10 +44,20 @@ export function HeroSection({ nextEvent }: HeroSectionProps) {
             </div>
 
             <div className="hero-section__actions">
-              <Button href={primaryCtaHref} variant="primary" onDark>
+              <Button
+                href={primaryCtaHref}
+                className="hero-section__primary-cta"
+                variant="primary"
+                onDark
+              >
                 {primaryCtaLabel}
               </Button>
-              <Button href="/join" variant="text" onDark>
+              <Button
+                href="/join"
+                className="hero-section__secondary-cta"
+                variant="text"
+                onDark
+              >
                 Join the Tour
               </Button>
             </div>

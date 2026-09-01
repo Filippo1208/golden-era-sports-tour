@@ -72,8 +72,7 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>{visitLabel}</span>
-            <span aria-hidden="true">↗</span>
+            {visitLabel}
           </a>
         </div>
 

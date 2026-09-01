@@ -133,6 +133,14 @@ Future optional Hero files:
 
 The video is referenced in the browser as `/videos/home/home-hero-desktop.mp4`, not imported as a JavaScript module. Hero crop is controlled through `homeHeroMedia.objectPosition` in `data/media.ts`.
 
+Homepage Hero mobile direction:
+
+- Desktop and tablet Hero composition remains unchanged.
+- At `760px` and below, the manifesto uses a reduced responsive serif scale and a compact four-line composition.
+- The descriptive sentence is hidden inside the mobile Hero and appears as the opening copy of the following Next Stage Countdown section.
+- `Explore Monte-Carlo` remains the primary mobile CTA; `Join the Tour` is a smaller text-only secondary link below it.
+- Next Stage metadata uses compact spacing so the video, manifesto, Monte-Carlo details and primary CTA remain visible within the first `100svh` viewport.
+
 ## Homepage Sections
 
 Current homepage order:
@@ -347,6 +355,7 @@ Navigation decisions:
   - HEROE'S: `public/images/partners/heroespartner.jpg`
   - SEMBRANCHER: `public/images/partners/sembrancherpartner.jpg`
 - Partners page direction: partner photography is integrated into the editorial canvas with no partner cards, HEROE'S image reaches the right viewport edge, Sembrancher image reaches the left viewport edge, the global partner strip remains logo-only, and the dedicated `/partners` page is the only place using the editorial partner photographs.
+- Partners mobile order is strict per partner: HEROE'S content, HEROE'S image, Sembrancher content, Sembrancher image. Visit links are text-only with no arrow or icon.
 
 ## The Concept Page
 

@@ -490,6 +490,10 @@ video {
   text-align: center;
 }
 
+.countdown-section__mobile-description {
+  display: none;
+}
+
 .countdown-section__intro {
   display: grid;
   justify-items: center;
@@ -3164,19 +3168,13 @@ video {
     max-width: 42rem;
   }
 
-  .partner-editorial--heroes .partner-editorial__content {
-    order: 1;
-  }
-
-  .partner-editorial--heroes .partner-editorial__media {
-    order: 2;
-  }
-
-  .partner-editorial--sembrancher .partner-editorial__media {
-    order: 1;
-  }
-
+  .partner-editorial--heroes .partner-editorial__content,
   .partner-editorial--sembrancher .partner-editorial__content {
+    order: 1;
+  }
+
+  .partner-editorial--heroes .partner-editorial__media,
+  .partner-editorial--sembrancher .partner-editorial__media {
     order: 2;
   }
 
@@ -3471,23 +3469,23 @@ video {
 
   .hero-section__content {
     grid-template-rows: var(--header-safe-area) minmax(0, 1fr) auto;
-    gap: var(--space-md);
-    padding-bottom: 1.75rem;
+    gap: clamp(0.85rem, 2.2svh, 1.25rem);
+    padding-bottom: clamp(1rem, 2.8svh, 1.5rem);
   }
 
   .hero-section__copy {
-    width: min(100%, 25rem);
+    width: min(100%, 23.5rem);
     min-width: 0;
   }
 
   .hero-section__copy h1 {
-    font-size: clamp(2.85rem, 14.5cqi, 3.8rem);
-    line-height: 0.96;
+    margin: 0.7rem auto 0;
+    font-size: clamp(2.25rem, 10.8cqi, 2.75rem);
+    line-height: 0.98;
   }
 
-  .hero-section__copy p {
-    max-width: 21rem;
-    font-size: 0.9rem;
+  .hero-section__copy .hero-section__description {
+    display: none;
   }
 
   .hero-section__lower,
@@ -3552,16 +3550,47 @@ video {
   }
 
   .hero-section__actions {
+    display: grid;
     justify-content: start;
+    justify-items: start;
+    gap: 0.35rem;
   }
 
   .hero-section__event {
+    gap: 0.16rem;
     min-width: 0;
-    padding-left: var(--space-sm);
+    padding-left: 0.75rem;
   }
 
   .hero-section__event strong {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
+  }
+
+  .hero-section__event span,
+  .hero-section__event small {
+    font-size: 0.66rem;
+  }
+
+  .hero-section__lower {
+    gap: clamp(0.75rem, 2svh, 1rem);
+  }
+
+  .hero-section__primary-cta {
+    min-height: 2.4rem;
+    padding: 0.62rem 0.82rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .hero-section__secondary-cta {
+    min-height: auto;
+    padding: 0.2rem 0;
+    color: var(--color-over-media-muted);
+    font-size: 0.67rem;
+  }
+
+  .hero-section__secondary-cta .button__icon {
+    display: none;
   }
 
   .tour-stage-hero__copy {
@@ -3645,6 +3674,15 @@ video {
 
   .countdown-section__inner {
     gap: var(--space-lg);
+  }
+
+  .countdown-section__mobile-description {
+    display: block;
+    max-width: 22rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .countdown-section {
