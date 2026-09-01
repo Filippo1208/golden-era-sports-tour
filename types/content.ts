@@ -90,6 +90,39 @@ export type TourEvent = {
   landingContent?: TourEventLandingContent;
 };
 
+export type TourOverviewStatus =
+  | "Completed"
+  | "Next Stage"
+  | "Upcoming"
+  | "TBC"
+  | "Finals";
+
+export type TourOverviewLayout =
+  | "full-bleed"
+  | "edge-right"
+  | "panorama"
+  | "edge-left"
+  | "finale";
+
+export type TourOverviewStage = {
+  id: string;
+  slug: string;
+  order: number;
+  city: string;
+  country: string;
+  dateLabel: string;
+  venue?: string;
+  status: TourOverviewStatus;
+  image: string;
+  imageAlt: string;
+  imagePosition?: string;
+  href: string;
+  pageAvailable: boolean;
+  year: number;
+  supportingLine: string;
+  layout: TourOverviewLayout;
+};
+
 export type Destination = {
   id: string;
   slug: string;

@@ -140,6 +140,7 @@ Current homepage order:
 1. Hero
 2. Next Stage Countdown
 3. The Concept
+4. The Tour
 
 The Concept homepage teaser:
 
@@ -149,6 +150,17 @@ The Concept homepage teaser:
 - Visual direction: editorial split layout, warm ivory background, one vertical heritage racquet photograph, no cards, no frames, no decorative panels.
 - Image treatment: expanded toward the right edge on desktop, no frame/card, subtle CSS mask blending the left edge into the ivory background, very slight warm color correction, horizontal mask on desktop only, natural unmasked image on mobile.
 - The lifestyle/model image is intentionally reserved for a future Experience section or deeper Concept storytelling.
+
+The Tour homepage teaser:
+
+- Eyebrow: `THE TOUR`
+- Headline: `ONE GLOBAL CIRCUIT. FIVE ICONIC DESTINATIONS.`
+- CTA: `/tour`
+- Shows the five 2026 destinations as one compact editorial list with no destination links.
+- Uses the existing Tour photography with Monte-Carlo as the default image and next stage.
+- Desktop hover and keyboard focus update the large image through a restrained crossfade; mobile keeps one large image with the five destinations below it.
+- Uses exactly the same `var(--color-background)` warm ivory token as the Concept section, creating one continuous editorial Homepage canvas.
+- No cards, frames, shadows, carousel, countdown duplication or full event details.
 
 ## Current Confirmed Events
 
@@ -267,7 +279,7 @@ Prepared navigation targets:
 
 Do not build these pages until requested.
 
-For the current phase, the global `Tour` navigation item points to `/tour`; `/tour` temporarily redirects to `/tour/monte-carlo` until a full Tour overview route is built.
+The global `Tour` navigation item points to the full Tour overview at `/tour`; `/tour/monte-carlo` remains the individual Monte-Carlo stage page.
 
 ## Final Primary Navigation
 
@@ -372,6 +384,46 @@ Advanced animation pass:
 ## Current Status
 
 First development phase foundation implemented. Hero/Header refinement phase implemented with the real desktop video.
+
+## Tour Landing Page
+
+Route:
+
+- `/tour`
+
+2026 stages:
+
+1. St. Moritz - 12 July 2026 - Completed
+2. Monte-Carlo - 10–11 October 2026 - Next Stage
+3. Los Angeles - 25 October 2026 - Upcoming
+4. São Paulo - November 2026 - TBC
+5. Dubai - 06 December 2026 - Finals
+
+Images:
+
+- `/images/tour/stmoritz.jpg`
+- `/images/tour/montecarlo.png`
+- `/images/tour/losangeles.png`
+- `/images/tour/saopaulo.png`
+- `/images/tour/dubai.png`
+
+Design:
+
+- Editorial destination journey
+- No cards
+- Large integrated photography
+- Brochure-inspired itinerary
+- Asymmetric destination sections
+- Los Angeles uses an ivory editorial text block above the photography; text is never overlaid on the image and the headline uses a reduced scale.
+- Destination motion uses one-time IntersectionObserver reveals with directional image clips, restrained text staggering and selected subtle parallax. Monte-Carlo copy is sticky on desktop only, Dubai imagery arrives after its text, and reduced-motion preferences disable the movement.
+
+Future teaser:
+
+- New York / 2027 / not confirmed
+
+Tour overview content is centralized in `data/events.ts` as `tourOverviewStages`. The existing confirmed-event data used by countdown and individual stage pages remains separate in `tourEvents`.
+
+Every Tour overview stage stores its intended `/tour/[slug]` route and a `pageAvailable` flag. Only Monte-Carlo currently exposes its destination CTA; future stage routes remain prepared in data but are not linked until confirmed pages exist.
 
 ## Next Step
 

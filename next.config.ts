@@ -13,11 +13,6 @@ const nextConfig: NextConfig = {
         destination: "/the-concept",
         permanent: true,
       },
-      {
-        source: "/tour",
-        destination: "/tour/monte-carlo",
-        permanent: false,
-      },
     ];
   },
 };
