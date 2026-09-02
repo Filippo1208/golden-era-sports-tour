@@ -172,6 +172,63 @@ The Tour homepage teaser:
 - Uses exactly the same `var(--color-background)` warm ivory token as the Concept section, creating one continuous editorial Homepage canvas.
 - No cards, frames, border radius, shadows, countdown duplication or full event details.
 
+## Experience Page
+
+Route:
+
+- `/experience`
+
+Purpose:
+
+- Show what taking part in Golden Era feels like through real photography and a continuous editorial scrolling journey.
+
+Core narrative:
+
+1. Arrive
+2. Play
+3. Stay in the Game
+4. Meet
+5. Celebrate
+
+Design direction:
+
+- Modern editorial and cinematic, with real Golden Era photography as the protagonist.
+- Compact, web-native page rhythm with text and relevant photography visible together wherever possible.
+- No cards, slide-deck feeling, giant empty statement screens or repeated identical sections.
+- One short sticky desktop narrative section anchored by a single atmospheric photograph; tablet and mobile use one natural image followed by compact chapter copy.
+- Asymmetric photography, one dark brown Heritage interlude and a photographic final CTA.
+- Desktop Game, Between Points, People and Heritage compositions keep headline and photography within the same visual moment; major section padding and heights are intentionally restrained.
+- The redundant motion strip and Captured collage are removed. The page uses exactly seven unique photographic moments with no repeated source image.
+
+Motion:
+
+- CSS clip-path image reveals, short text translate reveals, one-time IntersectionObserver triggers and limited requestAnimationFrame parallax on desktop only.
+- `prefers-reduced-motion` removes parallax, transforms, clip masking and sticky behavior where necessary while keeping all content visible.
+
+Mobile:
+
+- Sticky and parallax behavior are removed. The Journey uses one 3:4 atmospheric image followed by five compact text chapters.
+- Hero, Journey, Between Points, Heritage and Final are immersive full-width moments; Game and People remain inset for a quieter editorial rhythm.
+- Portrait and landscape media use intentional 3:4 and 3:2 crops, text keeps a 20-24px visual gutter, touch targets are at least 44px and no horizontal overflow is permitted.
+
+Experience photo mapping:
+
+- Hero: `public/images/experience/experience-hero.jpg`
+- Journey: `public/images/experience/experience-atmosphere.jpg`
+- The Game: `public/images/experience/experience-play.jpg`
+- Between Points: `public/images/experience/experience-social.jpg`
+- The People: `public/images/experience/experience-community-wide.jpg`
+- The Heritage: `public/images/experience/experience-heritage.jpg`
+- Final CTA: `public/images/experience/experience-community.jpg`
+
+Unused Experience asset:
+
+- `public/images/experience/experience-serve.jpg` remains available in the project but is intentionally not rendered on `/experience`.
+
+Density result:
+
+- At 1440x900 the Experience content is approximately 6,350px tall, about 30% shorter than the previous approximately 9,000px implementation.
+
 ## Current Confirmed Events
 
 - St. Moritz - 12 July 2026 - completed
