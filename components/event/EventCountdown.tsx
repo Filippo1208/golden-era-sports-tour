@@ -1,9 +1,8 @@
-import Link from "next/link";
-
 import { CountdownTimer } from "@/components/event/CountdownTimer";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Link } from "@/i18n/navigation";
 import { formatEventDateRange } from "@/lib/events";
 import type { TourEvent } from "@/types/content";
 

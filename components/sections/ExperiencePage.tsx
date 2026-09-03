@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
@@ -42,7 +43,9 @@ const experienceChapters = [
   },
 ] as const;
 
-export function ExperiencePage() {
+export async function ExperiencePage() {
+  const navigation = await getTranslations("Navigation");
+
   return (
     <div className="experience-page">
       <ExperienceMotionController />
@@ -264,7 +267,7 @@ export function ExperiencePage() {
           </h2>
           <div className="experience-final__actions">
             <Button href={primaryNavigationCta.href} onDark>
-              Join the Tour
+              {navigation("joinTour")}
             </Button>
             <Button href="/tour" variant="outline" onDark>
               Discover the Tour

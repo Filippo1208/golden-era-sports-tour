@@ -1,6 +1,8 @@
 import { EventCountdown } from "@/components/event/EventCountdown";
 import { PublicPageShell } from "@/components/layout/PublicPageShell";
 import { HomeConceptSection } from "@/components/sections/HomeConceptSection";
+import { HomeExperienceSection } from "@/components/sections/HomeExperienceSection";
+import { HomeTeamSection } from "@/components/sections/HomeTeamSection";
 import { HomeTourSection } from "@/components/sections/HomeTourSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { tourEvents, tourOverviewStages } from "@/data/events";
@@ -15,6 +17,8 @@ export default function Home() {
       <EventCountdown event={nextEvent} />
       <HomeConceptSection />
       <HomeTourSection stages={tourOverviewStages} />
+      <HomeExperienceSection />
+      <HomeTeamSection />
     </PublicPageShell>
   );
 }

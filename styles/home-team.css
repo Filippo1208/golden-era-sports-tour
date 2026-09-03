@@ -1,0 +1,137 @@
+.home-team {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  overflow: clip;
+  background: var(--color-background);
+}
+
+.home-team__header {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: end;
+  column-gap: clamp(1rem, 2vw, 2rem);
+}
+
+.home-team__header .eyebrow {
+  grid-column: 1 / 5;
+  margin: 0 0 clamp(1.5rem, 2.5vw, 2.5rem);
+  color: var(--color-accent);
+}
+
+.home-team__header h2 {
+  grid-column: 1 / 10;
+  margin: 0;
+  color: var(--color-brown-dark);
+  font-size: clamp(4.25rem, 6.5vw, 7rem);
+  font-weight: 500;
+  line-height: 0.84;
+  text-transform: uppercase;
+}
+
+.home-team__header h2 span {
+  display: block;
+}
+
+.home-team__header > p {
+  grid-column: 10 / 13;
+  max-width: 24rem;
+  margin: 0 0 0.5rem;
+  color: var(--color-text-muted);
+  font-size: clamp(0.96rem, 1.1vw, 1.06rem);
+  line-height: 1.65;
+}
+
+.home-team__media {
+  position: relative;
+  width: min(100%, 70rem);
+  aspect-ratio: 8 / 5;
+  margin: clamp(2.75rem, 5vw, 5rem) 0 0 auto;
+  overflow: hidden;
+  background: var(--color-stone);
+}
+
+.home-team__image {
+  object-fit: cover;
+  object-position: 50% 48%;
+}
+
+.home-team__action {
+  display: flex;
+  width: min(100%, 70rem);
+  justify-content: flex-end;
+  margin: 1.5rem 0 0 auto;
+}
+
+.home-team__action .button {
+  min-height: 2.75rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
+  padding: 0 0 0.35rem;
+  color: var(--color-brown-dark);
+}
+
+.home-team__action .button:hover,
+.home-team__action .button:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+@media (max-width: 900px) {
+  .home-team {
+    padding: 5rem 0;
+  }
+
+  .home-team__header h2 {
+    grid-column: 1 / 10;
+    font-size: clamp(4rem, 9.5vw, 5.4rem);
+  }
+
+  .home-team__header > p {
+    grid-column: 10 / 13;
+  }
+
+  .home-team__media {
+    width: 100%;
+  }
+
+  .home-team__action {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .home-team {
+    padding: 4.5rem 0;
+  }
+
+  .home-team__header {
+    display: block;
+  }
+
+  .home-team__header .eyebrow {
+    margin-bottom: 1.15rem;
+  }
+
+  .home-team__header h2 {
+    font-size: clamp(3.2rem, 14vw, 4rem);
+    line-height: 0.87;
+  }
+
+  .home-team__header > p {
+    max-width: 22rem;
+    margin: 1.35rem 0 0;
+    font-size: 0.92rem;
+  }
+
+  .home-team__media {
+    aspect-ratio: 3 / 2;
+    margin-top: 1.75rem;
+  }
+
+  .home-team__image {
+    object-position: center center;
+  }
+
+  .home-team__action {
+    justify-content: flex-start;
+    margin-top: 1.25rem;
+  }
+}

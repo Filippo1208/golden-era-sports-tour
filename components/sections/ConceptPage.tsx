@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
@@ -73,7 +74,9 @@ function publicAssetLabel(assetPath: string) {
   return `public${assetPath}`;
 }
 
-export function ConceptPage() {
+export async function ConceptPage() {
+  const navigation = await getTranslations("Navigation");
+
   const hasDetailImage = publicAssetExists(conceptImages.detail.src);
   const hasEvolutionImage = publicAssetExists(conceptImages.evolution.src);
   const hasPlayedImage = publicAssetExists(conceptImages.played.src);
@@ -345,7 +348,7 @@ export function ConceptPage() {
               Discover the Tour
             </Button>
             <Button href={primaryNavigationCta.href} variant="text" onDark>
-              {primaryNavigationCta.label}
+              {navigation("joinTour")}
             </Button>
           </div>
         </Container>

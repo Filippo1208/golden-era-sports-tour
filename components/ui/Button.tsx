@@ -1,5 +1,6 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
+
+import { Link } from "@/i18n/navigation";
 
 type ButtonProps = {
   children: ReactNode;

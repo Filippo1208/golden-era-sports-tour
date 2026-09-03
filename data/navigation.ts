@@ -1,15 +1,14 @@
 export const navigationItems = [
-  { label: "The Concept", href: "/the-concept" },
-  { label: "Tour", href: "/tour" },
-  { label: "Experience", href: "/experience" },
-  { label: "The Collection", href: "/collection" },
-  { label: "Partners", href: "/partners" },
-  { label: "Team", href: "/team" },
-  { label: "Contact", href: "/contact" },
+  { labelKey: "concept", href: "/the-concept" },
+  { labelKey: "tour", href: "/tour" },
+  { labelKey: "experience", href: "/experience" },
+  { labelKey: "collection", href: "/collection" },
+  { labelKey: "partners", href: "/partners" },
+  { labelKey: "team", href: "/team" },
+  { labelKey: "contact", href: "/contact" },
 ] as const;
 
 export const primaryNavigationCta = {
-  label: "Join the Tour",
   href: "/join",
 } as const;
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import type { CSSProperties } from "react";
@@ -95,7 +96,9 @@ function TourDestination({ stage }: { stage: TourOverviewStage }) {
   );
 }
 
-export function TourLandingPage() {
+export async function TourLandingPage() {
+  const navigation = await getTranslations("Navigation");
+
   return (
     <div className="tour-overview-page">
       <TourMotionController />
@@ -172,7 +175,7 @@ export function TourLandingPage() {
             <span>The evolution of tennis,</span>
             <span>played by amateurs.</span>
           </p>
-          <Button href="/join">Join the Tour</Button>
+          <Button href="/join">{navigation("joinTour")}</Button>
         </Container>
       </section>
     </div>

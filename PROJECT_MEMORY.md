@@ -149,6 +149,8 @@ Current homepage order:
 2. Next Stage Countdown
 3. The Concept
 4. The Tour
+5. The Experience
+6. The Team
 
 The Concept homepage teaser:
 
@@ -171,6 +173,29 @@ The Tour homepage teaser:
 - Only Monte-Carlo currently exposes a stage CTA at `/tour/monte-carlo`; the main section CTA remains `/tour`.
 - Uses exactly the same `var(--color-background)` warm ivory token as the Concept section, creating one continuous editorial Homepage canvas.
 - No cards, frames, border radius, shadows, countdown duplication or full event details.
+
+The Experience homepage teaser:
+
+- Eyebrow: `THE EXPERIENCE`
+- Headline: `MORE THAN A TOURNAMENT.`
+- Image: `public/images/experience/experience-community.jpg`
+- CTA: `/experience`
+- Desktop uses one asymmetric editorial composition with the 3:2 event photograph on the left and the narrative plus `PLAY.`, `MEET.`, `SHARE.` and `REMEMBER.` pillars on the right.
+- Mobile order is strict: eyebrow, headline, paragraph, photograph, four pillars, CTA, then the low-contrast decorative phrase.
+- The closing phrase is `PLAY · MEET · SHARE · REMEMBER`; it is decorative, restrained and never used as overlapping image typography.
+- Motion is a one-time, lightweight IntersectionObserver reveal with staggered text and a soft image clip/scale. Reduced-motion preferences show the complete section without transforms or clipping.
+- The section uses the shared warm ivory background, no cards, border radius, shadows, image overlays, parallax or extra photographs.
+
+The Team homepage teaser:
+
+- Eyebrow: `THE TEAM`
+- Headline: `THE PEOPLE BEHIND GOLDEN ERA.`
+- Copy: `Meet the team bringing the Tour to life.`
+- Image: `public/images/team/team.jpg`
+- CTA: `/team`, using the locale-aware link architecture.
+- The group image is exclusive to the Homepage teaser and remains absent from the dedicated Team page.
+- Desktop uses a concise typographic introduction followed by a large 8:5 editorial crop; mobile uses the complete 3:2 composition so all people and faces remain visible.
+- No names over the photograph, cards, border radius or shadows.
 
 ## Experience Page
 
@@ -328,25 +353,27 @@ The frontend should remain one unified Golden Era website while CMS manages edit
 
 ## Routes
 
-Current route:
+Current public route architecture uses a required locale prefix:
 
-- `/`
-- `/tour/monte-carlo`
+- `/[locale]`
+- `/[locale]/the-concept`
+- `/[locale]/tour`
+- `/[locale]/tour/monte-carlo`
+- `/[locale]/experience`
+- `/[locale]/partners`
+- `/[locale]/team`
 
-Prepared navigation targets:
+Supported locale values are `en`, `fr` and `it`. Unprefixed public URLs redirect to the equivalent English URL.
 
-- `/the-concept`
-- `/tour`
-- `/experience`
-- `/collection`
-- `/partners`
-- `/team`
-- `/contact`
-- `/join`
+Prepared navigation targets that remain unbuilt:
 
-Do not build these pages until requested.
+- `/[locale]/collection`
+- `/[locale]/contact`
+- `/[locale]/join`
 
-The global `Tour` navigation item points to the full Tour overview at `/tour`; `/tour/monte-carlo` remains the individual Monte-Carlo stage page.
+Do not build these future pages until requested.
+
+The global `Tour` navigation item points to the localized full Tour overview at `/[locale]/tour`; `/[locale]/tour/monte-carlo` remains the individual Monte-Carlo stage page.
 
 ## Final Primary Navigation
 
@@ -366,12 +393,28 @@ Primary CTA:
 
 Navigation decisions:
 
-- Golden Era logo / wordmark links to `/` and acts as Home.
+- Golden Era logo / wordmark links to the current locale homepage and acts as Home.
 - `GOLDEN ERA` was removed as a separate navigation item.
 - `DESTINATIONS` was removed as a separate navigation item and merged into `TOUR`.
 - `/tour/[slug]` is the architecture for individual destination/event stages.
-- `/destinations` redirects to `/tour` for legacy links.
-- `/golden-era` redirects to `/the-concept` for legacy links.
+- `/[locale]/destinations` redirects to `/[locale]/tour` for legacy links.
+- `/[locale]/golden-era` redirects to `/[locale]/the-concept` for legacy links.
+
+## Multilingual Architecture
+
+- Internationalization uses `next-intl` with App Router and Next.js 16 `proxy.ts`.
+- English (`en`) is the primary/master and default language. French (`fr`) and Italian (`it`) currently load the same approved English copy; no automatic translation has been generated.
+- `localePrefix` is always enabled, producing `/en`, `/fr` and `/it` routes.
+- `localeDetection` is disabled. Browser language and locale cookies do not override the English default for unprefixed URLs.
+- All existing pages live under `app/[locale]/`; `generateStaticParams` prerenders all supported locales.
+- Locale configuration lives in `i18n/routing.ts`, request/message loading in `i18n/request.ts`, and locale-aware Link/router wrappers in `i18n/navigation.ts`.
+- Translation dictionaries live in `messages/en.json`, `messages/fr.json` and `messages/it.json`. Global navigation, Header controls, Footer byline and metadata are prepared for independent translation.
+- The desktop Header selector is `EN | FR | IT`. Mobile uses a compact native language selector showing the current locale and full language names in its option list.
+- Changing locale preserves the current pathname, including individual Tour stage pages.
+- `/[locale]/discover-the-tour` is a legacy/marketing alias that redirects to `/[locale]/tour`; `/tour` remains the canonical Tour route.
+- Every implemented localized page provides its own canonical URL plus `hreflang` alternates for `en`, `fr`, `it` and `x-default`.
+- `app/sitemap.ts` generates all implemented pages for all three locales with reciprocal language alternates.
+- Absolute SEO URLs use `NEXT_PUBLIC_SITE_URL`, then Vercel production/deployment URL variables, with `http://localhost:3000` only as the local fallback.
 
 ## Decisions Taken
 
@@ -496,3 +539,14 @@ Every Tour overview stage stores its intended `/tour/[slug]` route and a `pageAv
 ## Next Step
 
 Add real Golden Era image/video/logo assets, then design the next requested section or route in a separate phase.
+
+## Team Page
+
+- The final Team page lives at `/{locale}/team` for English, French and Italian.
+- The Team page must not render `public/images/team/team.jpg`; the group photograph is reserved for separate Homepage use.
+- Team page photography uses `public/images/team/jerome.jpg`, `nicola.jpg`, `massimo.jpg`, `marco.jpg`, `filippo.jpg` and `pier.jpg`.
+- The page narrative is: the people, founder Jérôme Séguin, the question that inspired the format, and the team building Golden Era today.
+- Team copy is stored in the existing `next-intl` dictionaries. English is the master copy; French and Italian retain the same temporary English fallback content.
+- The Concept CTA uses the locale-aware internal link architecture and preserves the active locale.
+- The Team page is an editorial feature, not a profile grid: its hero is typography-only, Jérôme receives a dominant origin-story composition and the five remaining portraits form an alternating numbered sequence with varied proportions and positioning.
+- Portrait motion is limited to one-time reveals and a maximum `1.018` hover scale, with reduced-motion support.

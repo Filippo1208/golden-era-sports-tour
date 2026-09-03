@@ -1,20 +1,49 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const locales = ["en", "fr", "it"] as const;
+
+const localizedLegacyRedirects = locales.flatMap((locale) => [
+  {
+    source: `/${locale}/destinations`,
+    destination: `/${locale}/tour`,
+    permanent: true,
+  },
+  {
+    source: `/${locale}/golden-era`,
+    destination: `/${locale}/the-concept`,
+    permanent: true,
+  },
+  {
+    source: `/${locale}/discover-the-tour`,
+    destination: `/${locale}/tour`,
+    permanent: true,
+  },
+]);
 
 const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
         source: "/destinations",
-        destination: "/tour",
+        destination: "/en/tour",
         permanent: true,
       },
       {
         source: "/golden-era",
-        destination: "/the-concept",
+        destination: "/en/the-concept",
         permanent: true,
       },
+      {
+        source: "/discover-the-tour",
+        destination: "/en/tour",
+        permanent: true,
+      },
+      ...localizedLegacyRedirects,
     ];
   },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+export default withNextIntl(nextConfig);

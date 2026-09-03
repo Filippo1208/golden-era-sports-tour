@@ -1,4 +1,7 @@
 @import "../styles/tokens.css";
 @import "../styles/typography.css";
 @import "../styles/globals.css";
+@import "../styles/home-experience.css";
+@import "../styles/home-team.css";
 @import "../styles/experience.css";
+@import "../styles/team.css";

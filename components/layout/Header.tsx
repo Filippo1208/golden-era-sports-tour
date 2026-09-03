@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
+import { LanguageSwitcher } from "@/components/navigation/LanguageSwitcher";
 import { MainNavigation } from "@/components/navigation/MainNavigation";
 import { Button } from "@/components/ui/Button";
 import { primaryNavigationCta } from "@/data/navigation";
+import { Link } from "@/i18n/navigation";
 
 const HEADER_SCROLL_THRESHOLD = 24;
 const headerLogo = {
@@ -22,6 +24,7 @@ type HeaderProps = {
 
 export function Header({ heroTone = "dark" }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const t = useTranslations("Navigation");
 
   useEffect(() => {
     const updateHeaderState = () => {
@@ -47,7 +50,7 @@ export function Header({ heroTone = "dark" }: HeaderProps) {
         onLightHero ? "site-header--on-light" : ""
       }`.trim()}
     >
-      <Link href="/" className="site-header__brand" aria-label="Golden Era home">
+      <Link href="/" className="site-header__brand" aria-label={t("homeLabel")}>
         <Image
           src={headerLogo.src}
           alt={headerLogo.alt}
@@ -62,19 +65,22 @@ export function Header({ heroTone = "dark" }: HeaderProps) {
       <MainNavigation className="site-header__desktop-nav" onDark={onDarkHero} />
 
       <div className="site-header__actions">
+        <LanguageSwitcher mode="desktop" onDark={onDarkHero} />
+
         <Button
           href={primaryNavigationCta.href}
           variant="outline"
           arrow="up-right"
           onDark={onDarkHero}
         >
-          {primaryNavigationCta.label}
+          {t("joinTour")}
         </Button>
 
         <details className="site-header__mobile-menu">
-          <summary aria-label="Open navigation">Menu</summary>
+          <summary aria-label={t("openMenu")}>{t("menu")}</summary>
           <div className="site-header__mobile-panel">
             <MainNavigation onDark />
+            <LanguageSwitcher mode="mobile" onDark />
             <Button
               href={primaryNavigationCta.href}
               variant="primary"
@@ -82,7 +88,7 @@ export function Header({ heroTone = "dark" }: HeaderProps) {
               onDark
               className="site-header__mobile-cta"
             >
-              {primaryNavigationCta.label}
+              {t("joinTour")}
             </Button>
           </div>
         </details>

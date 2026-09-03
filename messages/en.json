@@ -1,0 +1,132 @@
+{
+  "Navigation": {
+    "primaryLabel": "Primary navigation",
+    "homeLabel": "Golden Era home",
+    "openMenu": "Open navigation",
+    "menu": "Menu",
+    "joinTour": "Join the Tour",
+    "items": {
+      "concept": "The Concept",
+      "tour": "Tour",
+      "experience": "Experience",
+      "collection": "The Collection",
+      "partners": "Partners",
+      "team": "Team",
+      "contact": "Contact"
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Select language",
+    "english": "English",
+    "french": "Français",
+    "italian": "Italiano"
+  },
+  "Footer": {
+    "byline": "By Vintage Events Monte-Carlo"
+  },
+  "HomeTeam": {
+    "eyebrow": "The Team",
+    "headlineLineOne": "The People",
+    "headlineLineTwo": "Behind Golden Era.",
+    "copy": "Meet the team bringing the Tour to life.",
+    "cta": "Meet the Team",
+    "imageAlt": "The Golden Era Sports Tour team together on a clay tennis court"
+  },
+  "TeamPage": {
+    "hero": {
+      "eyebrow": "The Team",
+      "titleLineOne": "People",
+      "titleLineTwo": "Behind",
+      "titleLineThree": "The Idea.",
+      "intro": "Golden Era is shaped by different backgrounds, perspectives and a shared passion for the game."
+    },
+    "founder": {
+      "eyebrow": "The Founder",
+      "firstName": "Jérôme",
+      "lastName": "Séguin",
+      "role": "President",
+      "imageAlt": "Portrait of Golden Era founder Jérôme Séguin",
+      "story": {
+        "opening": "The idea behind Golden Era began on a tennis court.",
+        "background": "Years ago, Jérôme Séguin, a tennis instructor based at the Monte-Carlo Country Club, played a match using modern equipment against an opponent using an older-generation racquet.",
+        "result": "Jérôme won.",
+        "question": "What stayed with him was not the result, but the question behind it: how much can the evolution of equipment change the balance of a match?",
+        "legacy": "That experience became the starting point for Golden Era — a format built around the opposition of materials and the evolution of tennis technology."
+      },
+      "quote": {
+        "lineOne": "“How Much Can Equipment",
+        "lineTwo": "Change The Balance",
+        "lineThree": "Of A Match?”"
+      }
+    },
+    "statement": {
+      "lineOne": "One Match.",
+      "lineTwo": "One Question.",
+      "lineThree": "One Format.",
+      "supporting": "The starting point of Golden Era."
+    },
+    "people": {
+      "eyebrow": "The People Behind The Tour",
+      "heading": "The Golden Era team",
+      "members": {
+        "nicola": {
+          "name": "Nicola Bertazzi",
+          "role": "Vice President & CFO",
+          "imageAlt": "Portrait of Nicola Bertazzi"
+        },
+        "massimo": {
+          "name": "Massimo Della Torre",
+          "role": "Vice President",
+          "imageAlt": "Portrait of Massimo Della Torre"
+        },
+        "marco": {
+          "name": "Marco Lolli",
+          "role": "Strategic Planning Manager",
+          "imageAlt": "Portrait of Marco Lolli"
+        },
+        "filippo": {
+          "name": "Filippo Chiani",
+          "role": "Office Manager",
+          "imageAlt": "Portrait of Filippo Chiani"
+        },
+        "pier": {
+          "name": "Pier Federico Grillone",
+          "role": "Communication & Brand Strategy Manager",
+          "imageAlt": "Portrait of Pier Federico Grillone"
+        }
+      }
+    },
+    "closing": {
+      "lineOne": "Different Roles.",
+      "lineTwo": "One Tour.",
+      "cta": "Discover the Concept"
+    }
+  },
+  "Metadata": {
+    "home": {
+      "title": "Golden Era Sports Tour | The Evolution of Tennis, Played by Amateurs",
+      "description": "Golden Era Sports Tour celebrates the evolution and heritage of tennis through international events, original racquets and iconic destinations."
+    },
+    "experience": {
+      "title": "The Experience | Golden Era Sports Tour",
+      "description": "Discover the Golden Era Sports Tour experience — tennis, heritage, people and shared moments on and beyond the court."
+    },
+    "partners": {
+      "title": "Partners | Golden Era Sports Tour",
+      "description": "Discover the official partners supporting the Golden Era Sports Tour and becoming part of the Tour experience."
+    },
+    "team": {
+      "title": "Team | Golden Era Sports Tour",
+      "description": "Meet the team behind the Golden Era Sports Tour."
+    },
+    "concept": {
+      "title": "The Concept | Golden Era Sports Tour",
+      "description": "Discover the Golden Era Sports Tour concept: an amateur tennis format that brings the heritage and evolution of racquet technology back onto the court."
+    },
+    "tour": {
+      "title": "The Tour | Golden Era Sports Tour",
+      "description": "Discover the 2026 Golden Era Sports Tour, an international amateur tennis circuit travelling through five iconic destinations."
+    },
+    "tourStageFallbackTitle": "Tour Stage | Golden Era Sports Tour"
+  }
+}
