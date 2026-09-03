@@ -92,7 +92,7 @@ export function HomeExperienceSection() {
               src={experienceCommunity}
               alt="Golden Era players gathered on a clay court with heritage tennis racquets"
               fill
-              sizes="(max-width: 900px) 100vw, (max-width: 1280px) 58vw, 60vw"
+              sizes="(max-width: 900px) calc(100vw - 2rem), (max-width: 1496px) 55vw, 790px"
               className="home-experience__image"
             />
           </figure>

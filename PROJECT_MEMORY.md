@@ -550,3 +550,36 @@ Add real Golden Era image/video/logo assets, then design the next requested sect
 - The Concept CTA uses the locale-aware internal link architecture and preserves the active locale.
 - The Team page is an editorial feature, not a profile grid: its hero is typography-only, Jérôme receives a dominant origin-story composition and the five remaining portraits form an alternating numbered sequence with varied proportions and positioning.
 - Portrait motion is limited to one-time reveals and a maximum `1.018` hover scale, with reduced-motion support.
+
+## Image Delivery
+
+- All rendered site images use `next/image`; there are no remaining manual `<img>` elements or photographic CSS background images.
+- Image quality uses the Next.js default of 75. No image requests `quality={100}`.
+- Image preload is reserved for the immediately visible Concept, Experience and Monte-Carlo stage hero photographs.
+- The global Header logo and all below-the-fold Homepage, Tour, Experience, Team, Concept and partner media use native lazy loading.
+- Responsive `sizes` values follow the actual page grids. Homepage Tour panels request a larger variant only while a desktop panel is expanded.
+- The HEROE'S and Sembrancher editorial photographs remain `unoptimized` so they are served reliably from their static public paths at 768px; they are still lazy-loaded.
+
+## Global Footer
+
+- The shared Footer keeps the existing brand and navigation and includes the official company details for Vintage Events Montecarlo S.r.l.s.
+- Legal data is identical in every locale: Largo Francesco Richini 2, 20122 Milano, Italy; VAT / Tax Code 14563590968; REA MI-2792204.
+- The final footer line includes the 2026 copyright and the discreet credit `Website by Filippo Chiani`.
+- The official Instagram profile is `https://www.instagram.com/goldenerasportstour/` and is linked from the shared Footer in every locale.
+- Contact and Footer Instagram links use the official `public/images/social/instagram.png` icon at 24px and 17px respectively, followed only by the `Instagram` text with no trailing arrow.
+
+## Contact Page
+
+- The Contact page lives at `/{locale}/contact` for English, French and Italian and uses localized metadata and the shared locale-aware navigation.
+- Official general enquiries address: `info@goldenerasportstour.com`.
+- Contact content is stored in the existing `next-intl` dictionaries. English is the master copy; French and Italian currently keep the same temporary English content.
+- Form submissions are validated in the browser and again by `app/api/contact/route.ts`, with a honeypot and same-origin check.
+- Email delivery uses the Resend HTTP API server-side. `RESEND_API_KEY` and `CONTACT_EMAIL_FROM` are required; `CONTACT_EMAIL_TO` is optional and defaults to the official general enquiries address.
+- Without email provider configuration, the form reports that delivery is unavailable and never displays a false success state.
+
+## Collection Page
+
+- The temporary Collection page lives at `/{locale}/collection` for English, French and Italian and remains linked from the global navigation.
+- It is an intentional editorial Coming Soon page with no product cards, listings, filters or fabricated archive entries.
+- Collection copy and localized metadata are stored in the existing `next-intl` dictionaries. English is the master copy; French and Italian currently retain the same temporary English content.
+- The page uses one existing secondary visual, `public/images/the-concept/racquetevolution.jpg`, at its original proportions.

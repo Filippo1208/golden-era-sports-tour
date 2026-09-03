@@ -60,8 +60,8 @@ export function TourStageLanding({ event }: TourStageLandingProps) {
                 src={event.heroImage}
                 alt={`${event.title} at ${event.venue ?? event.city}`}
                 fill
-                priority
-                sizes="(max-width: 980px) 100vw, 62vw"
+                preload
+                sizes="(max-width: 980px) 100vw, 61vw"
                 className="tour-stage-hero__image"
               />
             ) : (

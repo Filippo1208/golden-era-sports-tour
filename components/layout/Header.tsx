@@ -56,7 +56,6 @@ export function Header({ heroTone = "dark" }: HeaderProps) {
           alt={headerLogo.alt}
           width={headerLogo.width}
           height={headerLogo.height}
-          preload
           sizes="(max-width: 760px) 155px, 210px"
           className="site-header__brand-logo"
         />

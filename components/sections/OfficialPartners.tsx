@@ -10,13 +10,14 @@ type PartnerLogoLinkProps = {
 };
 
 function PartnerLogoLink({ partner }: PartnerLogoLinkProps) {
+  const logoSizes = partner.id === "heroes" ? "255px" : "181px";
   const logo = partner.logo ? (
     <Image
       src={partner.logo}
       alt={partner.logoAlt}
       width={partner.logoWidth}
       height={partner.logoHeight}
-      sizes="(max-width: 760px) 78vw, 340px"
+      sizes={logoSizes}
       className={`official-partners__logo official-partners__logo--${partner.id}`}
     />
   ) : (

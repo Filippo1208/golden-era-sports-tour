@@ -150,7 +150,6 @@ export async function ConceptPage() {
                 alt={conceptImages.evolution.alt}
                 width={conceptImages.evolution.width}
                 height={conceptImages.evolution.height}
-                loading="eager"
                 sizes="(max-width: 760px) 100vw, (max-width: 980px) 95vw, 48vw"
                 className="concept-rule__image"
               />
@@ -252,7 +251,6 @@ export async function ConceptPage() {
               alt={conceptImages.played.alt}
               width={conceptImages.played.width}
               height={conceptImages.played.height}
-              loading="eager"
               sizes="100vw"
               className="concept-played__image"
             />

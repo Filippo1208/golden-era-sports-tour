@@ -41,7 +41,7 @@ export function HomeConceptSection() {
             alt={conceptImage.alt}
             width={conceptImage.width}
             height={conceptImage.height}
-            sizes="(max-width: 760px) 92vw, (max-width: 980px) 88vw, 35vw"
+            sizes="(max-width: 760px) 92vw, (max-width: 980px) 88vw, 32vw"
             className="home-concept__image"
           />
         </figure>

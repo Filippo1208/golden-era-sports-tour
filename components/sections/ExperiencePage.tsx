@@ -77,7 +77,7 @@ export async function ExperiencePage() {
               fill
               preload
               placeholder="blur"
-              sizes="(max-width: 760px) 100vw, (max-width: 1100px) 48vw, 46vw"
+              sizes="(max-width: 900px) 100vw, (max-width: 1496px) 52vw, 780px"
               className="experience-hero__image"
             />
           </figure>
@@ -119,7 +119,7 @@ export async function ExperiencePage() {
                 alt="Golden Era players meeting beside a clay tennis court in the mountains"
                 fill
                 placeholder="blur"
-                sizes="(max-width: 1024px) 100vw, 48vw"
+                sizes="(max-width: 760px) 100vw, (max-width: 1024px) 94vw, (max-width: 1496px) 46vw, 680px"
                 className="experience-journey__image"
               />
             </figure>
@@ -164,7 +164,7 @@ export async function ExperiencePage() {
               alt="A Golden Era match in progress on a clay court"
               fill
               placeholder="blur"
-              sizes="(max-width: 900px) 100vw, 60vw"
+              sizes="(max-width: 900px) 100vw, (max-width: 1496px) 63vw, 900px"
               className="experience-game__image"
             />
           </figure>
@@ -179,7 +179,7 @@ export async function ExperiencePage() {
               alt="Golden Era participants sharing a conversation between matches"
               fill
               placeholder="blur"
-              sizes="(max-width: 900px) 100vw, 61vw"
+              sizes="(max-width: 900px) 100vw, (max-width: 1496px) 57vw, 820px"
               className="experience-between__image"
             />
           </figure>
@@ -216,7 +216,7 @@ export async function ExperiencePage() {
               alt="Golden Era players and organisers gathered together on a clay court"
               fill
               placeholder="blur"
-              sizes="(max-width: 900px) 100vw, 58vw"
+              sizes="(max-width: 900px) 100vw, (max-width: 1496px) 53vw, 760px"
               className="experience-people__image"
             />
           </figure>
@@ -231,7 +231,7 @@ export async function ExperiencePage() {
               alt="Golden Era participants presenting framed heritage tennis racquets"
               fill
               placeholder="blur"
-              sizes="(max-width: 900px) 100vw, 49vw"
+              sizes="(max-width: 900px) 100vw, (max-width: 1496px) 44vw, 640px"
               className="experience-heritage__image"
             />
           </figure>

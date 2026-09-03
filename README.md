@@ -35,6 +35,22 @@ Then open the local URL shown by the terminal.
 npm run build
 ```
 
+## Contact Form Email
+
+The contact form sends email server-side through the Resend HTTP API. Configure
+these environment variables in the deployment platform:
+
+```text
+RESEND_API_KEY=re_...
+CONTACT_EMAIL_FROM=Golden Era Website <website@your-verified-domain.com>
+CONTACT_EMAIL_TO=info@goldenerasportstour.com
+```
+
+`RESEND_API_KEY` and `CONTACT_EMAIL_FROM` are required. `CONTACT_EMAIL_TO` is
+optional and defaults to `info@goldenerasportstour.com`. Without the required
+variables, the form returns a clear unavailable state and never reports a fake
+successful delivery.
+
 ## Main Folders
 
 - `app/` - Next.js App Router pages and global layout.

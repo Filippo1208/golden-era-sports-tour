@@ -22,7 +22,7 @@ function publicAssetExists(assetPath: string) {
 
 function imageSizes(layout: TourOverviewStage["layout"]) {
   if (layout === "edge-right" || layout === "edge-left") {
-    return "(max-width: 900px) 100vw, 62vw";
+    return "(max-width: 900px) 100vw, 64vw";
   }
 
   return "100vw";

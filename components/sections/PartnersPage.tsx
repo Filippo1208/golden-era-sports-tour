@@ -26,6 +26,7 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
   const visitLabel =
     partner.id === "heroes" ? "Visit HEROE'S" : `Visit ${partner.name}`;
   const hasFeaturedImage = assetExists(partner.featuredImage);
+  const logoSizes = partner.id === "heroes" ? "212px" : "149px";
 
   return (
     <section
@@ -54,7 +55,7 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
                 alt={partner.logoAlt}
                 width={partner.logoWidth}
                 height={partner.logoHeight}
-                sizes="(max-width: 760px) 64vw, 260px"
+                sizes={logoSizes}
                 className={`partner-editorial__logo partner-editorial__logo--${partner.id}`}
               />
             ) : (
@@ -87,7 +88,6 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
               alt={partner.featuredImageAlt ?? `${partner.name} partner photograph`}
               width={partner.featuredImageWidth ?? 1200}
               height={partner.featuredImageHeight ?? 1800}
-              loading="eager"
               unoptimized
               sizes="(max-width: 980px) 100vw, 58vw"
               className="partner-editorial__image"

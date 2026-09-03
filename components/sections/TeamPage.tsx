@@ -14,6 +14,7 @@ const teamMembers = [
     width: 400,
     height: 678,
     position: "50% 10%",
+    sizes: "(max-width: 680px) 85vw, (max-width: 900px) 87vw, 38vw",
   },
   {
     id: "massimo",
@@ -22,6 +23,7 @@ const teamMembers = [
     width: 406,
     height: 688,
     position: "50% 8%",
+    sizes: "(max-width: 680px) 78vw, (max-width: 900px) 80vw, 46vw",
   },
   {
     id: "marco",
@@ -30,6 +32,7 @@ const teamMembers = [
     width: 388,
     height: 678,
     position: "50% 9%",
+    sizes: "(max-width: 680px) 67vw, (max-width: 900px) 69vw, 38vw",
   },
   {
     id: "filippo",
@@ -38,6 +41,7 @@ const teamMembers = [
     width: 354,
     height: 686,
     position: "50% 8%",
+    sizes: "(max-width: 680px) 82vw, (max-width: 900px) 84vw, 38vw",
   },
   {
     id: "pier",
@@ -46,6 +50,7 @@ const teamMembers = [
     width: 402,
     height: 682,
     position: "50% 8%",
+    sizes: "(max-width: 680px) 74vw, (max-width: 900px) 76vw, 46vw",
   },
 ] as const;
 
@@ -89,7 +94,7 @@ export async function TeamPage() {
                 src="/images/team/jerome.jpg"
                 alt={t("founder.imageAlt")}
                 fill
-                sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1496px) 48vw, 690px"
+                sizes="(max-width: 900px) 87vw, (max-width: 1496px) 46vw, 690px"
                 className="team-founder__image"
               />
             </figure>
@@ -165,7 +170,7 @@ export async function TeamPage() {
                   alt={t(`people.members.${member.id}.imageAlt`)}
                   width={member.width}
                   height={member.height}
-                  sizes="(max-width: 680px) calc(100vw - 2rem), (max-width: 1100px) 48vw, 38vw"
+                  sizes={member.sizes}
                   className="team-member__image"
                   style={{ objectPosition: member.position }}
                 />

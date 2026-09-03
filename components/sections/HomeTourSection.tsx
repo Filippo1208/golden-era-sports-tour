@@ -76,6 +76,7 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
         >
           {stages.map((stage) => {
             const isSelected = stage.slug === activeStageSlug;
+            const isExpanded = isEngaged && isSelected;
             const isNextStage = stage.status === "Next Stage";
             const panelStyle = {
               "--home-tour-image-position":
@@ -103,7 +104,11 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
                     src={stage.image}
                     alt={stage.imageAlt}
                     fill
-                    sizes="(max-width: 980px) 86vw, (max-width: 1200px) 38vw, 34vw"
+                    sizes={
+                      isExpanded
+                        ? "(max-width: 980px) 86vw, 45vw"
+                        : "(max-width: 980px) 86vw, 19vw"
+                    }
                     className="home-tour__panel-image"
                   />
 

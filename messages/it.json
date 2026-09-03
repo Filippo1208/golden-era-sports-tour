@@ -22,7 +22,8 @@
     "italian": "Italiano"
   },
   "Footer": {
-    "byline": "By Vintage Events Monte-Carlo"
+    "byline": "By Vintage Events Monte-Carlo",
+    "instagram": "Instagram"
   },
   "HomeTeam": {
     "eyebrow": "The Team",
@@ -102,6 +103,55 @@
       "cta": "Discover the Concept"
     }
   },
+  "CollectionPage": {
+    "eyebrow": "The Collection",
+    "titleLineOne": "A Living Archive",
+    "titleLineTwo": "Of Tennis History.",
+    "introLineOne": "Original racquets from different eras of the game form the heart of the Golden Era collection.",
+    "introLineTwo": "A dedicated digital archive is currently being curated.",
+    "status": "Coming Soon",
+    "closingLineOne": "Five decades of equipment.",
+    "closingLineTwo": "One evolving collection.",
+    "imageAlt": "Original tennis racquets from different eras in the Golden Era collection"
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "title": "Let’s Talk.",
+    "intro": "For general enquiries, partnerships, media requests or collaborations, get in touch with the Golden Era Sports Tour team.",
+    "generalEnquiries": "General Enquiries",
+    "followTour": "Follow the Tour",
+    "instagram": "Instagram",
+    "form": {
+      "title": "Send a message",
+      "honeypot": "Leave this field empty",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "validation": {
+        "required": "This field is required.",
+        "email": "Enter a valid email address."
+      },
+      "errors": {
+        "generic": "We could not send your message. Please try again.",
+        "unavailable": "Online message delivery is not configured yet. Please email us directly."
+      },
+      "success": {
+        "title": "THANK YOU.",
+        "lineOne": "Your message has been received.",
+        "lineTwo": "Our team will get back to you shortly."
+      }
+    },
+    "join": {
+      "prompt": "Interested in Playing?",
+      "cta": "Join the Tour"
+    }
+  },
   "Metadata": {
     "home": {
       "title": "Golden Era Sports Tour | The Evolution of Tennis, Played by Amateurs",
@@ -118,6 +168,14 @@
     "team": {
       "title": "Team | Golden Era Sports Tour",
       "description": "Meet the team behind the Golden Era Sports Tour."
+    },
+    "contact": {
+      "title": "Contact | Golden Era Sports Tour",
+      "description": "Contact Golden Era Sports Tour for general enquiries, partnerships, media requests and collaborations."
+    },
+    "collection": {
+      "title": "The Collection | Golden Era Sports Tour",
+      "description": "Discover the evolving Golden Era Sports Tour collection of original tennis racquets from different generations of the game."
     },
     "concept": {
       "title": "The Concept | Golden Era Sports Tour",

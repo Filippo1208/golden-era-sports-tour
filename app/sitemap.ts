@@ -9,6 +9,8 @@ const publicPaths = [
   "/experience",
   "/partners",
   "/team",
+  "/contact",
+  "/collection",
   "/the-concept",
   "/tour",
   "/tour/monte-carlo",
@@ -33,4 +35,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 }
-
