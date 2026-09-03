@@ -513,10 +513,10 @@ Route:
 Images:
 
 - `/images/tour/stmoritz.jpg`
-- `/images/tour/montecarlo.png`
-- `/images/tour/losangeles.png`
-- `/images/tour/saopaulo.png`
-- `/images/tour/dubai.png`
+- `/images/tour/montecarlo.jpg`
+- `/images/tour/losangeles.jpg`
+- `/images/tour/saopaulo.jpg`
+- `/images/tour/dubai.jpg`
 
 Design:
 
