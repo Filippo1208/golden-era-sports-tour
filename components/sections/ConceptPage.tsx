@@ -56,7 +56,7 @@ const formatFacts = [
   },
   {
     id: "ranking",
-    value: "Stage +",
+    value: null,
   },
 ] as const;
 
@@ -269,8 +269,8 @@ export async function ConceptPage() {
 
           <div className="concept-format__facts" aria-label={t("format.ariaLabel")}>
             {formatFacts.map((fact) => (
-              <div key={fact.value} className="concept-format__fact">
-                <strong>{fact.value}</strong>
+              <div key={fact.id} className="concept-format__fact">
+                <strong>{fact.value ?? t("format.stagePlus")}</strong>
                 <span>
                   <span>{t(`format.facts.${fact.id}.lineOne`)}</span>
                   <span>{t(`format.facts.${fact.id}.lineTwo`)}</span>

@@ -116,7 +116,7 @@
   margin: clamp(2.5rem, 3.5vw, 3.5rem) 0 0;
   color: color-mix(in srgb, var(--color-taupe) 46%, var(--color-background));
   font-family: var(--font-serif);
-  font-size: clamp(3.7rem, 5.95vw, 5.6rem);
+  font-size: clamp(2rem, 3.45vw, 4.5rem);
   font-weight: 500;
   line-height: 0.82;
   text-align: center;
@@ -209,9 +209,6 @@
     column-gap: 3rem;
   }
 
-  .home-experience__signature {
-    font-size: 4.55rem;
-  }
 }
 
 @media (max-width: 900px) {

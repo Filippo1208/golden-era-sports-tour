@@ -411,8 +411,9 @@ Navigation decisions:
 - Changing locale preserves the current pathname, including individual Tour stage pages.
 - `/[locale]/discover-the-tour` is a legacy/marketing alias that redirects to `/[locale]/tour`; `/tour` remains the canonical Tour route.
 - Every implemented localized page provides its own canonical URL plus `hreflang` alternates for `en`, `fr`, `it` and `x-default`.
-- `app/sitemap.ts` generates all implemented pages for all three locales with reciprocal language alternates.
-- Absolute SEO URLs use `NEXT_PUBLIC_SITE_URL`, then Vercel production/deployment URL variables, with `http://localhost:3000` only as the local fallback.
+- `app/sitemap.ts` lists the root redirect, every implemented page for all three locales and only stage pages marked available in the central event data, with reciprocal language alternates and route-specific change frequencies.
+- `app/robots.ts` allows public crawling, disallows `/api/` and references the production sitemap.
+- All canonical, Open Graph, hreflang, sitemap and robots URLs use the fixed production origin `https://goldenerasportstour.com`; deployment and localhost domains must never appear in SEO output.
 - Localized metadata dictionaries provide title and description values to standard metadata and Open Graph metadata through `lib/metadata.ts`.
 - The September 2026 pre-translation audit moved all rendered language-dependent Homepage, Concept, Tour, Monte-Carlo stage, Experience and Partners copy into the translation dictionaries. Team, Collection, Contact, Join, navigation, language controls and reusable Footer labels were already dictionary-backed and were verified in the same audit.
 - `messages/en.json` remains the source of truth. `messages/fr.json` and `messages/it.json` preserve full key parity while translating only approved scopes; no automatic translation is used.
