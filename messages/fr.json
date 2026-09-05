@@ -537,6 +537,7 @@
   "Footer": {
     "byline": "Par Vintage Events Monte-Carlo",
     "instagram": "Instagram",
+    "privacyPolicy": "Politique de Confidentialité",
     "websiteCredit": "Site web par Filippo Chiani"
   },
   "HomeTeam": {
@@ -752,19 +753,17 @@
         }
       },
       "privacy": {
-        "consent": "I have read and accept the <policy>Privacy Policy</policy> and agree to be contacted regarding my Golden Era Sports Tour application.",
-        "title": "Privacy Policy",
-        "note": "The information submitted through this form is used by Vintage Events Montecarlo S.r.l.s. to review your application and contact you about Golden Era Sports Tour participation. For privacy enquiries, contact info@goldenerasportstour.com."
+        "consent": "J’ai pris connaissance de la <policy>Politique de Confidentialité</policy> et j’accepte que mes informations soient utilisées afin d’examiner ma candidature au Golden Era Sports Tour et de me contacter à ce sujet."
       },
       "validation": {
         "required": "This field is required.",
         "email": "Enter a valid email address.",
         "event": "Select an available event.",
-        "privacy": "Privacy consent is required."
+        "privacy": "Votre consentement est nécessaire pour envoyer votre candidature."
       },
       "errors": {
         "generic": "We could not submit your application. Please try again.",
-        "unavailable": "Online application delivery is not configured yet. Please contact our team directly.",
+        "unavailable": "Votre candidature n’a pas pu être envoyée pour le moment. Veuillez contacter directement notre équipe.",
         "rateLimited": "Too many applications were submitted from this connection. Please try again later."
       },
       "submit": "Submit Application",
@@ -780,6 +779,54 @@
       "title": "General Enquiries?",
       "copy": "For partnerships, media or other enquiries, contact our team.",
       "cta": "Contact Us"
+    }
+  },
+  "PrivacyPage": {
+    "eyebrow": "Confidentialité",
+    "title": "Politique de Confidentialité",
+    "intro": "La présente politique explique comment Vintage Events Montecarlo S.r.l.s. traite les données personnelles transmises par l’intermédiaire du site Golden Era Sports Tour.",
+    "controller": {
+      "title": "Responsable du Traitement",
+      "copy": "Vintage Events Montecarlo S.r.l.s. est responsable du traitement et détermine comment et pourquoi les données personnelles décrites dans la présente politique sont utilisées.",
+      "contactLabel": "Contact confidentialité"
+    },
+    "data": {
+      "title": "Données Collectées",
+      "intro": "Les données collectées dépendent de la manière dont vous utilisez le site.",
+      "applicationTitle": "Candidatures Join the Tour",
+      "applicationCopy": "Une candidature peut comprendre vos prénom, nom, genre, adresse e-mail, numéro de téléphone ou WhatsApp, pays, niveau de tennis, club ou parcours tennistique, main de jeu, taille de T-shirt, taille de short ou pantalon, étape sélectionnée, source de recommandation, message facultatif, langue du site et horodatage de l’envoi.",
+      "contactTitle": "Demandes de contact",
+      "contactCopy": "Une demande de contact peut comprendre vos prénom, nom, adresse e-mail, objet et message.",
+      "technicalTitle": "Données techniques et de sécurité",
+      "technicalCopy": "Lorsqu’un formulaire est envoyé, des données techniques limitées, notamment l’adresse IP et les métadonnées de la requête, peuvent être traitées temporairement afin d’acheminer la demande, de prévenir les abus et de protéger le site."
+    },
+    "purposes": {
+      "title": "Utilisation des Données",
+      "application": "Examiner les candidatures au Tour, évaluer la participation et contacter les candidats au sujet de l’étape sélectionnée.",
+      "contact": "Répondre aux demandes générales, aux propositions de partenariat, aux demandes presse et aux collaborations.",
+      "security": "Faire fonctionner et protéger le site et ses formulaires, notamment contre les envois répétés ou abusifs."
+    },
+    "basis": {
+      "title": "Base du Traitement",
+      "copy": "Les données de candidature sont traitées sur la base du consentement donné dans le formulaire et, le cas échéant, afin de prendre des mesures à votre demande avant une participation. Les demandes de contact et les traitements de sécurité essentiels sont gérés afin de vous répondre et dans l’intérêt légitime de la société à exploiter et protéger le site.",
+      "withdrawal": "Vous pouvez retirer votre consentement à tout moment en nous contactant. Ce retrait n’affecte pas les traitements déjà réalisés avant votre demande."
+    },
+    "sharing": {
+      "title": "Destinataires et Prestataires",
+      "copy": "Les données peuvent être consultées par le personnel autorisé de la société et par des prestataires chargés de l’hébergement du site, de l’acheminement des e-mails, de l’informatique et de la sécurité. Ces prestataires les traitent uniquement lorsque cela est nécessaire à leurs services et pour le compte de la société. Les données personnelles ne sont pas vendues."
+    },
+    "retention": {
+      "title": "Durée de Conservation",
+      "copy": "Les données sont conservées uniquement pendant la durée raisonnablement nécessaire aux finalités décrites ci-dessus et au respect des obligations légales ou administratives applicables. Elles sont ensuite supprimées ou anonymisées lorsque cela est approprié."
+    },
+    "rights": {
+      "title": "Vos Droits",
+      "copy": "Selon les conditions applicables, vous pouvez demander l’accès à vos données personnelles, leur rectification, leur effacement, leur limitation ou leur portabilité, vous opposer à certains traitements ou retirer votre consentement. Vous pouvez également introduire une réclamation auprès de l’autorité de protection des données compétente.",
+      "contact": "Pour exercer vos droits ou poser une question sur la confidentialité, contactez"
+    },
+    "marketing": {
+      "title": "Communications Marketing",
+      "copy": "L’envoi d’un formulaire de contact ou de candidature ne vous inscrit pas automatiquement à des communications marketing. Un consentement distinct serait demandé avant la mise en place de tout abonnement marketing."
     }
   },
   "Metadata": {
@@ -810,6 +857,10 @@
     "join": {
       "title": "Join the Tour | Golden Era Sports Tour",
       "description": "Apply to join a Golden Era Sports Tour event and experience tennis through original racquets, iconic destinations and the evolution of the game."
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité | Golden Era Sports Tour",
+      "description": "Découvrez comment Golden Era Sports Tour traite les données transmises par les formulaires de candidature et de contact."
     },
     "concept": {
       "title": "The Concept | Golden Era Sports Tour",

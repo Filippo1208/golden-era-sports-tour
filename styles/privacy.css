@@ -1,0 +1,138 @@
+.privacy-page-shell,
+.privacy-page {
+  overflow: clip;
+  background: var(--color-background);
+}
+
+.privacy-hero {
+  padding-top: var(--header-safe-area);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.privacy-hero__inner {
+  padding-block: clamp(4rem, 7vw, 6.5rem);
+}
+
+.privacy-hero .eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--color-accent);
+}
+
+.privacy-hero h1 {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--color-brown-dark);
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.privacy-hero p {
+  max-width: 43rem;
+  margin: 1.75rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.privacy-policy {
+  padding-block: clamp(3.5rem, 6vw, 6rem);
+}
+
+.privacy-policy__section {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  border-top: 1px solid var(--color-border);
+  padding-block: 2.25rem;
+}
+
+.privacy-policy__section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.privacy-policy h2,
+.privacy-policy h3,
+.privacy-policy p,
+.privacy-policy ul {
+  margin: 0;
+}
+
+.privacy-policy h2 {
+  color: var(--color-brown-dark);
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.privacy-policy__body {
+  display: grid;
+  gap: 1rem;
+  max-width: 46rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.privacy-policy h3 {
+  margin-top: 0.4rem;
+  color: var(--color-brown-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.privacy-policy address {
+  display: grid;
+  gap: 0.15rem;
+  color: var(--color-text-muted);
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.privacy-policy address strong {
+  color: var(--color-brown-dark);
+  font-weight: 600;
+}
+
+.privacy-policy ul {
+  display: grid;
+  gap: 0.7rem;
+  padding-left: 1.15rem;
+}
+
+.privacy-policy a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 680px) {
+  .privacy-hero__inner {
+    padding-block: 3.5rem 4rem;
+  }
+
+  .privacy-hero h1 {
+    font-size: clamp(3rem, 14vw, 4rem);
+  }
+
+  .privacy-policy {
+    padding-block: 3.25rem 4.5rem;
+  }
+
+  .privacy-policy__section {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    padding-block: 1.9rem;
+  }
+
+  .privacy-policy h2 {
+    font-size: 1.5rem;
+  }
+}

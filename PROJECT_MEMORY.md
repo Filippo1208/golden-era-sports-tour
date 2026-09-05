@@ -597,10 +597,17 @@ Add real Golden Era image/video/logo assets, then design the next requested sect
 
 - The Tour application page lives at `/{locale}/join` for English, French and Italian. All existing Join CTAs use locale-aware links to `/join`.
 - The page is an editorial application experience with a compact hero, three-part format introduction, structured application form, success state and Contact alternative.
-- Join copy, validation messages, option labels and localized metadata live in the existing `next-intl` dictionaries. English is the master copy; French and Italian currently retain the same temporary English content.
+- Join copy, validation messages, option labels and localized metadata live in the existing `next-intl` dictionaries. English is the master copy; French and Italian retain the temporary English page content except for the approved localized privacy consent and related delivery error.
 - Application availability is stored on `tourOverviewStages` through `confirmed`, `completed` and `applicationsOpen`. The Join selector is derived from those flags rather than duplicating event names in the form.
 - Current selectable events are Monte-Carlo, Los Angeles and Dubai. Completed St. Moritz and unconfirmed São Paulo are excluded automatically.
 - Clothing sizes and select option values are centralized in `data/join.ts`.
 - The Contact and Join endpoints share the server-only Resend delivery helper in `lib/server/email.ts` and the same `RESEND_API_KEY`, `CONTACT_EMAIL_FROM` and optional `CONTACT_EMAIL_TO` variables.
 - Join submissions receive client and server validation, same-origin checking, a honeypot, disabled duplicate submission state, provider idempotency and a basic in-memory rate limit.
-- Privacy consent is mandatory. Its locale-preserving link points to the application privacy notice on the same Join page until a separate approved legal policy is supplied.
+- Privacy consent is mandatory. Step 06 contains only the checkbox, approved localized consent sentence, validation feedback and submit button; its locale-preserving link points to `/{locale}/privacy`.
+
+## Privacy Page
+
+- The localized public Privacy Policy lives at `/{locale}/privacy` for English, French and Italian and uses the shared Header and Footer.
+- The policy reflects only the current Join application, Contact form and limited form-security processing. It identifies Vintage Events Montecarlo S.r.l.s. as data controller and `info@goldenerasportstour.com` as the privacy contact.
+- Privacy metadata, canonical URLs and reciprocal `en` / `fr` / `it` / `x-default` alternates use the production SEO helpers. The three routes are included in the sitemap.
+- The shared Footer contains a discreet locale-aware Privacy Policy link while retaining the existing company information and website credit.

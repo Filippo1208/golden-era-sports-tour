@@ -18,6 +18,7 @@ const localizedPublicPages = [
   { pathname: "/team", changeFrequency: "monthly" },
   { pathname: "/contact", changeFrequency: "yearly" },
   { pathname: "/join", changeFrequency: "monthly" },
+  { pathname: "/privacy", changeFrequency: "yearly" },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

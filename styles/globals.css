@@ -1650,9 +1650,21 @@ video {
   color: var(--color-text-muted);
 }
 
-.site-footer__closing p:last-child {
-  text-align: right;
+.site-footer__closing-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
   white-space: nowrap;
+}
+
+.site-footer__closing-meta a {
+  transition: color 160ms ease;
+}
+
+.site-footer__closing-meta a:hover,
+.site-footer__closing-meta a:focus-visible {
+  color: var(--color-accent);
 }
 
 .route-placeholder {
@@ -3696,8 +3708,10 @@ video {
     gap: 0.55rem;
   }
 
-  .site-footer__closing p:last-child {
-    text-align: left;
+  .site-footer__closing-meta {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
   }
 
   .official-partners__logos {

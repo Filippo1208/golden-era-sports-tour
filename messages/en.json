@@ -537,6 +537,7 @@
   "Footer": {
     "byline": "By Vintage Events Monte-Carlo",
     "instagram": "Instagram",
+    "privacyPolicy": "Privacy Policy",
     "websiteCredit": "Website by Filippo Chiani"
   },
   "HomeTeam": {
@@ -752,9 +753,7 @@
         }
       },
       "privacy": {
-        "consent": "I have read and accept the <policy>Privacy Policy</policy> and agree to be contacted regarding my Golden Era Sports Tour application.",
-        "title": "Privacy Policy",
-        "note": "The information submitted through this form is used by Vintage Events Montecarlo S.r.l.s. to review your application and contact you about Golden Era Sports Tour participation. For privacy enquiries, contact info@goldenerasportstour.com."
+        "consent": "I have read the <policy>Privacy Policy</policy> and agree that my information may be used to review my Golden Era Sports Tour application and contact me regarding my application."
       },
       "validation": {
         "required": "This field is required.",
@@ -764,7 +763,7 @@
       },
       "errors": {
         "generic": "We could not submit your application. Please try again.",
-        "unavailable": "Online application delivery is not configured yet. Please contact our team directly.",
+        "unavailable": "We could not send your application at this time. Please contact our team directly.",
         "rateLimited": "Too many applications were submitted from this connection. Please try again later."
       },
       "submit": "Submit Application",
@@ -780,6 +779,54 @@
       "title": "General Enquiries?",
       "copy": "For partnerships, media or other enquiries, contact our team.",
       "cta": "Contact Us"
+    }
+  },
+  "PrivacyPage": {
+    "eyebrow": "Privacy",
+    "title": "Privacy Policy",
+    "intro": "This notice explains how Vintage Events Montecarlo S.r.l.s. manages personal information submitted through the Golden Era Sports Tour website.",
+    "controller": {
+      "title": "Data Controller",
+      "copy": "Vintage Events Montecarlo S.r.l.s. is responsible for deciding how and why the personal information described in this notice is processed.",
+      "contactLabel": "Privacy contact"
+    },
+    "data": {
+      "title": "Information We Collect",
+      "intro": "The information collected depends on how you use the website.",
+      "applicationTitle": "Join the Tour applications",
+      "applicationCopy": "An application may include your first name, last name, gender, email address, phone or WhatsApp number, country, tennis level, club or tennis background, playing hand, T-shirt size, shorts or pants size, selected event, referral source, optional message, website language and submission timestamp.",
+      "contactTitle": "Contact enquiries",
+      "contactCopy": "A contact enquiry may include your first name, last name, email address, subject and message.",
+      "technicalTitle": "Technical and security data",
+      "technicalCopy": "When a form is submitted, limited technical request data, including an IP address and request metadata, may be processed temporarily to deliver the request, prevent abuse and protect the website."
+    },
+    "purposes": {
+      "title": "How We Use Information",
+      "application": "To review Tour applications, assess participation and contact applicants about their selected event.",
+      "contact": "To respond to general enquiries, partnership requests, media enquiries and collaborations.",
+      "security": "To operate, secure and protect the website and its forms, including preventing repeated or abusive submissions."
+    },
+    "basis": {
+      "title": "Basis for Processing",
+      "copy": "Application information is processed with the consent provided through the form and, where relevant, to take steps at your request before participation. Contact enquiries and essential security processing are handled to respond to your request and for the company’s legitimate interest in operating and protecting the website.",
+      "withdrawal": "You may withdraw consent at any time by contacting us. Withdrawal does not affect processing already carried out before the request."
+    },
+    "sharing": {
+      "title": "Who May Process It",
+      "copy": "Information may be accessed by authorised company personnel and by service providers supporting website hosting, email delivery, IT and security. They process information only where necessary to provide those services and on behalf of the company. Personal information is not sold."
+    },
+    "retention": {
+      "title": "How Long We Keep It",
+      "copy": "Information is retained only for as long as reasonably necessary for the purposes described above and for any applicable legal or administrative obligations. It is then deleted or anonymised where appropriate."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "copy": "Where applicable, you may request access to your personal information, correction, deletion, restriction or portability, object to certain processing, or withdraw consent. You may also lodge a complaint with the competent data protection authority.",
+      "contact": "To make a request or ask a privacy question, contact"
+    },
+    "marketing": {
+      "title": "Marketing Communications",
+      "copy": "Submitting a contact or application form does not automatically subscribe you to marketing communications. Separate consent would be requested before any marketing subscription is introduced."
     }
   },
   "Metadata": {
@@ -810,6 +857,10 @@
     "join": {
       "title": "Join the Tour | Golden Era Sports Tour",
       "description": "Apply to join a Golden Era Sports Tour event and experience tennis through original racquets, iconic destinations and the evolution of the game."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Golden Era Sports Tour",
+      "description": "Learn how Golden Era Sports Tour handles information submitted through applications and contact forms."
     },
     "concept": {
       "title": "The Concept | Golden Era Sports Tour",

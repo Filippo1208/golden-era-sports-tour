@@ -12,6 +12,7 @@ import {
   tennisLevelOptions,
   type JoinApplicationEventOption,
 } from "@/data/join";
+import { Link } from "@/i18n/navigation";
 
 type TextFieldName =
   | "firstName"
@@ -542,7 +543,7 @@ export function JoinApplicationForm({ events }: JoinApplicationFormProps) {
           <label htmlFor="privacyConsent">
             {t.rich("privacy.consent", {
               policy: (chunks) => (
-                <a href="#join-privacy-note">{chunks}</a>
+                <Link href="/privacy">{chunks}</Link>
               ),
             })}
           </label>
@@ -551,25 +552,20 @@ export function JoinApplicationForm({ events }: JoinApplicationFormProps) {
           {fieldErrors.privacyConsent}
         </FieldError>
 
-        <div id="join-privacy-note" className="join-form__privacy-note">
-          <h3>{t("privacy.title")}</h3>
-          <p>{t("privacy.note")}</p>
-        </div>
+        {formError ? (
+          <p className="join-form__error" role="alert">
+            {formError}
+          </p>
+        ) : null}
+
+        <button
+          className="button button--primary join-form__submit"
+          type="submit"
+          disabled={status === "submitting"}
+        >
+          {status === "submitting" ? t("submitting") : t("submit")}
+        </button>
       </fieldset>
-
-      {formError ? (
-        <p className="join-form__error" role="alert">
-          {formError}
-        </p>
-      ) : null}
-
-      <button
-        className="button button--primary join-form__submit"
-        type="submit"
-        disabled={status === "submitting"}
-      >
-        {status === "submitting" ? t("submitting") : t("submit")}
-      </button>
     </form>
   );
 }
