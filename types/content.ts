@@ -118,6 +118,9 @@ export type TourOverviewStage = {
   imagePosition?: string;
   href: string;
   pageAvailable: boolean;
+  confirmed: boolean;
+  completed: boolean;
+  applicationsOpen: boolean;
   year: number;
   supportingLine: string;
   layout: TourOverviewLayout;
@@ -161,15 +164,12 @@ export type Partner = {
   type: PartnerType;
   status: PartnerStatus;
   logo?: string | null;
-  logoAlt: string;
   logoWidth: number;
   logoHeight: number;
   website: string;
-  shortDescription?: string;
   partnershipRole?: string;
   stageAssociation?: string[];
   featuredImage?: string | null;
-  featuredImageAlt?: string;
   featuredImageWidth?: number;
   featuredImageHeight?: number;
 };

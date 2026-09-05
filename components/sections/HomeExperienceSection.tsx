@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 
 import { Container } from "@/components/layout/Container";
@@ -9,25 +10,14 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import experienceCommunity from "@/public/images/experience/experience-community.jpg";
 
 const experiencePillars = [
-  {
-    title: "Play.",
-    copy: "Compete with original racquets from different eras.",
-  },
-  {
-    title: "Meet.",
-    copy: "Connect with players, guests and tennis personalities.",
-  },
-  {
-    title: "Share.",
-    copy: "Experience the tournament beyond the court.",
-  },
-  {
-    title: "Remember.",
-    copy: "Leave with stories, images and moments worth keeping.",
-  },
+  "play",
+  "meet",
+  "share",
+  "remember",
 ] as const;
 
 export function HomeExperienceSection() {
+  const t = useTranslations("HomePage.experience");
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -75,22 +65,18 @@ export function HomeExperienceSection() {
       <Container size="wide" className="home-experience__inner">
         <div className="home-experience__layout">
           <div className="home-experience__intro">
-            <Eyebrow>The Experience</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2 id="home-experience-title">
-              <span>More Than</span>
-              <span>A Tournament.</span>
+              <span>{t("titleLineOne")}</span>
+              <span>{t("titleLineTwo")}</span>
             </h2>
-            <p>
-              Golden Era brings tennis heritage back to life through
-              competition, iconic destinations and shared moments on and off
-              the court.
-            </p>
+            <p>{t("copy")}</p>
           </div>
 
           <figure className="home-experience__media">
             <Image
               src={experienceCommunity}
-              alt="Golden Era players gathered on a clay court with heritage tennis racquets"
+              alt={t("imageAlt")}
               fill
               sizes="(max-width: 900px) calc(100vw - 2rem), (max-width: 1496px) 55vw, 790px"
               className="home-experience__image"
@@ -99,9 +85,9 @@ export function HomeExperienceSection() {
 
           <dl className="home-experience__pillars">
             {experiencePillars.map((pillar) => (
-              <div className="home-experience__pillar" key={pillar.title}>
-                <dt>{pillar.title}</dt>
-                <dd>{pillar.copy}</dd>
+              <div className="home-experience__pillar" key={pillar}>
+                <dt>{t(`pillars.${pillar}.title`)}</dt>
+                <dd>{t(`pillars.${pillar}.copy`)}</dd>
               </div>
             ))}
           </dl>
@@ -112,12 +98,12 @@ export function HomeExperienceSection() {
             arrow="up-right"
             className="home-experience__link"
           >
-            Discover the Experience
+            {t("cta")}
           </Button>
         </div>
 
         <p className="home-experience__signature" aria-hidden="true">
-          Play &middot; Meet &middot; Share &middot; Remember
+          {t("signature")}
         </p>
       </Container>
     </section>

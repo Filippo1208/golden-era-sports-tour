@@ -22,6 +22,9 @@ const localizedLegacyRedirects = locales.flatMap((locale) => [
 ]);
 
 const nextConfig: NextConfig = {
+  images: {
+    qualities: [75, 82],
+  },
   async redirects() {
     return [
       {

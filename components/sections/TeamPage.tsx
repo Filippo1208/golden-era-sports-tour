@@ -9,48 +9,33 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 const teamMembers = [
   {
     id: "nicola",
-    number: "01",
+    number: "01 / 05",
     image: "/images/team/nicola.jpg",
-    width: 400,
-    height: 678,
     position: "50% 10%",
-    sizes: "(max-width: 680px) 85vw, (max-width: 900px) 87vw, 38vw",
   },
   {
     id: "massimo",
-    number: "02",
+    number: "02 / 05",
     image: "/images/team/massimo.jpg",
-    width: 406,
-    height: 688,
     position: "50% 8%",
-    sizes: "(max-width: 680px) 78vw, (max-width: 900px) 80vw, 46vw",
   },
   {
     id: "marco",
-    number: "03",
+    number: "03 / 05",
     image: "/images/team/marco.jpg",
-    width: 388,
-    height: 678,
     position: "50% 9%",
-    sizes: "(max-width: 680px) 67vw, (max-width: 900px) 69vw, 38vw",
   },
   {
     id: "filippo",
-    number: "04",
+    number: "04 / 05",
     image: "/images/team/filippo.jpg",
-    width: 354,
-    height: 686,
     position: "50% 8%",
-    sizes: "(max-width: 680px) 82vw, (max-width: 900px) 84vw, 38vw",
   },
   {
     id: "pier",
-    number: "05",
+    number: "05 / 05",
     image: "/images/team/pier.jpg",
-    width: 402,
-    height: 682,
     position: "50% 8%",
-    sizes: "(max-width: 680px) 74vw, (max-width: 900px) 76vw, 46vw",
   },
 ] as const;
 
@@ -76,10 +61,6 @@ export async function TeamPage() {
           <p className="team-hero__intro" data-team-reveal>
             {t("hero.intro")}
           </p>
-
-          <div className="team-hero__court-line" aria-hidden="true">
-            <span>00 / 05</span>
-          </div>
         </Container>
       </section>
 
@@ -93,8 +74,10 @@ export async function TeamPage() {
               <Image
                 src="/images/team/jerome.jpg"
                 alt={t("founder.imageAlt")}
-                fill
-                sizes="(max-width: 900px) 87vw, (max-width: 1496px) 46vw, 690px"
+                width={780}
+                height={1322}
+                sizes="(max-width: 768px) 80vw, 400px"
+                quality={82}
                 className="team-founder__image"
               />
             </figure>
@@ -118,20 +101,21 @@ export async function TeamPage() {
                   {t("founder.story.opening")}
                 </p>
                 <p>{t("founder.story.background")}</p>
+                <p>{t("founder.story.equipment")}</p>
                 <p className="team-founder__result">
                   {t("founder.story.result")}
                 </p>
                 <p>{t("founder.story.question")}</p>
                 <p>{t("founder.story.legacy")}</p>
               </div>
+
+              <blockquote className="team-founder__quote" data-team-reveal>
+                <span>{t("founder.quote.lineOne")}</span>
+                <span>{t("founder.quote.lineTwo")}</span>
+                <span>{t("founder.quote.lineThree")}</span>
+              </blockquote>
             </div>
           </div>
-
-          <blockquote className="team-founder__quote" data-team-reveal>
-            <span>{t("founder.quote.lineOne")}</span>
-            <span>{t("founder.quote.lineTwo")}</span>
-            <span>{t("founder.quote.lineThree")}</span>
-          </blockquote>
         </Container>
       </section>
 
@@ -142,7 +126,6 @@ export async function TeamPage() {
             <span>{t("statement.lineTwo")}</span>
             <span>{t("statement.lineThree")}</span>
           </h2>
-          <p data-team-reveal>{t("statement.supporting")}</p>
         </Container>
       </section>
 
@@ -152,40 +135,46 @@ export async function TeamPage() {
         </h2>
 
         <Container size="wide" className="team-roster__inner">
-          {teamMembers.map((member) => (
-            <article
-              key={member.id}
-              className={`team-member team-member--${member.id}`}
-            >
-              <span className="team-member__number" data-team-reveal>
-                {member.number}
-              </span>
+          <div className="team-roster__eyebrow" data-team-reveal>
+            <Eyebrow>{t("people.eyebrow")}</Eyebrow>
+          </div>
 
-              <figure
-                className="team-member__media"
-                data-team-reveal="portrait"
+          <div className="team-roster__grid">
+            {teamMembers.map((member) => (
+              <article
+                key={member.id}
+                className={`team-member team-member--${member.id}`}
               >
-                <Image
-                  src={member.image}
-                  alt={t(`people.members.${member.id}.imageAlt`)}
-                  width={member.width}
-                  height={member.height}
-                  sizes={member.sizes}
-                  className="team-member__image"
-                  style={{ objectPosition: member.position }}
-                />
-              </figure>
+                <span className="team-member__number" data-team-reveal>
+                  {member.number}
+                </span>
 
-              <div className="team-member__identity">
-                <h3 data-team-reveal>
-                  {t(`people.members.${member.id}.name`)}
-                </h3>
-                <p data-team-reveal>
-                  {t(`people.members.${member.id}.role`)}
-                </p>
-              </div>
-            </article>
-          ))}
+                <figure
+                  className="team-member__media"
+                  data-team-reveal="portrait"
+                >
+                  <Image
+                    src={member.image}
+                    alt={t(`people.members.${member.id}.imageAlt`)}
+                    fill
+                    sizes="(max-width: 768px) 70vw, 260px"
+                    quality={82}
+                    className="team-member__image"
+                    style={{ objectPosition: member.position }}
+                  />
+                </figure>
+
+                <div className="team-member__identity">
+                  <h3 data-team-reveal>
+                    {t(`people.members.${member.id}.name`)}
+                  </h3>
+                  <p data-team-reveal>
+                    {t(`people.members.${member.id}.role`)}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </Container>
       </section>
 

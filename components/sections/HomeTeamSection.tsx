@@ -11,7 +11,7 @@ export async function HomeTeamSection() {
   return (
     <section className="home-team" aria-labelledby="home-team-title">
       <Container size="wide" className="home-team__inner">
-        <header className="home-team__header">
+        <header className="home-team__copy">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 id="home-team-title">
             <span>{t("headlineLineOne")}</span>
@@ -24,8 +24,9 @@ export async function HomeTeamSection() {
           <Image
             src="/images/team/team.jpg"
             alt={t("imageAlt")}
-            fill
-            sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 94vw, 1120px"
+            width={2200}
+            height={1466}
+            sizes="(max-width: 768px) calc(100vw - 2rem), 55vw"
             className="home-team__image"
           />
         </figure>

@@ -5,18 +5,47 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { homeHeroMedia } from "@/data/media";
 import { formatEventDateRange } from "@/lib/events";
 import type { TourEvent } from "@/types/content";
+import { getTranslations } from "next-intl/server";
 
 type HeroSectionProps = {
   nextEvent: TourEvent | null;
 };
 
-export function HeroSection({ nextEvent }: HeroSectionProps) {
-  const eventDate = nextEvent ? formatEventDateRange(nextEvent) : "TO BE ANNOUNCED";
+const eventCtaKeys = {
+  "st-moritz-2026": "stMoritz",
+  "monte-carlo": "monteCarlo",
+} as const;
+
+export async function HeroSection({ nextEvent }: HeroSectionProps) {
+  const t = await getTranslations("HomePage.hero");
+  const common = await getTranslations("Common");
+  const monthNames = [
+    common("months.january"),
+    common("months.february"),
+    common("months.march"),
+    common("months.april"),
+    common("months.may"),
+    common("months.june"),
+    common("months.july"),
+    common("months.august"),
+    common("months.september"),
+    common("months.october"),
+    common("months.november"),
+    common("months.december"),
+  ];
+  const eventDate = nextEvent
+    ? formatEventDateRange(nextEvent, monthNames)
+    : t("toBeAnnouncedUppercase");
   const primaryCtaHref = nextEvent?.ctaHref ?? "/tour";
-  const primaryCtaLabel = nextEvent?.ctaLabel ?? "Discover the Tour";
+  const eventCtaKey = nextEvent
+    ? eventCtaKeys[nextEvent.slug as keyof typeof eventCtaKeys]
+    : undefined;
+  const primaryCtaLabel = eventCtaKey
+    ? t(`eventCtas.${eventCtaKey}`)
+    : t("discoverTour");
 
   return (
-    <section className="hero-section" aria-label="Golden Era Sports Tour">
+    <section className="hero-section" aria-label={t("ariaLabel")}>
       <CinematicVideo
         desktopSrc={homeHeroMedia.desktopVideo}
         mobileSrc={homeHeroMedia.mobileVideo}
@@ -25,21 +54,20 @@ export function HeroSection({ nextEvent }: HeroSectionProps) {
       >
         <Container size="wide" className="hero-section__content">
           <div className="hero-section__copy">
-            <Eyebrow>Golden Era Sports Tour</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h1>
-              The Evolution of Tennis,
-              <span>Played by Amateurs.</span>
+              {t("titleLineOne")}
+              <span>{t("titleLineTwo")}</span>
             </h1>
             <p className="hero-section__description">
-              A global tennis tour celebrating the heritage and evolution of
-              the game.
+              {t("description")}
             </p>
           </div>
 
           <div className="hero-section__lower">
-            <div className="hero-section__event" aria-label="Next event">
-              <span>Next stage</span>
-              <strong>{nextEvent?.city ?? "To be announced"}</strong>
+            <div className="hero-section__event" aria-label={t("nextEventLabel")}>
+              <span>{t("nextStage")}</span>
+              <strong>{nextEvent?.city ?? t("toBeAnnounced")}</strong>
               <small>{eventDate}</small>
             </div>
 
@@ -58,7 +86,7 @@ export function HeroSection({ nextEvent }: HeroSectionProps) {
                 variant="text"
                 onDark
               >
-                Join the Tour
+                {t("joinTour")}
               </Button>
             </div>
           </div>

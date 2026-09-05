@@ -1,21 +1,6 @@
 import type { TourEvent } from "@/types/content";
 
-const monthNames = [
-  "JANUARY",
-  "FEBRUARY",
-  "MARCH",
-  "APRIL",
-  "MAY",
-  "JUNE",
-  "JULY",
-  "AUGUST",
-  "SEPTEMBER",
-  "OCTOBER",
-  "NOVEMBER",
-  "DECEMBER",
-];
-
-function dateParts(date: string) {
+function dateParts(date: string, monthNames: readonly string[]) {
   const [year, month, day] = date.split("-").map(Number);
 
   return {
@@ -47,9 +32,12 @@ export function getNextEvent(events: TourEvent[], now = new Date()) {
   );
 }
 
-export function formatEventDateRange(event: TourEvent) {
-  const start = dateParts(event.startDate);
-  const end = event.endDate ? dateParts(event.endDate) : start;
+export function formatEventDateRange(
+  event: TourEvent,
+  monthNames: readonly string[],
+) {
+  const start = dateParts(event.startDate, monthNames);
+  const end = event.endDate ? dateParts(event.endDate, monthNames) : start;
 
   if (
     start.year === end.year &&

@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { useTranslations } from "next-intl";
 
 type ImagePlaceholderProps = {
   label?: string;
@@ -18,14 +19,16 @@ export function ImagePlaceholder({
   aspectRatio = "16:9",
   className = "",
 }: ImagePlaceholderProps) {
+  const t = useTranslations("MediaPlaceholders");
+
   return (
     <div
       className={`image-placeholder ${className}`.trim()}
       style={{ "--placeholder-ratio": aspectRatios[aspectRatio] } as CSSProperties}
       role="img"
-      aria-label={`Development image placeholder for ${label}`}
+      aria-label={t("imageAriaLabel", { label })}
     >
-      <span>Image placeholder</span>
+      <span>{t("imageLabel")}</span>
       <strong>{label}</strong>
       <small>{aspectRatio}</small>
     </div>

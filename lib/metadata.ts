@@ -34,10 +34,13 @@ export function getLocalizedMetadata({
   return {
     title,
     description,
+    openGraph: {
+      title,
+      description,
+    },
     alternates: {
       canonical: getLocalizedPath(locale, pathname),
       languages: getLanguageAlternates(pathname),
     },
   };
 }
-

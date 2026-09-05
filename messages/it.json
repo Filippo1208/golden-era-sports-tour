@@ -1,37 +1,550 @@
 {
   "Navigation": {
-    "primaryLabel": "Primary navigation",
-    "homeLabel": "Golden Era home",
-    "openMenu": "Open navigation",
+    "primaryLabel": "Navigazione principale",
+    "homeLabel": "Home Golden Era",
+    "logoAlt": "Golden Era Sports Tour di Vintage Events Monte-Carlo",
+    "openMenu": "Apri la navigazione",
     "menu": "Menu",
-    "joinTour": "Join the Tour",
+    "joinTour": "Partecipa al Tour",
     "items": {
-      "concept": "The Concept",
+      "concept": "Il Concept",
       "tour": "Tour",
-      "experience": "Experience",
-      "collection": "The Collection",
-      "partners": "Partners",
+      "experience": "L’Esperienza",
+      "collection": "La Collezione",
+      "partners": "Partner",
       "team": "Team",
-      "contact": "Contact"
+      "contact": "Contatti"
+    }
+  },
+  "Common": {
+    "months": {
+      "january": "GENNAIO",
+      "february": "FEBBRAIO",
+      "march": "MARZO",
+      "april": "APRILE",
+      "may": "MAGGIO",
+      "june": "GIUGNO",
+      "july": "LUGLIO",
+      "august": "AGOSTO",
+      "september": "SETTEMBRE",
+      "october": "OTTOBRE",
+      "november": "NOVEMBRE",
+      "december": "DICEMBRE"
+    }
+  },
+  "MediaPlaceholders": {
+    "imageAriaLabel": "Development image placeholder for {label}",
+    "imageLabel": "Image placeholder",
+    "videoAriaLabel": "Development video placeholder for {label}",
+    "videoLabel": "Video placeholder",
+    "videoHint": "Native HTML5 video slot"
+  },
+  "OfficialPartners": {
+    "title": "Official Partners",
+    "logosAriaLabel": "Official partner logos",
+    "visitAriaLabel": "Visit {name}",
+    "cta": "Discover Our Partners",
+    "partners": {
+      "heroes": {
+        "logoAlt": "HEROE'S official partner logo"
+      },
+      "sembrancher": {
+        "logoAlt": "Sembrancher official partner logo"
+      }
+    }
+  },
+  "HomePage": {
+    "hero": {
+      "ariaLabel": "Golden Era Sports Tour",
+      "eyebrow": "Golden Era Sports Tour",
+      "titleLineOne": "L’Evoluzione del Tennis,",
+      "titleLineTwo": "Giocata da Amatori.",
+      "description": "Un Tour internazionale che celebra la storia e l’evoluzione del tennis.",
+      "nextEventLabel": "Prossima Tappa",
+      "nextStage": "Prossima Tappa",
+      "toBeAnnounced": "Da Confermare",
+      "toBeAnnouncedUppercase": "DA CONFERMARE",
+      "discoverTour": "Scopri il Tour",
+      "joinTour": "Partecipa al Tour",
+      "eventCtas": {
+        "stMoritz": "Scopri St. Moritz",
+        "monteCarlo": "Scopri Monte-Carlo"
+      }
+    },
+    "countdown": {
+      "mobileDescription": "Un Tour internazionale che celebra la storia e l’evoluzione del tennis.",
+      "nextStage": "Prossima Tappa",
+      "toBeAnnounced": "Da Confermare",
+      "eventCtas": {
+        "stMoritz": "Scopri St. Moritz",
+        "monteCarlo": "Scopri Monte-Carlo",
+        "discoverTour": "Scopri il Tour"
+      },
+      "timer": {
+        "days": "Giorni",
+        "hours": "Ore",
+        "minutes": "Minuti",
+        "seconds": "Secondi",
+        "preparing": "Preparazione del conto alla rovescia",
+        "nextStagePending": "PROSSIMA TAPPA DA CONFERMARE",
+        "eventInProgress": "EVENTO IN CORSO",
+        "countdownTo": "Conto alla rovescia per {city}"
+      }
+    },
+    "concept": {
+      "eyebrow": "Il Concept",
+      "titleLineOne": "Un Omaggio alla",
+      "titleLineTwo": "Storia del Tennis,",
+      "titleLineThree": "Da Giocare — Non da Ricordare.",
+      "copy": "Un Tour internazionale di tennis amatoriale che celebra la storia e l’evoluzione del gioco attraverso racchette originali e un format sportivo unico.",
+      "cta": "Scopri il Concept",
+      "imageAlt": "Racchetta da tennis Dunlop vintage della collezione Golden Era"
+    },
+    "tour": {
+      "eyebrow": "Il Tour",
+      "titleLineOne": "Un Circuito Globale.",
+      "titleLineTwo": "Cinque Destinazioni Iconiche.",
+      "copy": "Dalle Alpi al Mediterraneo, dalla California al Sud America fino al Medio Oriente, Golden Era porta l’evoluzione del tennis in destinazioni internazionali uniche.",
+      "destinationsLabel": "Destinazioni del Tour 2026",
+      "nextStage": "Prossima Tappa",
+      "discover": "Scopri",
+      "cta": "Scopri il Tour",
+      "stages": {
+        "stMoritz": {
+          "dateLabel": "12 luglio 2026",
+          "status": "Conclusa",
+          "imageAlt": "Campi da tennis in terra battuta nel paesaggio alpino di St. Moritz"
+        },
+        "monteCarlo": {
+          "dateLabel": "10–11 ottobre 2026",
+          "status": "Prossima Tappa",
+          "imageAlt": "Campi da tennis in terra battuta affacciati sul Mediterraneo a Monte-Carlo"
+        },
+        "losAngeles": {
+          "dateLabel": "25 ottobre 2026",
+          "status": "In Arrivo",
+          "imageAlt": "Panorama di Los Angeles con le sue palme"
+        },
+        "saoPaulo": {
+          "dateLabel": "novembre 2026",
+          "status": "Da Confermare",
+          "imageAlt": "Panorama di São Paulo visto da un parco urbano verde"
+        },
+        "dubai": {
+          "dateLabel": "6 dicembre 2026",
+          "status": "Finali",
+          "imageAlt": "Architettura contemporanea e panorama sul lungomare di Dubai"
+        }
+      }
+    },
+    "experience": {
+      "eyebrow": "L’Esperienza",
+      "titleLineOne": "Molto Più",
+      "titleLineTwo": "di un Torneo.",
+      "copy": "Golden Era riporta in vita la storia del tennis attraverso la competizione, destinazioni iconiche e momenti condivisi dentro e fuori dal campo.",
+      "imageAlt": "Giocatori Golden Era riuniti su un campo in terra battuta con racchette storiche",
+      "pillars": {
+        "play": {
+          "title": "Giocare.",
+          "copy": "Scendi in campo con racchette originali di epoche diverse."
+        },
+        "meet": {
+          "title": "Incon\u200btrare.",
+          "copy": "Conosci giocatori, ospiti e protagonisti del mondo del tennis."
+        },
+        "share": {
+          "title": "Condivi\u200bdere.",
+          "copy": "Vivi il torneo anche oltre il campo."
+        },
+        "remember": {
+          "title": "Ricor\u200bdare.",
+          "copy": "Porta con te storie, immagini e momenti da ricordare."
+        }
+      },
+      "cta": "Scopri l’Esperienza",
+      "signature": "Giocare · Incontrare · Condividere · Ricordare"
+    }
+  },
+  "TourStages": {
+    "stages": {
+      "stMoritz": {
+        "country": "Switzerland",
+        "dateLabel": "12 July 2026",
+        "status": "Completed",
+        "imageAlt": "Clay tennis courts beneath the Alpine landscape of St. Moritz",
+        "supportingLine": "Where the 2026 journey began."
+      },
+      "monteCarlo": {
+        "country": "Monaco",
+        "dateLabel": "10–11 October 2026",
+        "status": "Next Stage",
+        "imageAlt": "Clay tennis courts overlooking the Mediterranean in Monte-Carlo",
+        "supportingLine": "The next Golden Era stage."
+      },
+      "losAngeles": {
+        "country": "USA",
+        "dateLabel": "25 October 2026",
+        "status": "Upcoming",
+        "imageAlt": "Los Angeles skyline and palm trees",
+        "supportingLine": "California. Tennis. Heritage."
+      },
+      "saoPaulo": {
+        "country": "Brazil",
+        "dateLabel": "November 2026",
+        "status": "TBC",
+        "imageAlt": "The São Paulo skyline seen across a green urban park",
+        "supportingLine": "A new chapter in South America."
+      },
+      "dubai": {
+        "country": "UAE",
+        "dateLabel": "06 December 2026",
+        "status": "Finals",
+        "imageAlt": "Contemporary waterfront architecture and skyline in Dubai",
+        "supportingLine": "The 2026 Finals."
+      }
+    }
+  },
+  "ConceptPage": {
+    "opening": {
+      "eyebrow": "Golden Era Sports Tour",
+      "title": "The Concept",
+      "statementLineOne": "The Evolution of Tennis,",
+      "statementLineTwo": "Played by Amateurs.",
+      "copy": "A global amateur tennis tour hosted in iconic locations, celebrating the heritage and evolution of the game.",
+      "imageAlt": "Close-up of a historic wooden tennis racquet from the Golden Era collection"
+    },
+    "manifesto": {
+      "eyebrow": "Our Manifesto",
+      "lineOne": "This is not a professional tour.",
+      "lineTwo": "This is not an exhibition.",
+      "titleLineOne": "It is a tribute to tennis history,",
+      "titleLineTwo": "Played — Not Remembered."
+    },
+    "rule": {
+      "eyebrow": "The Rule",
+      "titleLineOne": "Opposition",
+      "titleLineTwo": "of Materials.",
+      "lead": "Players never use their own racquets.",
+      "copyOne": "Historic racquets are assigned by the organisation according to each player's technical characteristics and the balance of the draw.",
+      "copyTwo": "More skilled players can be challenged with vintage equipment, while less experienced players can rely on more modern technology, turning the evolution of equipment into part of the competition itself.",
+      "imageAlt": "Selection of tennis racquets from different generations",
+      "materialsAriaLabel": "Wood, metal, composite, modern",
+      "materialsIntro": "The equipment changed. So did the game.",
+      "materials": {
+        "wood": "Wood",
+        "metal": "Metal",
+        "composite": "Composite",
+        "modern": "Modern"
+      }
+    },
+    "racquets": {
+      "eyebrow": "The Evolution of the Racquet",
+      "upTo": "Up To",
+      "originalRacquets": "Original Racquets",
+      "period": "From the 1970s to today.",
+      "copyOne": "From wooden frames to modern composite technology, every generation changed the way tennis could be played.",
+      "copyTwo": "Golden Era brings those differences back onto the court."
+    },
+    "played": {
+      "eyebrow": "Played, Not Remembered",
+      "titleLineOne": "History Returns",
+      "titleLineTwo": "to the Court.",
+      "copyOne": "Golden Era is not a display of historic equipment.",
+      "copyTwo": "The racquets are played.",
+      "copyThree": "Different generations of tennis technology return to competition, allowing players to experience how the game itself has changed.",
+      "imageAlt": "Golden Era participant playing with a wooden tennis racquet on clay"
+    },
+    "process": {
+      "eyebrow": "How the Rule Works",
+      "title": "Three sporting decisions, one balanced format.",
+      "steps": {
+        "assessment": {
+          "title": "Player Assessment",
+          "copy": "The organisation evaluates the technical characteristics and playing level of each participant."
+        },
+        "assignment": {
+          "title": "Racquet Assignment",
+          "copy": "Equipment is selected to create the intended contrast between player ability and racquet technology."
+        },
+        "competition": {
+          "title": "Balanced Competition",
+          "copy": "The draw and racquet assignments work together to create a balanced competition consistent with the Golden Era format."
+        }
+      }
+    },
+    "format": {
+      "eyebrow": "Sporting Format",
+      "titleLineOne": "One Day.",
+      "titleLineTwo": "Real Competition.",
+      "copy": "A group stage followed by finals keeps each stage dynamic while guaranteeing meaningful time on court.",
+      "ariaLabel": "Golden Era sporting format",
+      "facts": {
+        "duration": {
+          "lineOne": "Minutes",
+          "lineTwo": "Per Match"
+        },
+        "matches": {
+          "lineOne": "Matches",
+          "lineTwo": "Guaranteed"
+        },
+        "ranking": {
+          "lineOne": "Overall Tour",
+          "lineTwo": "Ranking"
+        }
+      }
+    },
+    "whiteBalls": {
+      "eyebrow": "A Detail from Tennis History",
+      "titleLineOne": "Always Played",
+      "titleLineTwo": "with White Balls.",
+      "copy": "A deliberate return to tradition and one of the details that makes Golden Era immediately distinctive on court."
+    },
+    "final": {
+      "preludeLineOne": "Every Era",
+      "preludeLineTwo": "Changed the Game.",
+      "titleLineOne": "Golden Era",
+      "titleLineTwo": "Brings Them Back",
+      "titleLineThree": "to the Same Court.",
+      "statementLineOne": "The Evolution of Tennis,",
+      "statementLineTwo": "Played by Amateurs.",
+      "discoverTour": "Discover the Tour"
+    }
+  },
+  "TourPage": {
+    "opening": {
+      "eyebrow": "The Golden Era Sports Tour",
+      "titleLineOne": "The",
+      "titleLineTwo": "Tour",
+      "statementLineOne": "One global circuit.",
+      "statementHighlight": "Five",
+      "statementLineTwo": "iconic destinations."
+    },
+    "index": {
+      "eyebrow": "2026 Itinerary",
+      "title": "The Circuit"
+    },
+    "destination": {
+      "discover": "Discover {city}"
+    },
+    "future": {
+      "eyebrow": "Next Chapter",
+      "city": "New York",
+      "line": "The Tour continues."
+    },
+    "final": {
+      "titleLineOne": "One global circuit.",
+      "titleLineTwo": "Five destinations.",
+      "statementLineOne": "The evolution of tennis,",
+      "statementLineTwo": "played by amateurs."
+    }
+  },
+  "TourStagePage": {
+    "monteCarlo": {
+      "hero": {
+        "eyebrow": "Golden Era Sports Tour",
+        "dateLabel": "10-11 October 2026",
+        "primaryCta": "Join the Tour",
+        "secondaryCta": "Discover the Concept",
+        "imageAlt": "Monte-Carlo Edition at Monte-Carlo Country Club"
+      },
+      "programme": {
+        "title": "The Weekend",
+        "intro": "Two days built around tennis, heritage and shared moments at the Monte-Carlo Country Club.",
+        "ariaLabel": "Monte-Carlo weekend programme",
+        "schedule": {
+          "saturdayPractice": {
+            "dayLabel": "Saturday",
+            "dateLabel": "10 October 2026",
+            "title": "Practice Session & Welcome Party",
+            "description": "Courts will be available for practice and tournament draw preparation for the following day."
+          },
+          "sundayTournament": {
+            "dayLabel": "Sunday",
+            "dateLabel": "11 October 2026",
+            "title": "Golden Era Tournament",
+            "description": ""
+          },
+          "sundayEvening": {
+            "dayLabel": "Sunday Evening",
+            "dateLabel": "",
+            "title": "Cocktail Evening",
+            "description": ""
+          }
+        }
+      },
+      "experience": {
+        "eyebrow": "The Experience",
+        "headline": "Tennis, Heritage\nand Monte-Carlo.",
+        "copy": "A weekend built around the Golden Era format, shared moments on and off court, and the atmosphere of the Monte-Carlo Country Club.",
+        "includedAriaLabel": "What is included",
+        "included": {
+          "tournamentAccess": "Tournament access",
+          "clubAccess": "Vintage Tennis Club access",
+          "apparel": "Vintage tennis apparel",
+          "prizes": "Exclusive prizes",
+          "foodBeverages": "Food & beverages"
+        }
+      },
+      "entry": {
+        "eyebrow": "Entry",
+        "standardLabel": "Per player",
+        "memberLabel": "For MCCC members",
+        "note": "Limited places",
+        "guestPolicy": "Up to three accompanying guests per invitation."
+      },
+      "format": {
+        "eyebrow": "The Golden Era Format",
+        "headline": "Play Through\nTennis History.",
+        "copy": "Players compete with racquets assigned by the organisation according to playing level and tournament balance, bringing different eras of tennis onto the same court.",
+        "cta": "Discover the Concept"
+      },
+      "final": {
+        "dateLabel": "10-11 October 2026",
+        "headline": "Join the Next\nGolden Era Stage.",
+        "cta": "Join the Tour"
+      }
+    }
+  },
+  "ExperiencePage": {
+    "hero": {
+      "eyebrow": "The Experience",
+      "titleLineOne": "More Than",
+      "titleLineTwo": "A Tournament.",
+      "copy": "Tennis, heritage and people brought together for one shared experience.",
+      "cta": "Discover the Experience",
+      "imageAlt": "Two Golden Era players sharing a moment at the net"
+    },
+    "manifesto": {
+      "ariaLabel": "The Golden Era experience in four words",
+      "eyebrow": "In Every Stage",
+      "words": {
+        "play": "Play.",
+        "meet": "Meet.",
+        "share": "Share.",
+        "remember": "Remember."
+      }
+    },
+    "journey": {
+      "eyebrow": "From Arrival to Awards",
+      "title": "The Golden Era Experience",
+      "imageAlt": "Golden Era players meeting beside a clay tennis court in the mountains",
+      "chapters": {
+        "arrive": {
+          "title": "Arrive",
+          "copy": "Welcome, first encounters and time on court."
+        },
+        "play": {
+          "title": "Play",
+          "copy": "The game, original racquets and competition."
+        },
+        "stay": {
+          "title": "Stay in the Game",
+          "copy": "Even after elimination, players can continue playing singles or doubles."
+        },
+        "meet": {
+          "title": "Meet",
+          "copy": "A shared environment built around tennis and conversation."
+        },
+        "celebrate": {
+          "title": "Celebrate",
+          "copy": "Closing moments, awards and the end of the stage."
+        }
+      }
+    },
+    "game": {
+      "eyebrow": "The Game",
+      "titleLineOne": "The Match Is Only",
+      "titleLineTwo": "Part Of The Experience.",
+      "imageAlt": "A Golden Era match in progress on a clay court"
+    },
+    "between": {
+      "eyebrow": "Between Points",
+      "titleLineOne": "The Experience",
+      "titleLineTwo": "Continues Off The Ball.",
+      "copy": "Moments between matches become part of the story: conversation, connection and a shared passion for the game.",
+      "imageAlt": "Golden Era participants sharing a conversation between matches"
+    },
+    "people": {
+      "eyebrow": "The People",
+      "titleLineOne": "A Shared Passion.",
+      "titleLineTwo": "An International Community.",
+      "copyLineOne": "Different backgrounds.",
+      "copyLineTwo": "One game.",
+      "imageAlt": "Golden Era players and organisers gathered together on a clay court"
+    },
+    "heritage": {
+      "eyebrow": "The Heritage",
+      "titleLineOne": "Every Racquet",
+      "titleLineTwo": "Carries A Story.",
+      "copyLineOne": "The evolution of tennis is not displayed behind glass.",
+      "copyLineTwo": "It returns to the court.",
+      "imageAlt": "Golden Era participants presenting framed heritage tennis racquets"
+    },
+    "final": {
+      "eyebrow": "Take Your Place",
+      "titleLineOne": "Come For The Tennis.",
+      "titleLineTwo": "Leave With The Story.",
+      "discoverTour": "Discover the Tour",
+      "imageAlt": "The Golden Era community together at the close of a stage"
+    }
+  },
+  "PartnersPage": {
+    "opening": {
+      "eyebrow": "Golden Era Sports Tour",
+      "title": "Our Partners",
+      "statementLineOne": "Partners Who Become",
+      "statementLineTwo": "Part Of The Experience.",
+      "copy": "Golden Era is built with partners who share a connection with sport, heritage, international experiences and the culture surrounding the game."
+    },
+    "chaptersAriaLabel": "Official partners",
+    "officialPartner": "Official Partner",
+    "visitAriaLabel": "Visit {name}",
+    "partners": {
+      "heroes": {
+        "visitLabel": "Visit HEROE'S",
+        "logoAlt": "HEROE'S official partner logo",
+        "description": "A sportswear partner within the Golden Era Sports Tour.",
+        "featuredImageAlt": "Golden Era tennis portrait featuring HEROE'S sportswear and a vintage racquet"
+      },
+      "sembrancher": {
+        "visitLabel": "Visit SEMBRANCHER",
+        "logoAlt": "Sembrancher official partner logo",
+        "description": "Sembrancher joins the Golden Era environment as an official partner, connecting its identity with the Tour's international tennis experience.",
+        "featuredImageAlt": "Sembrancher bottle photographed with tennis balls and a wooden tennis racquet"
+      }
+    },
+    "philosophy": {
+      "eyebrow": "Partnership",
+      "titleLineOne": "Built Into The Experience,",
+      "titleLineTwo": "Not Added Around It.",
+      "copy": "Golden Era partnerships are designed to live naturally within the sporting, social and visual environment of the Tour."
+    },
+    "cta": {
+      "eyebrow": "Partner With Golden Era",
+      "titleLineOne": "Join The Next",
+      "titleLineTwo": "Chapter Of The Tour.",
+      "copy": "Interested in becoming part of the Golden Era Sports Tour?",
+      "label": "Partner With Us"
     }
   },
   "LanguageSwitcher": {
-    "label": "Select language",
+    "label": "Seleziona la lingua",
     "english": "English",
     "french": "Français",
     "italian": "Italiano"
   },
   "Footer": {
-    "byline": "By Vintage Events Monte-Carlo",
-    "instagram": "Instagram"
+    "byline": "Di Vintage Events Monte-Carlo",
+    "instagram": "Instagram",
+    "websiteCredit": "Sito web di Filippo Chiani"
   },
   "HomeTeam": {
-    "eyebrow": "The Team",
-    "headlineLineOne": "The People",
-    "headlineLineTwo": "Behind Golden Era.",
-    "copy": "Meet the team bringing the Tour to life.",
-    "cta": "Meet the Team",
-    "imageAlt": "The Golden Era Sports Tour team together on a clay tennis court"
+    "eyebrow": "Il Team",
+    "headlineLineOne": "Dietro",
+    "headlineLineTwo": "Golden Era.",
+    "copy": "Conosci le persone che danno vita al Tour.",
+    "cta": "Scopri il Team",
+    "imageAlt": "Il team Golden Era Sports Tour riunito su un campo in terra battuta"
   },
   "TeamPage": {
     "hero": {
@@ -49,15 +562,16 @@
       "imageAlt": "Portrait of Golden Era founder Jérôme Séguin",
       "story": {
         "opening": "The idea behind Golden Era began on a tennis court.",
-        "background": "Years ago, Jérôme Séguin, a tennis instructor based at the Monte-Carlo Country Club, played a match using modern equipment against an opponent using an older-generation racquet.",
+        "background": "Years ago, Jérôme Séguin, a tennis instructor based at the Monte-Carlo Country Club, found himself playing against one of the leading players of the late 1970s and early 1980s — a champion from a generation that defined an era of tennis.",
+        "equipment": "The former top player was using an old-generation racquet, while Jérôme played with modern equipment.",
         "result": "Jérôme won.",
         "question": "What stayed with him was not the result, but the question behind it: how much can the evolution of equipment change the balance of a match?",
         "legacy": "That experience became the starting point for Golden Era — a format built around the opposition of materials and the evolution of tennis technology."
       },
       "quote": {
-        "lineOne": "“How Much Can Equipment",
+        "lineOne": "How Much Can Equipment",
         "lineTwo": "Change The Balance",
-        "lineThree": "Of A Match?”"
+        "lineThree": "Of A Match?"
       }
     },
     "statement": {
@@ -152,10 +666,125 @@
       "cta": "Join the Tour"
     }
   },
+  "JoinPage": {
+    "hero": {
+      "eyebrow": "Join the Tour",
+      "titleLineOne": "Step Onto",
+      "titleLineTwo": "The Court.",
+      "intro": "Apply to take part in a Golden Era Sports Tour event and experience tennis through the evolution of the game.",
+      "supporting": "Selected amateur players · Original racquets · Iconic destinations"
+    },
+    "introduction": {
+      "title": "The Golden Era application experience",
+      "format": {
+        "title": "The Format",
+        "copy": "Selected amateur players compete using racquets assigned by the organisation from different generations of tennis history."
+      },
+      "experience": {
+        "title": "The Experience",
+        "copy": "Tournament play, shared moments on and off court, awards and the Golden Era atmosphere."
+      },
+      "tour": {
+        "title": "The Tour",
+        "copy": "Select the event you would like to join and submit your application."
+      }
+    },
+    "application": {
+      "eyebrow": "Application / 2026",
+      "title": "Your Place On Court.",
+      "copy": "Tell us about your tennis and select the Golden Era stage you would like to join."
+    },
+    "form": {
+      "title": "Golden Era Sports Tour application",
+      "honeypot": "Leave this field empty",
+      "selectPlaceholder": "Select an option",
+      "optionalPlaceholder": "Optional",
+      "selectEventPlaceholder": "Select your event",
+      "sections": {
+        "personal": "Personal Details",
+        "tennis": "Tennis Profile",
+        "kit": "Player Kit",
+        "event": "Event Selection",
+        "additional": "Additional Information",
+        "privacy": "Privacy Consent"
+      },
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "gender": "Gender",
+        "email": "Email",
+        "phone": "Phone / WhatsApp",
+        "country": "Country",
+        "tennisLevel": "Tennis level",
+        "clubBackground": "Club / tennis background",
+        "playingHand": "Playing hand",
+        "tshirtSize": "T-shirt size",
+        "bottomSize": "Shorts / Pants size",
+        "event": "Select your event",
+        "referralSource": "How did you hear about Golden Era?",
+        "message": "Additional message"
+      },
+      "options": {
+        "gender": {
+          "male": "Male",
+          "female": "Female"
+        },
+        "tennisLevel": {
+          "recreational": "Recreational",
+          "intermediate": "Intermediate",
+          "advancedAmateur": "Advanced amateur",
+          "competitiveAmateur": "Competitive amateur",
+          "formerCompetitivePlayer": "Former competitive player"
+        },
+        "playingHand": {
+          "rightHanded": "Right-handed",
+          "leftHanded": "Left-handed"
+        },
+        "referralSource": {
+          "instagram": "Instagram",
+          "friendInvitation": "Friend / invitation",
+          "tennisClub": "Tennis club",
+          "event": "Event",
+          "pressMedia": "Press / media",
+          "googleWebSearch": "Google / web search",
+          "other": "Other"
+        }
+      },
+      "privacy": {
+        "consent": "I have read and accept the <policy>Privacy Policy</policy> and agree to be contacted regarding my Golden Era Sports Tour application.",
+        "title": "Privacy Policy",
+        "note": "The information submitted through this form is used by Vintage Events Montecarlo S.r.l.s. to review your application and contact you about Golden Era Sports Tour participation. For privacy enquiries, contact info@goldenerasportstour.com."
+      },
+      "validation": {
+        "required": "This field is required.",
+        "email": "Enter a valid email address.",
+        "event": "Select an available event.",
+        "privacy": "Privacy consent is required."
+      },
+      "errors": {
+        "generic": "We could not submit your application. Please try again.",
+        "unavailable": "Online application delivery is not configured yet. Please contact our team directly.",
+        "rateLimited": "Too many applications were submitted from this connection. Please try again later."
+      },
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "success": {
+        "title": "Application Received.",
+        "intro": "Thank you for your interest in Golden Era Sports Tour.",
+        "followUp": "Our team will review your application and contact you directly.",
+        "cta": "Discover the Tour"
+      }
+    },
+    "contact": {
+      "title": "General Enquiries?",
+      "copy": "For partnerships, media or other enquiries, contact our team.",
+      "cta": "Contact Us"
+    }
+  },
   "Metadata": {
     "home": {
-      "title": "Golden Era Sports Tour | The Evolution of Tennis, Played by Amateurs",
-      "description": "Golden Era Sports Tour celebrates the evolution and heritage of tennis through international events, original racquets and iconic destinations."
+      "title": "Golden Era Sports Tour | L’Evoluzione del Tennis, Giocata da Amatori",
+      "description": "Golden Era Sports Tour celebra la storia e l’evoluzione del tennis attraverso eventi internazionali, racchette originali e destinazioni iconiche."
     },
     "experience": {
       "title": "The Experience | Golden Era Sports Tour",
@@ -177,6 +806,10 @@
       "title": "The Collection | Golden Era Sports Tour",
       "description": "Discover the evolving Golden Era Sports Tour collection of original tennis racquets from different generations of the game."
     },
+    "join": {
+      "title": "Join the Tour | Golden Era Sports Tour",
+      "description": "Apply to join a Golden Era Sports Tour event and experience tennis through original racquets, iconic destinations and the evolution of the game."
+    },
     "concept": {
       "title": "The Concept | Golden Era Sports Tour",
       "description": "Discover the Golden Era Sports Tour concept: an amateur tennis format that brings the heritage and evolution of racquet technology back onto the court."
@@ -184,6 +817,12 @@
     "tour": {
       "title": "The Tour | Golden Era Sports Tour",
       "description": "Discover the 2026 Golden Era Sports Tour, an international amateur tennis circuit travelling through five iconic destinations."
+    },
+    "tourStages": {
+      "monteCarlo": {
+        "title": "Monte-Carlo | Golden Era Sports Tour",
+        "description": "The next Golden Era stage on the international heritage tennis tour."
+      }
     },
     "tourStageFallbackTitle": "Tour Stage | Golden Era Sports Tour"
   }

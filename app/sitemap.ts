@@ -11,6 +11,7 @@ const publicPaths = [
   "/team",
   "/contact",
   "/collection",
+  "/join",
   "/the-concept",
   "/tour",
   "/tour/monte-carlo",

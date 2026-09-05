@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
@@ -12,7 +13,20 @@ import type { Partner } from "@/types/content";
 type PartnerChapterProps = {
   index: number;
   partner: Partner;
+  copy: {
+    officialPartner: string;
+    visitLabel: string;
+    visitAriaLabel: string;
+    logoAlt: string;
+    description: string;
+    featuredImageAlt: string;
+  };
 };
+
+const partnerMessageKeys = {
+  heroes: "heroes",
+  sembrancher: "sembrancher",
+} as const;
 
 function assetExists(assetPath?: string | null) {
   if (!assetPath) {
@@ -22,9 +36,7 @@ function assetExists(assetPath?: string | null) {
   return existsSync(join(process.cwd(), "public", assetPath.replace(/^\//, "")));
 }
 
-function PartnerChapter({ index, partner }: PartnerChapterProps) {
-  const visitLabel =
-    partner.id === "heroes" ? "Visit HEROE'S" : `Visit ${partner.name}`;
+function PartnerChapter({ index, partner, copy }: PartnerChapterProps) {
   const hasFeaturedImage = assetExists(partner.featuredImage);
   const logoSizes = partner.id === "heroes" ? "212px" : "149px";
 
@@ -37,7 +49,7 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
         <div className="partner-editorial__content">
           <div className="partner-editorial__meta">
             <span>{String(index + 1).padStart(2, "0")}</span>
-            <p>Official Partner</p>
+            <p>{copy.officialPartner}</p>
           </div>
 
           <h2 id={`partner-${partner.id}-title`}>{partner.name}</h2>
@@ -47,12 +59,12 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
             href={partner.website}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Visit ${partner.name}`}
+            aria-label={copy.visitAriaLabel}
           >
             {partner.logo ? (
               <Image
                 src={partner.logo}
-                alt={partner.logoAlt}
+                alt={copy.logoAlt}
                 width={partner.logoWidth}
                 height={partner.logoHeight}
                 sizes={logoSizes}
@@ -63,9 +75,7 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
             )}
           </a>
 
-          {partner.shortDescription ? (
-            <p className="partner-editorial__copy">{partner.shortDescription}</p>
-          ) : null}
+          <p className="partner-editorial__copy">{copy.description}</p>
 
           <a
             className="partner-editorial__visit"
@@ -73,7 +83,7 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {visitLabel}
+            {copy.visitLabel}
           </a>
         </div>
 
@@ -85,7 +95,7 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
           {hasFeaturedImage && partner.featuredImage ? (
             <Image
               src={partner.featuredImage}
-              alt={partner.featuredImageAlt ?? `${partner.name} partner photograph`}
+              alt={copy.featuredImageAlt}
               width={partner.featuredImageWidth ?? 1200}
               height={partner.featuredImageHeight ?? 1800}
               unoptimized
@@ -101,60 +111,78 @@ function PartnerChapter({ index, partner }: PartnerChapterProps) {
   );
 }
 
-export function PartnersPage() {
+export async function PartnersPage() {
+  const t = await getTranslations("PartnersPage");
+
   return (
     <div className="partners-page">
       <section className="partners-opening">
         <Container size="wide" className="partners-opening__inner">
-          <Eyebrow>Golden Era Sports Tour</Eyebrow>
-          <h1>Our Partners</h1>
+          <Eyebrow>{t("opening.eyebrow")}</Eyebrow>
+          <h1>{t("opening.title")}</h1>
           <p className="partners-opening__statement">
-            <span>Partners Who Become</span>
-            <span>Part Of The Experience.</span>
+            <span>{t("opening.statementLineOne")}</span>
+            <span>{t("opening.statementLineTwo")}</span>
           </p>
-          <p>
-            Golden Era is built with partners who share a connection with sport,
-            heritage, international experiences and the culture surrounding the
-            game.
-          </p>
+          <p>{t("opening.copy")}</p>
         </Container>
       </section>
 
-      <section className="partners-chapters" aria-label="Official partners">
-        {activeOfficialPartners.map((partner, index) => (
-          <PartnerChapter key={partner.id} index={index} partner={partner} />
-        ))}
+      <section className="partners-chapters" aria-label={t("chaptersAriaLabel")}>
+        {activeOfficialPartners.map((partner, index) => {
+          const messageKey =
+            partnerMessageKeys[partner.id as keyof typeof partnerMessageKeys];
+
+          if (!messageKey) {
+            return null;
+          }
+
+          return (
+            <PartnerChapter
+              key={partner.id}
+              index={index}
+              partner={partner}
+              copy={{
+                officialPartner: t("officialPartner"),
+                visitLabel: t(`partners.${messageKey}.visitLabel`),
+                visitAriaLabel: t("visitAriaLabel", { name: partner.name }),
+                logoAlt: t(`partners.${messageKey}.logoAlt`),
+                description: t(`partners.${messageKey}.description`),
+                featuredImageAlt: t(
+                  `partners.${messageKey}.featuredImageAlt`,
+                ),
+              }}
+            />
+          );
+        })}
       </section>
 
       <section className="partners-philosophy">
         <Container size="wide" className="partners-philosophy__inner">
-          <Eyebrow>Partnership</Eyebrow>
+          <Eyebrow>{t("philosophy.eyebrow")}</Eyebrow>
           <h2>
-            <span>Built Into The Experience,</span>
-            <span>Not Added Around It.</span>
+            <span>{t("philosophy.titleLineOne")}</span>
+            <span>{t("philosophy.titleLineTwo")}</span>
           </h2>
-          <p>
-            Golden Era partnerships are designed to live naturally within the
-            sporting, social and visual environment of the Tour.
-          </p>
+          <p>{t("philosophy.copy")}</p>
         </Container>
       </section>
 
       <section className="partners-cta">
         <Container size="wide" className="partners-cta__inner">
-          <Eyebrow>Partner With Golden Era</Eyebrow>
+          <Eyebrow>{t("cta.eyebrow")}</Eyebrow>
           <h2>
-            <span>Join The Next</span>
-            <span>Chapter Of The Tour.</span>
+            <span>{t("cta.titleLineOne")}</span>
+            <span>{t("cta.titleLineTwo")}</span>
           </h2>
-          <p>Interested in becoming part of the Golden Era Sports Tour?</p>
+          <p>{t("cta.copy")}</p>
           <Button
             href={primaryNavigationCta.href}
             variant="text"
             arrow="up-right"
             className="partners-cta__link"
           >
-            Partner With Us
+            {t("cta.label")}
           </Button>
         </Container>
       </section>

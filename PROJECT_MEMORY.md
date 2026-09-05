@@ -189,12 +189,12 @@ The Experience homepage teaser:
 The Team homepage teaser:
 
 - Eyebrow: `THE TEAM`
-- Headline: `THE PEOPLE BEHIND GOLDEN ERA.`
-- Copy: `Meet the team bringing the Tour to life.`
+- Headline: `BEHIND GOLDEN ERA.`
+- Copy: `Meet the people shaping the Tour.`
 - Image: `public/images/team/team.jpg`
 - CTA: `/team`, using the locale-aware link architecture.
 - The group image is exclusive to the Homepage teaser and remains absent from the dedicated Team page.
-- Desktop uses a concise typographic introduction followed by a large 8:5 editorial crop; mobile uses the complete 3:2 composition so all people and faces remain visible.
+- Desktop uses a compact 45/55 text-and-image editorial split with a medium photograph. Mobile orders the copy, full-width photograph and CTA vertically. The image uses an `11 / 7` crop anchored at `center top` to remove only the embedded bottom credit while retaining the complete group.
 - No names over the photograph, cards, border radius or shadows.
 
 ## Experience Page
@@ -365,13 +365,11 @@ Current public route architecture uses a required locale prefix:
 
 Supported locale values are `en`, `fr` and `it`. Unprefixed public URLs redirect to the equivalent English URL.
 
-Prepared navigation targets that remain unbuilt:
+Additional implemented localized routes:
 
 - `/[locale]/collection`
 - `/[locale]/contact`
 - `/[locale]/join`
-
-Do not build these future pages until requested.
 
 The global `Tour` navigation item points to the localized full Tour overview at `/[locale]/tour`; `/[locale]/tour/monte-carlo` remains the individual Monte-Carlo stage page.
 
@@ -403,7 +401,7 @@ Navigation decisions:
 ## Multilingual Architecture
 
 - Internationalization uses `next-intl` with App Router and Next.js 16 `proxy.ts`.
-- English (`en`) is the primary/master and default language. French (`fr`) and Italian (`it`) currently load the same approved English copy; no automatic translation has been generated.
+- English (`en`) is the primary/master and default language. French (`fr`) and Italian (`it`) have approved translations for the Homepage, global navigation, language selector and shared Footer labels; internal page content continues to use the approved English fallback until each page receives its own translation pass.
 - `localePrefix` is always enabled, producing `/en`, `/fr` and `/it` routes.
 - `localeDetection` is disabled. Browser language and locale cookies do not override the English default for unprefixed URLs.
 - All existing pages live under `app/[locale]/`; `generateStaticParams` prerenders all supported locales.
@@ -415,6 +413,14 @@ Navigation decisions:
 - Every implemented localized page provides its own canonical URL plus `hreflang` alternates for `en`, `fr`, `it` and `x-default`.
 - `app/sitemap.ts` generates all implemented pages for all three locales with reciprocal language alternates.
 - Absolute SEO URLs use `NEXT_PUBLIC_SITE_URL`, then Vercel production/deployment URL variables, with `http://localhost:3000` only as the local fallback.
+- Localized metadata dictionaries provide title and description values to standard metadata and Open Graph metadata through `lib/metadata.ts`.
+- The September 2026 pre-translation audit moved all rendered language-dependent Homepage, Concept, Tour, Monte-Carlo stage, Experience and Partners copy into the translation dictionaries. Team, Collection, Contact, Join, navigation, language controls and reusable Footer labels were already dictionary-backed and were verified in the same audit.
+- `messages/en.json` remains the source of truth. `messages/fr.json` and `messages/it.json` preserve full key parity while translating only approved scopes; no automatic translation is used.
+- The first approved translation scope covers `Navigation`, `LanguageSwitcher`, `HomePage`, `HomeTeam`, Homepage date-month labels, shared Footer labels and `Metadata.home`. All other page namespaces remain equal to English.
+- Homepage Tour stage labels live under `HomePage.tour.stages` so translated Homepage dates, statuses and image alternatives do not prematurely translate the full `/tour` page. `TourStages` remains the separate source for the Tour overview page.
+- Shared structured data remains outside the dictionaries where localization is not required: IDs, slugs, routes, media paths, prices, times, stage availability flags, event date data and proper names. Translation dictionaries own the labels and prose rendered around that data.
+- Company legal data and fixed brand names remain identical hardcoded legal/identity content in the shared Footer by design. Server-only email subjects, diagnostic responses and submission summaries are operational content and are not rendered as website interface copy.
+- `components/sections/DesignSystemPreview.tsx` remains an unused development-only preview and is not part of any public route.
 
 ## Decisions Taken
 
@@ -548,13 +554,15 @@ Add real Golden Era image/video/logo assets, then design the next requested sect
 - The page narrative is: the people, founder Jérôme Séguin, the question that inspired the format, and the team building Golden Era today.
 - Team copy is stored in the existing `next-intl` dictionaries. English is the master copy; French and Italian retain the same temporary English fallback content.
 - The Concept CTA uses the locale-aware internal link architecture and preserves the active locale.
-- The Team page is an editorial feature, not a profile grid: its hero is typography-only, Jérôme receives a dominant origin-story composition and the five remaining portraits form an alternating numbered sequence with varied proportions and positioning.
-- Portrait motion is limited to one-time reveals and a maximum `1.018` hover scale, with reduced-motion support.
+- The Team page is a compact, typography-led editorial feature rather than a staff directory. Its photography-free hero remains approximately 45-55% of the desktop viewport height.
+- Jérôme's portrait preserves its natural proportions and is capped at `23rem` (approximately 368px) on desktop. His founder story describes the former world-class opponent without identifying that player, and the equipment question is integrated as a controlled pull quote.
+- The five remaining members use a balanced 3+2 desktop grid, a two-column tablet grid and a one-column mobile sequence. Their 4:5 portraits are capped at 240px on desktop and approximately 232px on mobile to protect perceived source quality.
+- The founder portrait and all roster portraits use responsive `sizes`, quality 82 and native lazy loading. Portrait motion is limited to one-time reveals and a maximum `1.015` hover scale, with reduced-motion support.
 
 ## Image Delivery
 
 - All rendered site images use `next/image`; there are no remaining manual `<img>` elements or photographic CSS background images.
-- Image quality uses the Next.js default of 75. No image requests `quality={100}`.
+- Image quality uses the Next.js default of 75, with 82 allowlisted specifically for the compact Team portraits. No image requests `quality={100}`.
 - Image preload is reserved for the immediately visible Concept, Experience and Monte-Carlo stage hero photographs.
 - The global Header logo and all below-the-fold Homepage, Tour, Experience, Team, Concept and partner media use native lazy loading.
 - Responsive `sizes` values follow the actual page grids. Homepage Tour panels request a larger variant only while a desktop panel is expanded.
@@ -583,3 +591,15 @@ Add real Golden Era image/video/logo assets, then design the next requested sect
 - It is an intentional editorial Coming Soon page with no product cards, listings, filters or fabricated archive entries.
 - Collection copy and localized metadata are stored in the existing `next-intl` dictionaries. English is the master copy; French and Italian currently retain the same temporary English content.
 - The page uses one existing secondary visual, `public/images/the-concept/racquetevolution.jpg`, at its original proportions.
+
+## Join Page
+
+- The Tour application page lives at `/{locale}/join` for English, French and Italian. All existing Join CTAs use locale-aware links to `/join`.
+- The page is an editorial application experience with a compact hero, three-part format introduction, structured application form, success state and Contact alternative.
+- Join copy, validation messages, option labels and localized metadata live in the existing `next-intl` dictionaries. English is the master copy; French and Italian currently retain the same temporary English content.
+- Application availability is stored on `tourOverviewStages` through `confirmed`, `completed` and `applicationsOpen`. The Join selector is derived from those flags rather than duplicating event names in the form.
+- Current selectable events are Monte-Carlo, Los Angeles and Dubai. Completed St. Moritz and unconfirmed São Paulo are excluded automatically.
+- Clothing sizes and select option values are centralized in `data/join.ts`.
+- The Contact and Join endpoints share the server-only Resend delivery helper in `lib/server/email.ts` and the same `RESEND_API_KEY`, `CONTACT_EMAIL_FROM` and optional `CONTACT_EMAIL_TO` variables.
+- Join submissions receive client and server validation, same-origin checking, a honeypot, disabled duplicate submission state, provider idempotency and a basic in-memory rate limit.
+- Privacy consent is mandatory. Its locale-preserving link points to the application privacy notice on the same Join page until a separate approved legal policy is supplied.

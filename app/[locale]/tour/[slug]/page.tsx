@@ -56,11 +56,16 @@ export async function generateMetadata({
     });
   }
 
+  const t = await getTranslations({
+    locale,
+    namespace: "Metadata.tourStages.monteCarlo",
+  });
+
   return getLocalizedMetadata({
     locale,
     pathname: `/tour/${slug}`,
-    title: `${event.city} | Golden Era Sports Tour`,
-    description: event.shortDescription,
+    title: t("title"),
+    description: t("description"),
   });
 }
 

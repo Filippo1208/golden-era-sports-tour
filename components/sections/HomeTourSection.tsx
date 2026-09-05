@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useState, type CSSProperties } from "react";
 
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { getTourStageMessageKey } from "@/lib/tour-i18n";
 import type { TourOverviewStage } from "@/types/content";
 
 type HomeTourSectionProps = {
@@ -19,6 +21,7 @@ function stageNumber(order: number) {
 }
 
 export function HomeTourSection({ stages }: HomeTourSectionProps) {
+  const t = useTranslations("HomePage.tour");
   const [activeStageSlug, setActiveStageSlug] = useState(() =>
     stages.some((stage) => stage.slug === defaultStageSlug)
       ? defaultStageSlug
@@ -44,23 +47,19 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
     <section className="home-tour" aria-labelledby="home-tour-title">
       <Container size="wide" className="home-tour__inner">
         <div className="home-tour__intro">
-          <Eyebrow>The Tour</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 id="home-tour-title">
-            <span>One global circuit.</span>
-            <span>Five iconic destinations.</span>
+            <span>{t("titleLineOne")}</span>
+            <span>{t("titleLineTwo")}</span>
           </h2>
-          <p>
-            From the Alps to the Mediterranean, California, South America and
-            the Middle East, Golden Era brings the evolution of tennis to
-            distinctive international destinations.
-          </p>
+          <p>{t("copy")}</p>
         </div>
 
         <ol
           className={`home-tour__panels ${
             isEngaged ? "is-engaged" : ""
           }`.trim()}
-          aria-label="2026 Tour destinations"
+          aria-label={t("destinationsLabel")}
           onMouseLeave={(event) => {
             if (!event.currentTarget.contains(document.activeElement)) {
               resetPanels();
@@ -75,6 +74,12 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
           }}
         >
           {stages.map((stage) => {
+            const messageKey = getTourStageMessageKey(stage.slug);
+
+            if (!messageKey) {
+              return null;
+            }
+
             const isSelected = stage.slug === activeStageSlug;
             const isExpanded = isEngaged && isSelected;
             const isNextStage = stage.status === "Next Stage";
@@ -102,7 +107,7 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
                 >
                   <Image
                     src={stage.image}
-                    alt={stage.imageAlt}
+                    alt={t(`stages.${messageKey}.imageAlt`)}
                     fill
                     sizes={
                       isExpanded
@@ -119,7 +124,7 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
                       </span>
                       {isNextStage ? (
                         <span className="home-tour__panel-next">
-                          Next Stage
+                          {t("nextStage")}
                         </span>
                       ) : null}
                     </div>
@@ -127,8 +132,8 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
                     <h3>{stage.city}</h3>
 
                     <div className="home-tour__panel-meta">
-                      <time>{stage.dateLabel}</time>
-                      <span>{stage.status}</span>
+                      <time>{t(`stages.${messageKey}.dateLabel`)}</time>
+                      <span>{t(`stages.${messageKey}.status`)}</span>
                       {stage.pageAvailable ? (
                         <Button
                           href={stage.href}
@@ -136,7 +141,7 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
                           onDark
                           className="home-tour__panel-link"
                         >
-                          Discover
+                          {t("discover")}
                         </Button>
                       ) : null}
                     </div>
@@ -148,7 +153,7 @@ export function HomeTourSection({ stages }: HomeTourSectionProps) {
         </ol>
 
         <Button href="/tour" variant="text" className="home-tour__link">
-          Discover the Tour
+          {t("cta")}
         </Button>
       </Container>
     </section>

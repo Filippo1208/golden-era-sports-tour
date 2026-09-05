@@ -55,7 +55,7 @@ export function Footer() {
             &copy; 2026 Golden Era Sports Tour &middot; Vintage Events Montecarlo
             S.r.l.s. &middot; P. IVA 14563590968 &middot; REA MI-2792204
           </p>
-          <p>Website by Filippo Chiani</p>
+          <p>{footer("websiteCredit")}</p>
         </div>
       </div>
     </footer>

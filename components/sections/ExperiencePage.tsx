@@ -17,34 +17,32 @@ import { ExperienceMotionController } from "./ExperienceMotionController";
 
 const experienceChapters = [
   {
+    id: "arrive",
     number: "01",
-    title: "Arrive",
-    copy: "Welcome, first encounters and time on court.",
   },
   {
+    id: "play",
     number: "02",
-    title: "Play",
-    copy: "The game, original racquets and competition.",
   },
   {
+    id: "stay",
     number: "03",
-    title: "Stay in the Game",
-    copy: "Even after elimination, players can continue playing singles or doubles.",
   },
   {
+    id: "meet",
     number: "04",
-    title: "Meet",
-    copy: "A shared environment built around tennis and conversation.",
   },
   {
+    id: "celebrate",
     number: "05",
-    title: "Celebrate",
-    copy: "Closing moments, awards and the end of the stage.",
   },
 ] as const;
 
+const manifestoWords = ["play", "meet", "share", "remember"] as const;
+
 export async function ExperiencePage() {
   const navigation = await getTranslations("Navigation");
+  const t = await getTranslations("ExperiencePage");
 
   return (
     <div className="experience-page">
@@ -53,17 +51,14 @@ export async function ExperiencePage() {
       <section className="experience-hero" aria-labelledby="experience-title">
         <Container size="wide" className="experience-hero__grid">
           <div className="experience-hero__copy">
-            <Eyebrow>The Experience</Eyebrow>
+            <Eyebrow>{t("hero.eyebrow")}</Eyebrow>
             <h1 id="experience-title">
-              <span>More Than</span>
-              <span>A Tournament.</span>
+              <span>{t("hero.titleLineOne")}</span>
+              <span>{t("hero.titleLineTwo")}</span>
             </h1>
-            <p>
-              Tennis, heritage and people brought together for one shared
-              experience.
-            </p>
+            <p>{t("hero.copy")}</p>
             <Button href="#experience-manifesto" className="experience-hero__cta">
-              Discover the Experience
+              {t("hero.cta")}
             </Button>
           </div>
 
@@ -73,7 +68,7 @@ export async function ExperiencePage() {
           >
             <Image
               src={experienceHero}
-              alt="Two Golden Era players sharing a moment at the net"
+              alt={t("hero.imageAlt")}
               fill
               preload
               placeholder="blur"
@@ -87,18 +82,18 @@ export async function ExperiencePage() {
       <section
         id="experience-manifesto"
         className="experience-manifesto"
-        aria-label="The Golden Era experience in four words"
+        aria-label={t("manifesto.ariaLabel")}
       >
         <Container size="wide" className="experience-manifesto__inner">
-          <Eyebrow>In Every Stage</Eyebrow>
+          <Eyebrow>{t("manifesto.eyebrow")}</Eyebrow>
           <div className="experience-manifesto__words">
-            {['Play.', 'Meet.', 'Share.', 'Remember.'].map((word, index) => (
+            {manifestoWords.map((word, index) => (
               <p
                 key={word}
                 className={index === 0 ? "is-active" : undefined}
                 data-experience-word
               >
-                {word}
+                {t(`manifesto.words.${word}`)}
               </p>
             ))}
           </div>
@@ -107,8 +102,8 @@ export async function ExperiencePage() {
 
       <section className="experience-journey" aria-labelledby="journey-title">
         <Container size="wide" className="experience-journey__heading">
-          <Eyebrow>From Arrival to Awards</Eyebrow>
-          <h2 id="journey-title">The Golden Era Experience</h2>
+          <Eyebrow>{t("journey.eyebrow")}</Eyebrow>
+          <h2 id="journey-title">{t("journey.title")}</h2>
         </Container>
 
         <Container size="wide" className="experience-journey__layout">
@@ -116,7 +111,7 @@ export async function ExperiencePage() {
             <figure className="experience-journey__visual" data-experience-reveal>
               <Image
                 src={experienceAtmosphere}
-                alt="Golden Era players meeting beside a clay tennis court in the mountains"
+                alt={t("journey.imageAlt")}
                 fill
                 placeholder="blur"
                 sizes="(max-width: 760px) 100vw, (max-width: 1024px) 94vw, (max-width: 1496px) 46vw, 680px"
@@ -136,8 +131,8 @@ export async function ExperiencePage() {
               >
                 <div className="experience-journey__chapter-copy">
                   <span>{chapter.number}</span>
-                  <h3>{chapter.title}</h3>
-                  <p>{chapter.copy}</p>
+                  <h3>{t(`journey.chapters.${chapter.id}.title`)}</h3>
+                  <p>{t(`journey.chapters.${chapter.id}.copy`)}</p>
                 </div>
               </li>
             ))}
@@ -148,10 +143,10 @@ export async function ExperiencePage() {
       <section className="experience-game" aria-labelledby="experience-game-title">
         <Container size="wide" className="experience-game__grid">
           <div className="experience-game__heading" data-experience-reveal>
-            <Eyebrow>The Game</Eyebrow>
+            <Eyebrow>{t("game.eyebrow")}</Eyebrow>
             <h2 id="experience-game-title">
-              <span>The Match Is Only</span>
-              <span>Part Of The Experience.</span>
+              <span>{t("game.titleLineOne")}</span>
+              <span>{t("game.titleLineTwo")}</span>
             </h2>
           </div>
           <figure
@@ -161,7 +156,7 @@ export async function ExperiencePage() {
           >
             <Image
               src={experiencePlay}
-              alt="A Golden Era match in progress on a clay court"
+              alt={t("game.imageAlt")}
               fill
               placeholder="blur"
               sizes="(max-width: 900px) 100vw, (max-width: 1496px) 63vw, 900px"
@@ -176,7 +171,7 @@ export async function ExperiencePage() {
           <figure className="experience-between__media" data-experience-reveal>
             <Image
               src={experienceSocial}
-              alt="Golden Era participants sharing a conversation between matches"
+              alt={t("between.imageAlt")}
               fill
               placeholder="blur"
               sizes="(max-width: 900px) 100vw, (max-width: 1496px) 57vw, 820px"
@@ -184,15 +179,12 @@ export async function ExperiencePage() {
             />
           </figure>
           <div className="experience-between__copy" data-experience-reveal>
-            <Eyebrow>Between Points</Eyebrow>
+            <Eyebrow>{t("between.eyebrow")}</Eyebrow>
             <h2 id="experience-between-title">
-              <span>The Experience</span>
-              <span>Continues Off The Ball.</span>
+              <span>{t("between.titleLineOne")}</span>
+              <span>{t("between.titleLineTwo")}</span>
             </h2>
-            <p>
-              Moments between matches become part of the story: conversation,
-              connection and a shared passion for the game.
-            </p>
+            <p>{t("between.copy")}</p>
           </div>
         </Container>
       </section>
@@ -200,20 +192,20 @@ export async function ExperiencePage() {
       <section className="experience-people" aria-labelledby="experience-people-title">
         <Container size="wide" className="experience-people__grid">
           <div className="experience-people__copy" data-experience-reveal>
-            <Eyebrow>The People</Eyebrow>
+            <Eyebrow>{t("people.eyebrow")}</Eyebrow>
             <h2 id="experience-people-title">
-              <span>A Shared Passion.</span>
-              <span>An International Community.</span>
+              <span>{t("people.titleLineOne")}</span>
+              <span>{t("people.titleLineTwo")}</span>
             </h2>
             <p>
-              <span>Different backgrounds.</span>
-              <span>One game.</span>
+              <span>{t("people.copyLineOne")}</span>
+              <span>{t("people.copyLineTwo")}</span>
             </p>
           </div>
           <figure className="experience-people__media" data-experience-reveal>
             <Image
               src={experienceCommunityWide}
-              alt="Golden Era players and organisers gathered together on a clay court"
+              alt={t("people.imageAlt")}
               fill
               placeholder="blur"
               sizes="(max-width: 900px) 100vw, (max-width: 1496px) 53vw, 760px"
@@ -228,7 +220,7 @@ export async function ExperiencePage() {
           <figure className="experience-heritage__media" data-experience-reveal>
             <Image
               src={experienceHeritage}
-              alt="Golden Era participants presenting framed heritage tennis racquets"
+              alt={t("heritage.imageAlt")}
               fill
               placeholder="blur"
               sizes="(max-width: 900px) 100vw, (max-width: 1496px) 44vw, 640px"
@@ -236,14 +228,14 @@ export async function ExperiencePage() {
             />
           </figure>
           <div className="experience-heritage__copy" data-experience-reveal>
-            <Eyebrow>The Heritage</Eyebrow>
+            <Eyebrow>{t("heritage.eyebrow")}</Eyebrow>
             <h2 id="experience-heritage-title">
-              <span>Every Racquet</span>
-              <span>Carries A Story.</span>
+              <span>{t("heritage.titleLineOne")}</span>
+              <span>{t("heritage.titleLineTwo")}</span>
             </h2>
             <p>
-              The evolution of tennis is not displayed behind glass.
-              <span>It returns to the court.</span>
+              {t("heritage.copyLineOne")}
+              <span>{t("heritage.copyLineTwo")}</span>
             </p>
           </div>
         </Container>
@@ -252,7 +244,7 @@ export async function ExperiencePage() {
       <section className="experience-final" aria-labelledby="experience-final-title">
         <Image
           src={experienceCommunity}
-          alt="The Golden Era community together at the close of a stage"
+          alt={t("final.imageAlt")}
           fill
           placeholder="blur"
           sizes="100vw"
@@ -260,17 +252,17 @@ export async function ExperiencePage() {
         />
         <div className="experience-final__overlay" aria-hidden="true" />
         <Container size="narrow" className="experience-final__content" data-experience-reveal>
-          <Eyebrow>Take Your Place</Eyebrow>
+          <Eyebrow>{t("final.eyebrow")}</Eyebrow>
           <h2 id="experience-final-title">
-            <span>Come For The Tennis.</span>
-            <span>Leave With The Story.</span>
+            <span>{t("final.titleLineOne")}</span>
+            <span>{t("final.titleLineTwo")}</span>
           </h2>
           <div className="experience-final__actions">
             <Button href={primaryNavigationCta.href} onDark>
               {navigation("joinTour")}
             </Button>
             <Button href="/tour" variant="outline" onDark>
-              Discover the Tour
+              {t("final.discoverTour")}
             </Button>
           </div>
         </Container>

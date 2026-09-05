@@ -1,4 +1,4 @@
-import { contactDetails } from "@/data/contact";
+import { sendWebsiteEmail } from "@/lib/server/email";
 
 const MAX_REQUEST_LENGTH = 12_000;
 
@@ -120,33 +120,16 @@ export async function POST(request: Request) {
     return jsonResponse({ ok: false, code: "VALIDATION_ERROR" }, 422);
   }
 
-  const apiKey = process.env.RESEND_API_KEY?.trim();
-  const from = process.env.CONTACT_EMAIL_FROM?.trim();
-  const to = process.env.CONTACT_EMAIL_TO?.trim() || contactDetails.email;
-
-  if (!apiKey || !from) {
-    return jsonResponse({ ok: false, code: "EMAIL_NOT_CONFIGURED" }, 503);
-  }
-
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-      "Idempotency-Key": crypto.randomUUID(),
-    },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      reply_to: payload.email,
-      subject: `[Golden Era Website] ${payload.subject.replace(/[\r\n]+/g, " ")}`,
-      text: buildEmailText(payload),
-    }),
+  const delivery = await sendWebsiteEmail({
+    replyTo: payload.email,
+    subject: `[Golden Era Website] ${payload.subject.replace(/[\r\n]+/g, " ")}`,
+    text: buildEmailText(payload),
+    idempotencyKey: crypto.randomUUID(),
   });
 
-  if (!response.ok) {
-    console.error("Contact email delivery failed", response.status);
-    return jsonResponse({ ok: false, code: "EMAIL_DELIVERY_FAILED" }, 502);
+  if (!delivery.ok) {
+    const status = delivery.code === "EMAIL_NOT_CONFIGURED" ? 503 : 502;
+    return jsonResponse({ ok: false, code: delivery.code }, status);
   }
 
   return jsonResponse({ ok: true });

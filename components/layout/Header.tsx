@@ -13,7 +13,6 @@ import { Link } from "@/i18n/navigation";
 const HEADER_SCROLL_THRESHOLD = 24;
 const headerLogo = {
   src: "/images/brand/goldeneralogo.png",
-  alt: "Golden Era Sports Tour by Vintage Events Monte-Carlo",
   width: 1987,
   height: 324,
 } as const;
@@ -53,7 +52,7 @@ export function Header({ heroTone = "dark" }: HeaderProps) {
       <Link href="/" className="site-header__brand" aria-label={t("homeLabel")}>
         <Image
           src={headerLogo.src}
-          alt={headerLogo.alt}
+          alt={t("logoAlt")}
           width={headerLogo.width}
           height={headerLogo.height}
           sizes="(max-width: 760px) 155px, 210px"

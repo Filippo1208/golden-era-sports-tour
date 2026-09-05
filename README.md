@@ -35,10 +35,11 @@ Then open the local URL shown by the terminal.
 npm run build
 ```
 
-## Contact Form Email
+## Website Form Email
 
-The contact form sends email server-side through the Resend HTTP API. Configure
-these environment variables in the deployment platform:
+The Contact and Join forms send email server-side through the same Resend HTTP
+API integration. Configure these environment variables in the deployment
+platform:
 
 ```text
 RESEND_API_KEY=re_...
