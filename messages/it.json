@@ -168,39 +168,39 @@
   "TourStages": {
     "stages": {
       "stMoritz": {
-        "country": "Switzerland",
-        "dateLabel": "12 July 2026",
-        "status": "Completed",
-        "imageAlt": "Clay tennis courts beneath the Alpine landscape of St. Moritz",
-        "supportingLine": "Where the 2026 journey began."
+        "country": "Svizzera",
+        "dateLabel": "12 luglio 2026",
+        "status": "Conclusa",
+        "imageAlt": "Campi da tennis in terra battuta nel paesaggio alpino di St. Moritz",
+        "supportingLine": "Il punto di partenza del Tour 2026."
       },
       "monteCarlo": {
         "country": "Monaco",
-        "dateLabel": "10–11 October 2026",
-        "status": "Next Stage",
-        "imageAlt": "Clay tennis courts overlooking the Mediterranean in Monte-Carlo",
-        "supportingLine": "The next Golden Era stage."
+        "dateLabel": "10–11 ottobre 2026",
+        "status": "Prossima Tappa",
+        "imageAlt": "Campi da tennis in terra battuta affacciati sul Mediterraneo a Monte-Carlo",
+        "supportingLine": "La prossima tappa Golden Era."
       },
       "losAngeles": {
-        "country": "USA",
-        "dateLabel": "25 October 2026",
-        "status": "Upcoming",
-        "imageAlt": "Los Angeles skyline and palm trees",
-        "supportingLine": "California. Tennis. Heritage."
+        "country": "Stati Uniti",
+        "dateLabel": "25 ottobre 2026",
+        "status": "In arrivo",
+        "imageAlt": "Lo skyline di Los Angeles e le sue palme",
+        "supportingLine": "California. Tennis. Tradizione."
       },
       "saoPaulo": {
-        "country": "Brazil",
-        "dateLabel": "November 2026",
-        "status": "TBC",
-        "imageAlt": "The São Paulo skyline seen across a green urban park",
-        "supportingLine": "A new chapter in South America."
+        "country": "Brasile",
+        "dateLabel": "novembre 2026",
+        "status": "Da confermare",
+        "imageAlt": "Lo skyline di São Paulo visto oltre un parco urbano verde",
+        "supportingLine": "Un nuovo capitolo in Sud America."
       },
       "dubai": {
-        "country": "UAE",
-        "dateLabel": "06 December 2026",
-        "status": "Finals",
-        "imageAlt": "Contemporary waterfront architecture and skyline in Dubai",
-        "supportingLine": "The 2026 Finals."
+        "country": "Emirati Arabi Uniti",
+        "dateLabel": "6 dicembre 2026",
+        "status": "Finali",
+        "imageAlt": "Architettura contemporanea sul lungomare e skyline di Dubai",
+        "supportingLine": "Le Finali del 2026."
       }
     }
   },
@@ -313,96 +313,96 @@
   },
   "TourPage": {
     "opening": {
-      "eyebrow": "The Golden Era Sports Tour",
-      "titleLineOne": "The",
+      "eyebrow": "Golden Era Sports Tour",
+      "titleLineOne": "Il",
       "titleLineTwo": "Tour",
-      "statementLineOne": "One global circuit.",
-      "statementHighlight": "Five",
-      "statementLineTwo": "iconic destinations."
+      "statementLineOne": "Un circuito internazionale.",
+      "statementHighlight": "Cinque",
+      "statementLineTwo": "destinazioni iconiche."
     },
     "index": {
-      "eyebrow": "2026 Itinerary",
-      "title": "The Circuit"
+      "eyebrow": "Itinerario 2026",
+      "title": "Il Circuito"
     },
     "destination": {
-      "discover": "Discover {city}"
+      "discover": "Scopri {city}"
     },
     "future": {
-      "eyebrow": "Next Chapter",
+      "eyebrow": "Prossimo capitolo",
       "city": "New York",
-      "line": "The Tour continues."
+      "line": "Il Tour continua."
     },
     "final": {
-      "titleLineOne": "One global circuit.",
-      "titleLineTwo": "Five destinations.",
-      "statementLineOne": "The evolution of tennis,",
-      "statementLineTwo": "played by amateurs."
+      "titleLineOne": "Un circuito internazionale.",
+      "titleLineTwo": "Cinque destinazioni.",
+      "statementLineOne": "L’evoluzione del tennis,",
+      "statementLineTwo": "giocata da amatori."
     }
   },
   "TourStagePage": {
     "monteCarlo": {
       "hero": {
         "eyebrow": "Golden Era Sports Tour",
-        "dateLabel": "10-11 October 2026",
-        "primaryCta": "Join the Tour",
-        "secondaryCta": "Discover the Concept",
-        "imageAlt": "Monte-Carlo Edition at Monte-Carlo Country Club"
+        "dateLabel": "10–11 ottobre 2026",
+        "primaryCta": "Partecipa al Tour",
+        "secondaryCta": "Scopri il Concept",
+        "imageAlt": "Edizione di Monte-Carlo al Monte-Carlo Country Club"
       },
       "programme": {
-        "title": "The Weekend",
-        "intro": "Two days built around tennis, heritage and shared moments at the Monte-Carlo Country Club.",
-        "ariaLabel": "Monte-Carlo weekend programme",
+        "title": "Il Weekend",
+        "intro": "Due giornate tra tennis, tradizione e momenti condivisi al Monte-Carlo Country Club.",
+        "ariaLabel": "Programma del weekend di Monte-Carlo",
         "schedule": {
           "saturdayPractice": {
-            "dayLabel": "Saturday",
-            "dateLabel": "10 October 2026",
-            "title": "Practice Session & Welcome Party",
-            "description": "Courts will be available for practice and tournament draw preparation for the following day."
+            "dayLabel": "Sabato",
+            "dateLabel": "10 ottobre 2026",
+            "title": "Sessione di allenamento e festa di benvenuto",
+            "description": "I campi saranno a disposizione per gli allenamenti e per la preparazione del sorteggio del torneo del giorno successivo."
           },
           "sundayTournament": {
-            "dayLabel": "Sunday",
-            "dateLabel": "11 October 2026",
-            "title": "Golden Era Tournament",
+            "dayLabel": "Domenica",
+            "dateLabel": "11 ottobre 2026",
+            "title": "Torneo Golden Era",
             "description": ""
           },
           "sundayEvening": {
-            "dayLabel": "Sunday Evening",
+            "dayLabel": "Domenica sera",
             "dateLabel": "",
-            "title": "Cocktail Evening",
+            "title": "Serata cocktail",
             "description": ""
           }
         }
       },
       "experience": {
-        "eyebrow": "The Experience",
-        "headline": "Tennis, Heritage\nand Monte-Carlo.",
-        "copy": "A weekend built around the Golden Era format, shared moments on and off court, and the atmosphere of the Monte-Carlo Country Club.",
-        "includedAriaLabel": "What is included",
+        "eyebrow": "L’Esperienza",
+        "headline": "Tennis, tradizione\ne Monte-Carlo.",
+        "copy": "Un weekend costruito attorno al format Golden Era, ai momenti condivisi dentro e fuori dal campo e all’atmosfera del Monte-Carlo Country Club.",
+        "includedAriaLabel": "Cosa è incluso",
         "included": {
-          "tournamentAccess": "Tournament access",
-          "clubAccess": "Vintage Tennis Club access",
-          "apparel": "Vintage tennis apparel",
-          "prizes": "Exclusive prizes",
-          "foodBeverages": "Food & beverages"
+          "tournamentAccess": "Accesso al torneo",
+          "clubAccess": "Accesso al Vintage Tennis Club",
+          "apparel": "Abbigliamento da tennis vintage",
+          "prizes": "Premi esclusivi",
+          "foodBeverages": "Cibo e bevande"
         }
       },
       "entry": {
-        "eyebrow": "Entry",
-        "standardLabel": "Per player",
-        "memberLabel": "For MCCC members",
-        "note": "Limited places",
-        "guestPolicy": "Up to three accompanying guests per invitation."
+        "eyebrow": "Iscrizione",
+        "standardLabel": "Per giocatore",
+        "memberLabel": "Per i soci del MCCC",
+        "note": "Posti limitati",
+        "guestPolicy": "Fino a tre accompagnatori per invito."
       },
       "format": {
-        "eyebrow": "The Golden Era Format",
-        "headline": "Play Through\nTennis History.",
-        "copy": "Players compete with racquets assigned by the organisation according to playing level and tournament balance, bringing different eras of tennis onto the same court.",
-        "cta": "Discover the Concept"
+        "eyebrow": "Il format Golden Era",
+        "headline": "Ripercorri in campo\nla storia del tennis.",
+        "copy": "I giocatori competono con racchette assegnate dall’organizzazione in base al livello di gioco e all’equilibrio del torneo, portando sullo stesso campo diverse epoche del tennis.",
+        "cta": "Scopri il Concept"
       },
       "final": {
-        "dateLabel": "10-11 October 2026",
-        "headline": "Join the Next\nGolden Era Stage.",
-        "cta": "Join the Tour"
+        "dateLabel": "10–11 ottobre 2026",
+        "headline": "Partecipa alla prossima\ntappa Golden Era.",
+        "cta": "Partecipa al Tour"
       }
     }
   },
