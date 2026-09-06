@@ -122,14 +122,14 @@ Home Hero future files:
 
 Use native HTML5 video through `CinematicVideo`. Do not add heavy video libraries unless specifically approved later.
 
-Current real Hero desktop video:
+Current real Hero media:
 
 - `public/videos/home/home-hero-desktop.mp4`
-
-Future optional Hero files:
-
 - `public/videos/home/home-hero-mobile.mp4`
 - `public/images/home/home-hero-poster.jpg`
+
+The 640x360 H.264 mobile video is served only below `768px` and has no audio. The
+1280x720 JPEG poster prevents a blank video state while the selected source loads.
 
 The video is referenced in the browser as `/videos/home/home-hero-desktop.mp4`, not imported as a JavaScript module. Hero crop is controlled through `homeHeroMedia.objectPosition` in `data/media.ts`.
 

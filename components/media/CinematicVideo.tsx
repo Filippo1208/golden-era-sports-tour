@@ -42,7 +42,13 @@ export function CinematicVideo({
           {mobileSrc ? (
             <source src={mobileSrc} media="(max-width: 767px)" type="video/mp4" />
           ) : null}
-          {desktopSrc ? <source src={desktopSrc} type="video/mp4" /> : null}
+          {desktopSrc ? (
+            <source
+              src={desktopSrc}
+              media={mobileSrc ? "(min-width: 768px)" : undefined}
+              type="video/mp4"
+            />
+          ) : null}
         </video>
       ) : (
         <VideoPlaceholder label={fallbackLabel} className="cinematic-video__media" />

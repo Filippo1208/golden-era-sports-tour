@@ -16,15 +16,21 @@
   padding-block: clamp(6rem, 10vw, 10rem);
 }
 
+.contact-opening__intro {
+  min-width: 0;
+  container-type: inline-size;
+}
+
 .contact-opening__intro .eyebrow {
   margin: 0 0 1.5rem;
   color: var(--color-accent);
 }
 
 .contact-opening__intro h1 {
+  max-width: 100%;
   margin: 0;
   color: var(--color-brown-dark);
-  font-size: 8rem;
+  font-size: clamp(3rem, 14.5cqw, 8rem);
   font-weight: 500;
   line-height: 0.82;
   text-transform: uppercase;
@@ -258,7 +264,7 @@
   }
 
   .contact-opening__intro h1 {
-    font-size: 6.25rem;
+    font-size: clamp(3rem, 14.5cqw, 6.25rem);
   }
 }
 
@@ -274,7 +280,7 @@
   }
 
   .contact-opening__intro h1 {
-    font-size: 5.25rem;
+    font-size: clamp(4rem, 12.25cqw, 5.25rem);
   }
 
   .contact-points {
@@ -289,7 +295,7 @@
   }
 
   .contact-opening__intro h1 {
-    font-size: 4.15rem;
+    font-size: clamp(2.625rem, 14.5cqw, 4.15rem);
   }
 
   .contact-opening__copy {
