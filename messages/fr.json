@@ -33,23 +33,23 @@
     }
   },
   "MediaPlaceholders": {
-    "imageAriaLabel": "Development image placeholder for {label}",
-    "imageLabel": "Image placeholder",
-    "videoAriaLabel": "Development video placeholder for {label}",
-    "videoLabel": "Video placeholder",
-    "videoHint": "Native HTML5 video slot"
+    "imageAriaLabel": "Emplacement d’image temporaire pour {label}",
+    "imageLabel": "Image temporaire",
+    "videoAriaLabel": "Emplacement vidéo temporaire pour {label}",
+    "videoLabel": "Vidéo temporaire",
+    "videoHint": "Emplacement vidéo HTML5 natif"
   },
   "OfficialPartners": {
-    "title": "Official Partners",
-    "logosAriaLabel": "Official partner logos",
-    "visitAriaLabel": "Visit {name}",
-    "cta": "Discover Our Partners",
+    "title": "Partenaires Officiels",
+    "logosAriaLabel": "Logos des partenaires officiels",
+    "visitAriaLabel": "Visiter {name}",
+    "cta": "Découvrir Nos Partenaires",
     "partners": {
       "heroes": {
-        "logoAlt": "HEROE'S official partner logo"
+        "logoAlt": "Logo de HEROE'S, partenaire officiel"
       },
       "sembrancher": {
-        "logoAlt": "Sembrancher official partner logo"
+        "logoAlt": "Logo de Sembrancher, partenaire officiel"
       }
     }
   },
@@ -207,108 +207,108 @@
   "ConceptPage": {
     "opening": {
       "eyebrow": "Golden Era Sports Tour",
-      "title": "The Concept",
-      "statementLineOne": "The Evolution of Tennis,",
-      "statementLineTwo": "Played by Amateurs.",
-      "copy": "A global amateur tennis tour hosted in iconic locations, celebrating the heritage and evolution of the game.",
-      "imageAlt": "Close-up of a historic wooden tennis racquet from the Golden Era collection"
+      "title": "Le Concept",
+      "statementLineOne": "L’Évolution du Tennis,",
+      "statementLineTwo": "Jouée par des Amateurs.",
+      "copy": "Un Tour international de tennis amateur organisé dans des lieux emblématiques, qui célèbre l’héritage et l’évolution du jeu.",
+      "imageAlt": "Gros plan sur une raquette de tennis historique en bois issue de la collection Golden Era"
     },
     "manifesto": {
-      "eyebrow": "Our Manifesto",
-      "lineOne": "This is not a professional tour.",
-      "lineTwo": "This is not an exhibition.",
-      "titleLineOne": "It is a tribute to tennis history,",
-      "titleLineTwo": "Played — Not Remembered."
+      "eyebrow": "Notre manifeste",
+      "lineOne": "Ce n’est pas un Tour professionnel.",
+      "lineTwo": "Ce n’est pas une exhibition.",
+      "titleLineOne": "C’est un hommage à l’histoire du tennis,",
+      "titleLineTwo": "À Jouer — Pas à Contempler."
     },
     "rule": {
-      "eyebrow": "The Rule",
+      "eyebrow": "La Règle",
       "titleLineOne": "Opposition",
-      "titleLineTwo": "of Materials.",
-      "lead": "Players never use their own racquets.",
-      "copyOne": "Historic racquets are assigned by the organisation according to each player's technical characteristics and the balance of the draw.",
-      "copyTwo": "More skilled players can be challenged with vintage equipment, while less experienced players can rely on more modern technology, turning the evolution of equipment into part of the competition itself.",
-      "imageAlt": "Selection of tennis racquets from different generations",
-      "materialsAriaLabel": "Wood, metal, composite, modern",
-      "materialsIntro": "The equipment changed. So did the game.",
+      "titleLineTwo": "des Matériaux.",
+      "lead": "Les joueurs n’utilisent jamais leur propre raquette.",
+      "copyOne": "Les raquettes historiques sont attribuées par l’organisation selon les caractéristiques techniques de chaque joueur et l’équilibre du tableau.",
+      "copyTwo": "Les joueurs les plus expérimentés peuvent relever le défi avec du matériel vintage, tandis que les moins expérimentés bénéficient d’une technologie plus moderne. L’évolution de l’équipement devient ainsi une composante à part entière de la compétition.",
+      "imageAlt": "Sélection de raquettes de tennis de différentes générations",
+      "materialsAriaLabel": "Bois, métal, composite, moderne",
+      "materialsIntro": "L’équipement a évolué. Le jeu aussi.",
       "materials": {
-        "wood": "Wood",
-        "metal": "Metal",
+        "wood": "Bois",
+        "metal": "Métal",
         "composite": "Composite",
-        "modern": "Modern"
+        "modern": "Moderne"
       }
     },
     "racquets": {
-      "eyebrow": "The Evolution of the Racquet",
-      "upTo": "Up To",
-      "originalRacquets": "Original Racquets",
-      "period": "From the 1970s to today.",
-      "copyOne": "From wooden frames to modern composite technology, every generation changed the way tennis could be played.",
-      "copyTwo": "Golden Era brings those differences back onto the court."
+      "eyebrow": "L’Évolution de la Raquette",
+      "upTo": "Jusqu’à",
+      "originalRacquets": "Raquettes originales",
+      "period": "Des années 1970 à aujourd’hui.",
+      "copyOne": "Des cadres en bois aux composites modernes, chaque génération a transformé la façon de jouer au tennis.",
+      "copyTwo": "Golden Era remet ces différences en jeu."
     },
     "played": {
-      "eyebrow": "Played, Not Remembered",
-      "titleLineOne": "History Returns",
-      "titleLineTwo": "to the Court.",
-      "copyOne": "Golden Era is not a display of historic equipment.",
-      "copyTwo": "The racquets are played.",
-      "copyThree": "Different generations of tennis technology return to competition, allowing players to experience how the game itself has changed.",
-      "imageAlt": "Golden Era participant playing with a wooden tennis racquet on clay"
+      "eyebrow": "À Jouer — Pas à Contempler",
+      "titleLineOne": "L’histoire revient",
+      "titleLineTwo": "sur le court.",
+      "copyOne": "Golden Era n’est pas une exposition de matériel historique.",
+      "copyTwo": "Ces raquettes sont utilisées en compétition.",
+      "copyThree": "Différentes générations de technologies du tennis reviennent en compétition, permettant aux joueurs de ressentir concrètement l’évolution du jeu.",
+      "imageAlt": "Participant Golden Era jouant avec une raquette de tennis en bois sur terre battue"
     },
     "process": {
-      "eyebrow": "How the Rule Works",
-      "title": "Three sporting decisions, one balanced format.",
+      "eyebrow": "Le fonctionnement de la règle",
+      "title": "Trois décisions sportives, un format équilibré.",
       "steps": {
         "assessment": {
-          "title": "Player Assessment",
-          "copy": "The organisation evaluates the technical characteristics and playing level of each participant."
+          "title": "Évaluation du joueur",
+          "copy": "L’organisation évalue les caractéristiques techniques et le niveau de jeu de chaque participant."
         },
         "assignment": {
-          "title": "Racquet Assignment",
-          "copy": "Equipment is selected to create the intended contrast between player ability and racquet technology."
+          "title": "Attribution des raquettes",
+          "copy": "Le matériel est sélectionné pour créer le contraste recherché entre le niveau du joueur et la technologie de la raquette."
         },
         "competition": {
-          "title": "Balanced Competition",
-          "copy": "The draw and racquet assignments work together to create a balanced competition consistent with the Golden Era format."
+          "title": "Compétition équilibrée",
+          "copy": "Le tableau et l’attribution des raquettes sont conçus ensemble pour créer une compétition équilibrée, fidèle au format Golden Era."
         }
       }
     },
     "format": {
-      "eyebrow": "Sporting Format",
-      "titleLineOne": "One Day.",
-      "titleLineTwo": "Real Competition.",
-      "copy": "A group stage followed by finals keeps each stage dynamic while guaranteeing meaningful time on court.",
-      "ariaLabel": "Golden Era sporting format",
+      "eyebrow": "Format Sportif",
+      "titleLineOne": "Une journée.",
+      "titleLineTwo": "Une vraie compétition.",
+      "copy": "Une phase de groupes suivie des finales donne du rythme à chaque étape tout en garantissant à chacun un temps de jeu significatif.",
+      "ariaLabel": "Format sportif Golden Era",
       "stagePlus": "Étape +",
       "facts": {
         "duration": {
           "lineOne": "Minutes",
-          "lineTwo": "Per Match"
+          "lineTwo": "Par match"
         },
         "matches": {
-          "lineOne": "Matches",
-          "lineTwo": "Guaranteed"
+          "lineOne": "Matchs",
+          "lineTwo": "Garantis"
         },
         "ranking": {
-          "lineOne": "Overall Tour",
-          "lineTwo": "Ranking"
+          "lineOne": "Classement général",
+          "lineTwo": "du Tour"
         }
       }
     },
     "whiteBalls": {
-      "eyebrow": "A Detail from Tennis History",
-      "titleLineOne": "Always Played",
-      "titleLineTwo": "with White Balls.",
-      "copy": "A deliberate return to tradition and one of the details that makes Golden Era immediately distinctive on court."
+      "eyebrow": "Un détail de l’histoire du tennis",
+      "titleLineOne": "Toujours joué",
+      "titleLineTwo": "avec des balles blanches.",
+      "copy": "Un retour assumé à la tradition, et l’un des détails qui rendent Golden Era immédiatement reconnaissable sur le court."
     },
     "final": {
-      "preludeLineOne": "Every Era",
-      "preludeLineTwo": "Changed the Game.",
+      "preludeLineOne": "Chaque époque",
+      "preludeLineTwo": "a transformé le jeu.",
       "titleLineOne": "Golden Era",
-      "titleLineTwo": "Brings Them Back",
-      "titleLineThree": "to the Same Court.",
-      "statementLineOne": "The Evolution of Tennis,",
-      "statementLineTwo": "Played by Amateurs.",
-      "discoverTour": "Discover the Tour"
+      "titleLineTwo": "les réunit",
+      "titleLineThree": "sur le même court.",
+      "statementLineOne": "L’Évolution du Tennis,",
+      "statementLineTwo": "Jouée par des Amateurs.",
+      "discoverTour": "Découvrir le Tour"
     }
   },
   "TourPage": {
@@ -408,124 +408,124 @@
   },
   "ExperiencePage": {
     "hero": {
-      "eyebrow": "The Experience",
-      "titleLineOne": "More Than",
-      "titleLineTwo": "A Tournament.",
-      "copy": "Tennis, heritage and people brought together for one shared experience.",
-      "cta": "Discover the Experience",
-      "imageAlt": "Two Golden Era players sharing a moment at the net"
+      "eyebrow": "L’Expérience",
+      "titleLineOne": "Bien Plus",
+      "titleLineTwo": "Qu’un Tournoi.",
+      "copy": "Le tennis, son héritage et des passionnés réunis autour d’une même expérience.",
+      "cta": "Découvrir l’Expérience",
+      "imageAlt": "Deux joueurs Golden Era partageant un moment au filet"
     },
     "manifesto": {
-      "ariaLabel": "The Golden Era experience in four words",
-      "eyebrow": "In Every Stage",
+      "ariaLabel": "L’expérience Golden Era en quatre mots",
+      "eyebrow": "À chaque étape",
       "words": {
-        "play": "Play.",
-        "meet": "Meet.",
-        "share": "Share.",
-        "remember": "Remember."
+        "play": "Jouer.",
+        "meet": "Rencontrer.",
+        "share": "Partager.",
+        "remember": "Se Souvenir."
       }
     },
     "journey": {
-      "eyebrow": "From Arrival to Awards",
-      "title": "The Golden Era Experience",
-      "imageAlt": "Golden Era players meeting beside a clay tennis court in the mountains",
+      "eyebrow": "De l’arrivée à la remise des prix",
+      "title": "L’Expérience Golden Era",
+      "imageAlt": "Joueurs Golden Era réunis près d’un court en terre battue dans les montagnes",
       "chapters": {
         "arrive": {
-          "title": "Arrive",
-          "copy": "Welcome, first encounters and time on court."
+          "title": "Arriver",
+          "copy": "Accueil, premières rencontres et temps de jeu."
         },
         "play": {
-          "title": "Play",
-          "copy": "The game, original racquets and competition."
+          "title": "Jouer",
+          "copy": "Le jeu, les raquettes originales et la compétition."
         },
         "stay": {
-          "title": "Stay in the Game",
-          "copy": "Even after elimination, players can continue playing singles or doubles."
+          "title": "Rester dans le jeu",
+          "copy": "Même après leur élimination, les joueurs peuvent continuer à jouer en simple ou en double."
         },
         "meet": {
-          "title": "Meet",
-          "copy": "A shared environment built around tennis and conversation."
+          "title": "Rencontrer",
+          "copy": "Un cadre partagé, construit autour du tennis et des échanges."
         },
         "celebrate": {
-          "title": "Celebrate",
-          "copy": "Closing moments, awards and the end of the stage."
+          "title": "Célébrer",
+          "copy": "Derniers moments, remise des prix et conclusion de l’étape."
         }
       }
     },
     "game": {
-      "eyebrow": "The Game",
-      "titleLineOne": "The Match Is Only",
-      "titleLineTwo": "Part Of The Experience.",
-      "imageAlt": "A Golden Era match in progress on a clay court"
+      "eyebrow": "Le jeu",
+      "titleLineOne": "Le match n’est qu’une",
+      "titleLineTwo": "partie de l’expérience.",
+      "imageAlt": "Match Golden Era en cours sur un court en terre battue"
     },
     "between": {
-      "eyebrow": "Between Points",
-      "titleLineOne": "The Experience",
-      "titleLineTwo": "Continues Off The Ball.",
-      "copy": "Moments between matches become part of the story: conversation, connection and a shared passion for the game.",
-      "imageAlt": "Golden Era participants sharing a conversation between matches"
+      "eyebrow": "Entre les points",
+      "titleLineOne": "L’expérience",
+      "titleLineTwo": "continue hors du court.",
+      "copy": "Les moments entre les matchs font partie de l’histoire : conversations, rencontres et passion partagée pour le jeu.",
+      "imageAlt": "Participants Golden Era échangeant entre deux matchs"
     },
     "people": {
-      "eyebrow": "The People",
-      "titleLineOne": "A Shared Passion.",
-      "titleLineTwo": "An International Community.",
-      "copyLineOne": "Different backgrounds.",
-      "copyLineTwo": "One game.",
-      "imageAlt": "Golden Era players and organisers gathered together on a clay court"
+      "eyebrow": "Les rencontres",
+      "titleLineOne": "Une passion commune.",
+      "titleLineTwo": "Une communauté internationale.",
+      "copyLineOne": "Des parcours différents.",
+      "copyLineTwo": "Un même jeu.",
+      "imageAlt": "Joueurs et organisateurs Golden Era réunis sur un court en terre battue"
     },
     "heritage": {
-      "eyebrow": "The Heritage",
-      "titleLineOne": "Every Racquet",
-      "titleLineTwo": "Carries A Story.",
-      "copyLineOne": "The evolution of tennis is not displayed behind glass.",
-      "copyLineTwo": "It returns to the court.",
-      "imageAlt": "Golden Era participants presenting framed heritage tennis racquets"
+      "eyebrow": "L’héritage",
+      "titleLineOne": "Chaque raquette",
+      "titleLineTwo": "porte une histoire.",
+      "copyLineOne": "L’évolution du tennis ne reste pas derrière une vitrine.",
+      "copyLineTwo": "Elle revient sur le court.",
+      "imageAlt": "Participants Golden Era présentant des raquettes de tennis historiques encadrées"
     },
     "final": {
-      "eyebrow": "Take Your Place",
-      "titleLineOne": "Come For The Tennis.",
-      "titleLineTwo": "Leave With The Story.",
-      "discoverTour": "Discover the Tour",
-      "imageAlt": "The Golden Era community together at the close of a stage"
+      "eyebrow": "Prenez votre place",
+      "titleLineOne": "Venez pour le tennis.",
+      "titleLineTwo": "Repartez avec une histoire.",
+      "discoverTour": "Découvrir le Tour",
+      "imageAlt": "La communauté Golden Era réunie à la fin d’une étape"
     }
   },
   "PartnersPage": {
     "opening": {
       "eyebrow": "Golden Era Sports Tour",
-      "title": "Our Partners",
-      "statementLineOne": "Partners Who Become",
-      "statementLineTwo": "Part Of The Experience.",
-      "copy": "Golden Era is built with partners who share a connection with sport, heritage, international experiences and the culture surrounding the game."
+      "title": "Nos Partenaires",
+      "statementLineOne": "Des partenaires qui deviennent",
+      "statementLineTwo": "partie intégrante de l’expérience.",
+      "copy": "Golden Era se construit avec des partenaires qui partagent un lien avec le sport, son héritage, les expériences internationales et la culture qui entoure le jeu."
     },
-    "chaptersAriaLabel": "Official partners",
-    "officialPartner": "Official Partner",
-    "visitAriaLabel": "Visit {name}",
+    "chaptersAriaLabel": "Partenaires officiels",
+    "officialPartner": "Partenaire officiel",
+    "visitAriaLabel": "Visiter {name}",
     "partners": {
       "heroes": {
-        "visitLabel": "Visit HEROE'S",
-        "logoAlt": "HEROE'S official partner logo",
-        "description": "A sportswear partner within the Golden Era Sports Tour.",
-        "featuredImageAlt": "Golden Era tennis portrait featuring HEROE'S sportswear and a vintage racquet"
+        "visitLabel": "Visiter HEROE'S",
+        "logoAlt": "Logo de HEROE'S, partenaire officiel",
+        "description": "Un partenaire de vêtements de sport du Golden Era Sports Tour.",
+        "featuredImageAlt": "Portrait de tennis Golden Era avec une tenue HEROE'S et une raquette vintage"
       },
       "sembrancher": {
-        "visitLabel": "Visit SEMBRANCHER",
-        "logoAlt": "Sembrancher official partner logo",
-        "description": "Sembrancher joins the Golden Era environment as an official partner, connecting its identity with the Tour's international tennis experience.",
-        "featuredImageAlt": "Sembrancher bottle photographed with tennis balls and a wooden tennis racquet"
+        "visitLabel": "Visiter SEMBRANCHER",
+        "logoAlt": "Logo de Sembrancher, partenaire officiel",
+        "description": "Sembrancher rejoint l’univers Golden Era en tant que partenaire officiel, associant son identité à l’expérience internationale de tennis du Tour.",
+        "featuredImageAlt": "Bouteille Sembrancher photographiée avec des balles de tennis et une raquette en bois"
       }
     },
     "philosophy": {
-      "eyebrow": "Partnership",
-      "titleLineOne": "Built Into The Experience,",
-      "titleLineTwo": "Not Added Around It.",
-      "copy": "Golden Era partnerships are designed to live naturally within the sporting, social and visual environment of the Tour."
+      "eyebrow": "Partenariat",
+      "titleLineOne": "Intégrés à l’expérience,",
+      "titleLineTwo": "pas ajoutés autour.",
+      "copy": "Les partenariats Golden Era sont conçus pour s’intégrer naturellement à l’environnement sportif, social et visuel du Tour."
     },
     "cta": {
-      "eyebrow": "Partner With Golden Era",
-      "titleLineOne": "Join The Next",
-      "titleLineTwo": "Chapter Of The Tour.",
-      "copy": "Interested in becoming part of the Golden Era Sports Tour?",
-      "label": "Partner With Us"
+      "eyebrow": "Devenir partenaire de Golden Era",
+      "titleLineOne": "Rejoignez le prochain",
+      "titleLineTwo": "chapitre du Tour.",
+      "copy": "Vous souhaitez rejoindre le Golden Era Sports Tour ?",
+      "label": "Devenir partenaire"
     }
   },
   "LanguageSwitcher": {
@@ -550,235 +550,235 @@
   },
   "TeamPage": {
     "hero": {
-      "eyebrow": "The Team",
-      "titleLineOne": "People",
-      "titleLineTwo": "Behind",
-      "titleLineThree": "The Idea.",
-      "intro": "Golden Era is shaped by different backgrounds, perspectives and a shared passion for the game."
+      "eyebrow": "L’Équipe",
+      "titleLineOne": "Les personnes",
+      "titleLineTwo": "derrière",
+      "titleLineThree": "l’idée.",
+      "intro": "Golden Era se construit à partir de parcours et de points de vue différents, réunis par une même passion pour le jeu."
     },
     "founder": {
-      "eyebrow": "The Founder",
+      "eyebrow": "Le Fondateur",
       "firstName": "Jérôme",
       "lastName": "Séguin",
-      "role": "President",
-      "imageAlt": "Portrait of Golden Era founder Jérôme Séguin",
+      "role": "Président",
+      "imageAlt": "Portrait de Jérôme Séguin, fondateur de Golden Era",
       "story": {
-        "opening": "The idea behind Golden Era began on a tennis court.",
-        "background": "Years ago, Jérôme Séguin, a tennis instructor based at the Monte-Carlo Country Club, found himself playing against one of the leading players of the late 1970s and early 1980s — a champion from a generation that defined an era of tennis.",
-        "equipment": "The former top player was using an old-generation racquet, while Jérôme played with modern equipment.",
-        "result": "Jérôme won.",
-        "question": "What stayed with him was not the result, but the question behind it: how much can the evolution of equipment change the balance of a match?",
-        "legacy": "That experience became the starting point for Golden Era — a format built around the opposition of materials and the evolution of tennis technology."
+        "opening": "L’idée de Golden Era est née sur un court de tennis.",
+        "background": "Il y a plusieurs années, Jérôme Séguin, professeur de tennis au Monte-Carlo Country Club, s’est retrouvé face à l’un des grands joueurs de la fin des années 1970 et du début des années 1980 — un champion issu d’une génération qui a marqué une époque du tennis.",
+        "equipment": "L’ancien grand joueur utilisait une raquette d’ancienne génération, tandis que Jérôme jouait avec du matériel moderne.",
+        "result": "Jérôme a gagné.",
+        "question": "Ce n’est pas le résultat qui l’a marqué, mais la question qu’il soulevait : dans quelle mesure l’évolution du matériel peut-elle modifier l’équilibre d’un match ?",
+        "legacy": "Cette expérience est devenue le point de départ de Golden Era — un format fondé sur l’opposition des matériaux et l’évolution de la technologie du tennis."
       },
       "quote": {
-        "lineOne": "How Much Can Equipment",
-        "lineTwo": "Change The Balance",
-        "lineThree": "Of A Match?"
+        "lineOne": "Jusqu’où le matériel",
+        "lineTwo": "peut-il modifier l’équilibre",
+        "lineThree": "d’un match ?"
       }
     },
     "statement": {
-      "lineOne": "One Match.",
-      "lineTwo": "One Question.",
-      "lineThree": "One Format.",
-      "supporting": "The starting point of Golden Era."
+      "lineOne": "Un match.",
+      "lineTwo": "Une question.",
+      "lineThree": "Un format.",
+      "supporting": "Le point de départ de Golden Era."
     },
     "people": {
-      "eyebrow": "The People Behind The Tour",
-      "heading": "The Golden Era team",
+      "eyebrow": "Les personnes derrière le Tour",
+      "heading": "L’équipe Golden Era",
       "members": {
         "nicola": {
           "name": "Nicola Bertazzi",
-          "role": "Vice President & CFO",
-          "imageAlt": "Portrait of Nicola Bertazzi"
+          "role": "Vice-président & CFO",
+          "imageAlt": "Portrait de Nicola Bertazzi"
         },
         "massimo": {
           "name": "Massimo Della Torre",
-          "role": "Vice President",
-          "imageAlt": "Portrait of Massimo Della Torre"
+          "role": "Vice-président",
+          "imageAlt": "Portrait de Massimo Della Torre"
         },
         "marco": {
           "name": "Marco Lolli",
-          "role": "Strategic Planning Manager",
-          "imageAlt": "Portrait of Marco Lolli"
+          "role": "Responsable de la planification stratégique",
+          "imageAlt": "Portrait de Marco Lolli"
         },
         "filippo": {
           "name": "Filippo Chiani",
           "role": "Office Manager",
-          "imageAlt": "Portrait of Filippo Chiani"
+          "imageAlt": "Portrait de Filippo Chiani"
         },
         "pier": {
           "name": "Pier Federico Grillone",
-          "role": "Communication & Brand Strategy Manager",
-          "imageAlt": "Portrait of Pier Federico Grillone"
+          "role": "Responsable communication et stratégie de marque",
+          "imageAlt": "Portrait de Pier Federico Grillone"
         }
       }
     },
     "closing": {
-      "lineOne": "Different Roles.",
-      "lineTwo": "One Tour.",
-      "cta": "Discover the Concept"
+      "lineOne": "Des rôles différents.",
+      "lineTwo": "Un même Tour.",
+      "cta": "Découvrir le Concept"
     }
   },
   "CollectionPage": {
-    "eyebrow": "The Collection",
-    "titleLineOne": "A Living Archive",
-    "titleLineTwo": "Of Tennis History.",
-    "introLineOne": "Original racquets from different eras of the game form the heart of the Golden Era collection.",
-    "introLineTwo": "A dedicated digital archive is currently being curated.",
-    "status": "Coming Soon",
-    "closingLineOne": "Five decades of equipment.",
-    "closingLineTwo": "One evolving collection.",
-    "imageAlt": "Original tennis racquets from different eras in the Golden Era collection"
+    "eyebrow": "La Collection",
+    "titleLineOne": "Une Collection Vivante",
+    "titleLineTwo": "de l’histoire du tennis.",
+    "introLineOne": "Des raquettes originales issues de différentes époques du jeu sont au cœur de la collection Golden Era.",
+    "introLineTwo": "Une archive numérique dédiée est actuellement en cours de création.",
+    "status": "Bientôt Disponible",
+    "closingLineOne": "Cinq décennies d’équipement.",
+    "closingLineTwo": "Une collection en constante évolution.",
+    "imageAlt": "Raquettes de tennis originales de différentes époques issues de la collection Golden Era"
   },
   "ContactPage": {
     "eyebrow": "Contact",
-    "title": "Let’s Talk.",
-    "intro": "For general enquiries, partnerships, media requests or collaborations, get in touch with the Golden Era Sports Tour team.",
-    "generalEnquiries": "General Enquiries",
-    "followTour": "Follow the Tour",
+    "title": "Parlons-en.",
+    "intro": "Pour toute demande générale, partenariat, demande média ou collaboration, contactez l’équipe du Golden Era Sports Tour.",
+    "generalEnquiries": "Demandes générales",
+    "followTour": "Suivre le Tour",
     "instagram": "Instagram",
     "form": {
-      "title": "Send a message",
-      "honeypot": "Leave this field empty",
+      "title": "Envoyer un message",
+      "honeypot": "Laissez ce champ vide",
       "fields": {
-        "firstName": "First name",
-        "lastName": "Last name",
-        "email": "Email",
-        "subject": "Subject",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "E-mail",
+        "subject": "Objet",
         "message": "Message"
       },
-      "submit": "Send Message",
-      "submitting": "Sending...",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
       "validation": {
-        "required": "This field is required.",
-        "email": "Enter a valid email address."
+        "required": "Ce champ est obligatoire.",
+        "email": "Saisissez une adresse e-mail valide."
       },
       "errors": {
-        "generic": "We could not send your message. Please try again.",
-        "unavailable": "Online message delivery is not configured yet. Please email us directly."
+        "generic": "Votre message n’a pas pu être envoyé. Veuillez réessayer.",
+        "unavailable": "L’envoi de messages en ligne n’est pas encore configuré. Veuillez nous écrire directement par e-mail."
       },
       "success": {
-        "title": "THANK YOU.",
-        "lineOne": "Your message has been received.",
-        "lineTwo": "Our team will get back to you shortly."
+        "title": "MERCI.",
+        "lineOne": "Votre message a bien été envoyé.",
+        "lineTwo": "Notre équipe vous répondra prochainement."
       }
     },
     "join": {
-      "prompt": "Interested in Playing?",
-      "cta": "Join the Tour"
+      "prompt": "Envie de jouer ?",
+      "cta": "Participer au Tour"
     }
   },
   "JoinPage": {
     "hero": {
-      "eyebrow": "Join the Tour",
-      "titleLineOne": "Step Onto",
-      "titleLineTwo": "The Court.",
-      "intro": "Apply to take part in a Golden Era Sports Tour event and experience tennis through the evolution of the game.",
-      "supporting": "Selected amateur players · Original racquets · Iconic destinations"
+      "eyebrow": "Participer au Tour",
+      "titleLineOne": "Entrez sur",
+      "titleLineTwo": "le court.",
+      "intro": "Candidatez pour prendre part à un événement du Golden Era Sports Tour et vivre l’évolution du tennis sur le court.",
+      "supporting": "Joueurs amateurs sélectionnés · Raquettes originales · Destinations emblématiques"
     },
     "introduction": {
-      "title": "The Golden Era application experience",
+      "title": "L’expérience de candidature Golden Era",
       "format": {
-        "title": "The Format",
-        "copy": "Selected amateur players compete using racquets assigned by the organisation from different generations of tennis history."
+        "title": "Le Format",
+        "copy": "Des joueurs amateurs sélectionnés s’affrontent avec des raquettes de différentes générations de l’histoire du tennis, attribuées par l’organisation."
       },
       "experience": {
-        "title": "The Experience",
-        "copy": "Tournament play, shared moments on and off court, awards and the Golden Era atmosphere."
+        "title": "L’Expérience",
+        "copy": "Compétition, moments partagés sur et en dehors du court, remise des prix et atmosphère Golden Era."
       },
       "tour": {
-        "title": "The Tour",
-        "copy": "Select the event you would like to join and submit your application."
+        "title": "Le Tour",
+        "copy": "Sélectionnez l’événement auquel vous souhaitez participer et envoyez votre candidature."
       }
     },
     "application": {
-      "eyebrow": "Application / 2026",
-      "title": "Your Place On Court.",
-      "copy": "Tell us about your tennis and select the Golden Era stage you would like to join."
+      "eyebrow": "Candidature / 2026",
+      "title": "Votre place sur le court.",
+      "copy": "Parlez-nous de votre pratique du tennis et sélectionnez l’étape Golden Era à laquelle vous souhaitez participer."
     },
     "form": {
-      "title": "Golden Era Sports Tour application",
-      "honeypot": "Leave this field empty",
-      "selectPlaceholder": "Select an option",
-      "optionalPlaceholder": "Optional",
-      "selectEventPlaceholder": "Select your event",
+      "title": "Candidature au Golden Era Sports Tour",
+      "honeypot": "Laissez ce champ vide",
+      "selectPlaceholder": "Sélectionnez une option",
+      "optionalPlaceholder": "Facultatif",
+      "selectEventPlaceholder": "Sélectionnez votre événement",
       "sections": {
-        "personal": "Personal Details",
-        "tennis": "Tennis Profile",
-        "kit": "Player Kit",
-        "event": "Event Selection",
-        "additional": "Additional Information",
-        "privacy": "Privacy Consent"
+        "personal": "Informations personnelles",
+        "tennis": "Profil de tennis",
+        "kit": "Tenue du joueur",
+        "event": "Choix de l’événement",
+        "additional": "Informations complémentaires",
+        "privacy": "Consentement relatif à la confidentialité"
       },
       "fields": {
-        "firstName": "First name",
-        "lastName": "Last name",
-        "gender": "Gender",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "gender": "Sexe",
         "email": "Email",
-        "phone": "Phone / WhatsApp",
-        "country": "Country",
-        "tennisLevel": "Tennis level",
-        "clubBackground": "Club / tennis background",
-        "playingHand": "Playing hand",
-        "tshirtSize": "T-shirt size",
-        "bottomSize": "Shorts / Pants size",
-        "event": "Select your event",
-        "referralSource": "How did you hear about Golden Era?",
-        "message": "Additional message"
+        "phone": "Téléphone / WhatsApp",
+        "country": "Pays",
+        "tennisLevel": "Niveau de tennis",
+        "clubBackground": "Club / expérience tennistique",
+        "playingHand": "Main de jeu",
+        "tshirtSize": "Taille du T-shirt",
+        "bottomSize": "Taille du short / pantalon",
+        "event": "Sélectionnez votre événement",
+        "referralSource": "Comment avez-vous connu Golden Era ?",
+        "message": "Message complémentaire"
       },
       "options": {
         "gender": {
-          "male": "Male",
-          "female": "Female"
+          "male": "Homme",
+          "female": "Femme"
         },
         "tennisLevel": {
-          "recreational": "Recreational",
-          "intermediate": "Intermediate",
-          "advancedAmateur": "Advanced amateur",
-          "competitiveAmateur": "Competitive amateur",
-          "formerCompetitivePlayer": "Former competitive player"
+          "recreational": "Loisir",
+          "intermediate": "Intermédiaire",
+          "advancedAmateur": "Amateur confirmé",
+          "competitiveAmateur": "Amateur de compétition",
+          "formerCompetitivePlayer": "Ancien joueur de compétition"
         },
         "playingHand": {
-          "rightHanded": "Right-handed",
-          "leftHanded": "Left-handed"
+          "rightHanded": "Droitier",
+          "leftHanded": "Gaucher"
         },
         "referralSource": {
           "instagram": "Instagram",
-          "friendInvitation": "Friend / invitation",
-          "tennisClub": "Tennis club",
-          "event": "Event",
-          "pressMedia": "Press / media",
-          "googleWebSearch": "Google / web search",
-          "other": "Other"
+          "friendInvitation": "Ami / invitation",
+          "tennisClub": "Club de tennis",
+          "event": "Événement",
+          "pressMedia": "Presse / médias",
+          "googleWebSearch": "Google / recherche web",
+          "other": "Autre"
         }
       },
       "privacy": {
         "consent": "J’ai pris connaissance de la <policy>Politique de Confidentialité</policy> et j’accepte que mes informations soient utilisées afin d’examiner ma candidature au Golden Era Sports Tour et de me contacter à ce sujet."
       },
       "validation": {
-        "required": "This field is required.",
-        "email": "Enter a valid email address.",
-        "event": "Select an available event.",
-        "privacy": "Votre consentement est nécessaire pour envoyer votre candidature."
+        "required": "Ce champ est obligatoire.",
+        "email": "Saisissez une adresse e-mail valide.",
+        "event": "Sélectionnez un événement disponible.",
+        "privacy": "Le consentement à la Politique de Confidentialité est obligatoire."
       },
       "errors": {
-        "generic": "We could not submit your application. Please try again.",
+        "generic": "Votre candidature n’a pas pu être envoyée. Veuillez réessayer.",
         "unavailable": "Votre candidature n’a pas pu être envoyée pour le moment. Veuillez contacter directement notre équipe.",
-        "rateLimited": "Too many applications were submitted from this connection. Please try again later."
+        "rateLimited": "Trop de candidatures ont été envoyées depuis cette connexion. Veuillez réessayer plus tard."
       },
-      "submit": "Submit Application",
-      "submitting": "Submitting...",
+      "submit": "Envoyer la candidature",
+      "submitting": "Envoi en cours...",
       "success": {
-        "title": "Application Received.",
-        "intro": "Thank you for your interest in Golden Era Sports Tour.",
-        "followUp": "Our team will review your application and contact you directly.",
-        "cta": "Discover the Tour"
+        "title": "Candidature reçue.",
+        "intro": "Merci de l’intérêt que vous portez au Golden Era Sports Tour.",
+        "followUp": "Notre équipe examinera votre candidature et vous contactera directement.",
+        "cta": "Découvrir le Tour"
       }
     },
     "contact": {
-      "title": "General Enquiries?",
-      "copy": "For partnerships, media or other enquiries, contact our team.",
-      "cta": "Contact Us"
+      "title": "Une question générale ?",
+      "copy": "Pour les partenariats, les médias ou toute autre demande, contactez notre équipe.",
+      "cta": "Nous contacter"
     }
   },
   "PrivacyPage": {
@@ -786,14 +786,14 @@
     "title": "Politique de Confidentialité",
     "intro": "La présente politique explique comment Vintage Events Montecarlo S.r.l.s. traite les données personnelles transmises par l’intermédiaire du site Golden Era Sports Tour.",
     "controller": {
-      "title": "Responsable du Traitement",
-      "copy": "Vintage Events Montecarlo S.r.l.s. est responsable du traitement et détermine comment et pourquoi les données personnelles décrites dans la présente politique sont utilisées.",
-      "contactLabel": "Contact confidentialité"
+      "title": "Responsable du traitement",
+      "copy": "Vintage Events Montecarlo S.r.l.s. est responsable du traitement et détermine comment et pourquoi les données personnelles décrites dans la présente politique sont traitées.",
+      "contactLabel": "Contact pour les questions de confidentialité"
     },
     "data": {
-      "title": "Données Collectées",
+      "title": "Données collectées",
       "intro": "Les données collectées dépendent de la manière dont vous utilisez le site.",
-      "applicationTitle": "Candidatures Join the Tour",
+      "applicationTitle": "Candidatures pour participer au Tour",
       "applicationCopy": "Une candidature peut comprendre vos prénom, nom, genre, adresse e-mail, numéro de téléphone ou WhatsApp, pays, niveau de tennis, club ou parcours tennistique, main de jeu, taille de T-shirt, taille de short ou pantalon, étape sélectionnée, source de recommandation, message facultatif, langue du site et horodatage de l’envoi.",
       "contactTitle": "Demandes de contact",
       "contactCopy": "Une demande de contact peut comprendre vos prénom, nom, adresse e-mail, objet et message.",
@@ -801,31 +801,31 @@
       "technicalCopy": "Lorsqu’un formulaire est envoyé, des données techniques limitées, notamment l’adresse IP et les métadonnées de la requête, peuvent être traitées temporairement afin d’acheminer la demande, de prévenir les abus et de protéger le site."
     },
     "purposes": {
-      "title": "Utilisation des Données",
+      "title": "Utilisation des données",
       "application": "Examiner les candidatures au Tour, évaluer la participation et contacter les candidats au sujet de l’étape sélectionnée.",
-      "contact": "Répondre aux demandes générales, aux propositions de partenariat, aux demandes presse et aux collaborations.",
+      "contact": "Répondre aux demandes générales, aux propositions de partenariat, aux demandes des médias et aux collaborations.",
       "security": "Faire fonctionner et protéger le site et ses formulaires, notamment contre les envois répétés ou abusifs."
     },
     "basis": {
-      "title": "Base du Traitement",
-      "copy": "Les données de candidature sont traitées sur la base du consentement donné dans le formulaire et, le cas échéant, afin de prendre des mesures à votre demande avant une participation. Les demandes de contact et les traitements de sécurité essentiels sont gérés afin de vous répondre et dans l’intérêt légitime de la société à exploiter et protéger le site.",
+      "title": "Base du traitement",
+      "copy": "Les données de candidature sont traitées sur la base du consentement donné dans le formulaire et, le cas échéant, afin de prendre des mesures à votre demande avant votre participation. Les demandes de contact et les traitements de sécurité essentiels sont gérés afin de vous répondre et dans l’intérêt légitime de la société à exploiter et protéger le site.",
       "withdrawal": "Vous pouvez retirer votre consentement à tout moment en nous contactant. Ce retrait n’affecte pas les traitements déjà réalisés avant votre demande."
     },
     "sharing": {
-      "title": "Destinataires et Prestataires",
+      "title": "Destinataires et prestataires",
       "copy": "Les données peuvent être consultées par le personnel autorisé de la société et par des prestataires chargés de l’hébergement du site, de l’acheminement des e-mails, de l’informatique et de la sécurité. Ces prestataires les traitent uniquement lorsque cela est nécessaire à leurs services et pour le compte de la société. Les données personnelles ne sont pas vendues."
     },
     "retention": {
-      "title": "Durée de Conservation",
+      "title": "Durée de conservation",
       "copy": "Les données sont conservées uniquement pendant la durée raisonnablement nécessaire aux finalités décrites ci-dessus et au respect des obligations légales ou administratives applicables. Elles sont ensuite supprimées ou anonymisées lorsque cela est approprié."
     },
     "rights": {
-      "title": "Vos Droits",
+      "title": "Vos droits",
       "copy": "Selon les conditions applicables, vous pouvez demander l’accès à vos données personnelles, leur rectification, leur effacement, leur limitation ou leur portabilité, vous opposer à certains traitements ou retirer votre consentement. Vous pouvez également introduire une réclamation auprès de l’autorité de protection des données compétente.",
       "contact": "Pour exercer vos droits ou poser une question sur la confidentialité, contactez"
     },
     "marketing": {
-      "title": "Communications Marketing",
+      "title": "Communications marketing",
       "copy": "L’envoi d’un formulaire de contact ou de candidature ne vous inscrit pas automatiquement à des communications marketing. Un consentement distinct serait demandé avant la mise en place de tout abonnement marketing."
     }
   },
@@ -835,47 +835,47 @@
       "description": "Golden Era Sports Tour célèbre l’histoire et l’évolution du tennis à travers des événements internationaux, des raquettes originales et des destinations emblématiques."
     },
     "experience": {
-      "title": "The Experience | Golden Era Sports Tour",
-      "description": "Discover the Golden Era Sports Tour experience — tennis, heritage, people and shared moments on and beyond the court."
+      "title": "L’Expérience | Golden Era Sports Tour",
+      "description": "Découvrez l’expérience Golden Era Sports Tour : tennis, héritage, rencontres et moments partagés sur le court et au-delà."
     },
     "partners": {
-      "title": "Partners | Golden Era Sports Tour",
-      "description": "Discover the official partners supporting the Golden Era Sports Tour and becoming part of the Tour experience."
+      "title": "Partenaires | Golden Era Sports Tour",
+      "description": "Découvrez les partenaires officiels qui accompagnent le Golden Era Sports Tour et s’intègrent à l’expérience du Tour."
     },
     "team": {
-      "title": "Team | Golden Era Sports Tour",
-      "description": "Meet the team behind the Golden Era Sports Tour."
+      "title": "L’Équipe | Golden Era Sports Tour",
+      "description": "Découvrez l’équipe derrière le Golden Era Sports Tour."
     },
     "contact": {
       "title": "Contact | Golden Era Sports Tour",
-      "description": "Contact Golden Era Sports Tour for general enquiries, partnerships, media requests and collaborations."
+      "description": "Contactez Golden Era Sports Tour pour toute demande générale, partenariat, demande média ou collaboration."
     },
     "collection": {
-      "title": "The Collection | Golden Era Sports Tour",
-      "description": "Discover the evolving Golden Era Sports Tour collection of original tennis racquets from different generations of the game."
+      "title": "La Collection | Golden Era Sports Tour",
+      "description": "Découvrez la collection évolutive du Golden Era Sports Tour, composée de raquettes de tennis originales issues de différentes générations du jeu."
     },
     "join": {
-      "title": "Join the Tour | Golden Era Sports Tour",
-      "description": "Apply to join a Golden Era Sports Tour event and experience tennis through original racquets, iconic destinations and the evolution of the game."
+      "title": "Participer au Tour | Golden Era Sports Tour",
+      "description": "Candidatez à un événement du Golden Era Sports Tour et vivez l’évolution du tennis à travers des raquettes originales et des destinations emblématiques."
     },
     "privacy": {
       "title": "Politique de Confidentialité | Golden Era Sports Tour",
       "description": "Découvrez comment Golden Era Sports Tour traite les données transmises par les formulaires de candidature et de contact."
     },
     "concept": {
-      "title": "The Concept | Golden Era Sports Tour",
-      "description": "Discover the Golden Era Sports Tour concept: an amateur tennis format that brings the heritage and evolution of racquet technology back onto the court."
+      "title": "Le Concept | Golden Era Sports Tour",
+      "description": "Découvrez le concept Golden Era Sports Tour : un format de tennis amateur qui remet sur le court l’héritage et l’évolution technologique des raquettes."
     },
     "tour": {
-      "title": "The Tour | Golden Era Sports Tour",
-      "description": "Discover the 2026 Golden Era Sports Tour, an international amateur tennis circuit travelling through five iconic destinations."
+      "title": "Le Tour | Golden Era Sports Tour",
+      "description": "Découvrez le Golden Era Sports Tour 2026, un circuit international de tennis amateur à travers cinq destinations emblématiques."
     },
     "tourStages": {
       "monteCarlo": {
         "title": "Monte-Carlo | Golden Era Sports Tour",
-        "description": "The next Golden Era stage on the international heritage tennis tour."
+        "description": "La prochaine étape Golden Era d’un Tour international consacré à l’héritage du tennis."
       }
     },
-    "tourStageFallbackTitle": "Tour Stage | Golden Era Sports Tour"
+    "tourStageFallbackTitle": "Étape du Tour | Golden Era Sports Tour"
   }
 }
