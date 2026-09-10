@@ -119,23 +119,23 @@ video {
   height: auto;
 }
 
-.site-footer__brand a {
+.site-footer__brand-identity {
   display: inline-grid;
   gap: 0.05rem;
   text-transform: uppercase;
 }
 
-.site-footer__brand span {
+.site-footer__brand-identity span {
   font-family: var(--font-serif);
   font-size: 1.28rem;
   font-weight: 600;
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
-.site-footer__brand small {
-  font-size: 0.58rem;
+.site-footer__brand-identity small {
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: 0.02em;
 }
 
 .site-header__desktop-nav {
@@ -644,6 +644,9 @@ video {
 }
 
 .countdown-timer {
+  --countdown-number-size: clamp(3rem, 7cqi, 5.3rem);
+  --countdown-number-row: calc(var(--countdown-number-size) * 1.08);
+
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   width: min(100%, 56rem);
@@ -652,17 +655,24 @@ video {
 
 .countdown-timer__unit {
   display: grid;
+  grid-template-rows: var(--countdown-number-row) auto;
   justify-items: center;
   gap: 0.75rem;
   min-width: 0;
 }
 
-.countdown-timer__unit strong {
+.countdown-timer__number {
+  display: grid;
+  min-block-size: var(--countdown-number-row);
+  place-items: center;
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 7cqi, 5.3rem);
+  font-size: var(--countdown-number-size);
   font-weight: 500;
-  line-height: 0.82;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
   color: var(--color-brown-dark);
+  white-space: nowrap;
 }
 
 .countdown-timer__unit span {
@@ -1576,9 +1586,10 @@ video {
 .site-footer__brand p {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 
@@ -1586,11 +1597,12 @@ video {
   display: inline-flex;
   justify-self: start;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
   color: var(--color-text-muted);
-  font-size: 0.68rem;
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
   text-transform: uppercase;
   white-space: nowrap;
   transition: color 160ms ease;
@@ -1598,8 +1610,8 @@ video {
 
 .site-footer__instagram-icon {
   flex: 0 0 auto;
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 0.875rem;
+  height: 0.875rem;
   object-fit: contain;
 }
 
@@ -1621,8 +1633,8 @@ video {
   border-top: 1px solid var(--color-border);
   padding-top: 1.25rem;
   color: var(--color-text-muted);
-  font-size: 0.65rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.55;
 }
 
 .site-footer__company {
@@ -1642,12 +1654,19 @@ video {
   display: grid;
 }
 
+.site-footer__company p:first-child {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
 .site-footer__closing {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
   gap: var(--space-md);
   color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
 }
 
 .site-footer__closing-meta {
@@ -1655,6 +1674,8 @@ video {
   align-items: center;
   justify-content: flex-end;
   gap: 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
   white-space: nowrap;
 }
 
@@ -3655,7 +3676,7 @@ video {
     width: 155px;
   }
 
-  .site-footer__brand span {
+  .site-footer__brand-identity span {
     font-size: 1.12rem;
   }
 

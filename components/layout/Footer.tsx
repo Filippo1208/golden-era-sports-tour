@@ -12,7 +12,11 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="site-footer__brand">
-        <Link href="/" aria-label={navigation("homeLabel")}>
+        <Link
+          className="site-footer__brand-identity"
+          href="/"
+          aria-label={navigation("homeLabel")}
+        >
           <span>Golden Era</span>
           <small>Sports Tour</small>
         </Link>

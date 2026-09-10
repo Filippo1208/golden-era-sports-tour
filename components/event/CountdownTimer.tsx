@@ -40,7 +40,7 @@ function LoadingUnits({ labels, ariaLabel }: { labels: string[]; ariaLabel: stri
     <div className="countdown-timer" aria-label={ariaLabel}>
       {labels.map((label) => (
         <div className="countdown-timer__unit" key={label}>
-          <strong>--</strong>
+          <strong className="countdown-timer__number">--</strong>
           <span>{label}</span>
         </div>
       ))}
@@ -87,7 +87,7 @@ export function CountdownTimer({ event }: CountdownTimerProps) {
     <div className="countdown-timer" aria-label={t("countdownTo", { city: event.city })}>
       {units.map((unit) => (
         <div className="countdown-timer__unit" key={unit.label}>
-          <strong>{unit.value}</strong>
+          <strong className="countdown-timer__number">{unit.value}</strong>
           <span>{unit.label}</span>
         </div>
       ))}
