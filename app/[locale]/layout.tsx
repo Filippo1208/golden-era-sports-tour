@@ -8,6 +8,7 @@ import type { ReactNode } from "react";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { getLocalizedMetadata } from "@/lib/metadata";
 import { getSiteUrl } from "@/lib/site-url";
+import { getWebsiteStructuredData } from "@/lib/structured-data";
 import "../globals.css";
 
 const editorialSerif = Cormorant_Garamond({
@@ -46,6 +47,17 @@ export async function generateMetadata({
 
   return {
     metadataBase: getSiteUrl(),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     ...getLocalizedMetadata({
       locale,
       title: t("title"),
@@ -65,6 +77,7 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages({ locale });
+  const structuredData = getWebsiteStructuredData();
 
   return (
     <html
@@ -73,6 +86,12 @@ export default async function LocaleLayout({
       className={`${editorialSerif.variable} ${contemporarySans.variable}`}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

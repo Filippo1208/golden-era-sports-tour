@@ -412,10 +412,12 @@ Navigation decisions:
 - Changing locale preserves the current pathname, including individual Tour stage pages.
 - `/[locale]/discover-the-tour` is a legacy/marketing alias that redirects to `/[locale]/tour`; `/tour` remains the canonical Tour route.
 - Every implemented localized page provides its own canonical URL plus `hreflang` alternates for `en`, `fr`, `it` and `x-default`.
-- `app/sitemap.ts` lists the root redirect, every implemented page for all three locales and only stage pages marked available in the central event data, with reciprocal language alternates and route-specific change frequencies.
+- `app/sitemap.ts` lists every canonical implemented page for all three locales and only stage pages marked available in the central event data, with reciprocal language alternates and route-specific change frequencies. Redirect-only URLs, including the unprefixed root, are excluded.
 - `app/robots.ts` allows public crawling, disallows `/api/` and references the production sitemap.
 - All canonical, Open Graph, hreflang, sitemap and robots URLs use the fixed production origin `https://goldenerasportstour.com`; deployment and localhost domains must never appear in SEO output.
 - Localized metadata dictionaries provide title and description values to standard metadata and Open Graph metadata through `lib/metadata.ts`.
+- The locale layout explicitly emits `index, follow` and Google preview directives for all public pages and includes conservative `Organization` plus `WebSite` JSON-LD using only published brand, company, contact and address data.
+- The unprefixed `/` route permanently redirects in one application hop to the canonical English homepage `/en`; legacy marketing redirects remain permanent and point directly to their canonical localized destinations.
 - The September 2026 pre-translation audit moved all rendered language-dependent Homepage, Concept, Tour, Monte-Carlo stage, Experience and Partners copy into the translation dictionaries. Team, Collection, Contact, Join, navigation, language controls and reusable Footer labels were already dictionary-backed and were verified in the same audit.
 - `messages/en.json` remains the source of truth. `messages/fr.json` and `messages/it.json` preserve full key parity while translating only approved scopes; no automatic translation is used.
 - The first approved translation scope covers `Navigation`, `LanguageSwitcher`, `HomePage`, `HomeTeam`, Homepage date-month labels, shared Footer labels and `Metadata.home`. All other page namespaces remain equal to English.

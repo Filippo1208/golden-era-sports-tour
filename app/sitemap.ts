@@ -38,19 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const localizedPages = [...localizedPublicPages, ...publicStagePages];
 
-  return [
-    {
-      url: new URL("/", siteUrl).toString(),
-      changeFrequency: "weekly",
-    },
-    ...localizedPages.flatMap(({ pathname, changeFrequency }) =>
-      routing.locales.map((locale) => ({
-        url: new URL(getLocalizedPath(locale, pathname), siteUrl).toString(),
-        changeFrequency,
-        alternates: {
-          languages: getAbsoluteLanguageAlternates(pathname),
-        },
-      })),
-    ),
-  ];
+  return localizedPages.flatMap(({ pathname, changeFrequency }) =>
+    routing.locales.map((locale) => ({
+      url: new URL(getLocalizedPath(locale, pathname), siteUrl).toString(),
+      changeFrequency,
+      alternates: {
+        languages: getAbsoluteLanguageAlternates(pathname),
+      },
+    })),
+  );
 }
