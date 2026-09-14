@@ -1317,7 +1317,10 @@ video {
   padding-block: clamp(4rem, 7vw, 7rem);
 }
 
-.partner-editorial--milano-restaurant-group,
+.partner-editorial--milano-restaurant-group {
+  --partner-photo-position: center 20%;
+}
+
 .partner-editorial--heroes {
   --partner-photo-position: center 42%;
 }
