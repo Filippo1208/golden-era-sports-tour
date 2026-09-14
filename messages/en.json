@@ -42,9 +42,14 @@
   "OfficialPartners": {
     "title": "Official Partners",
     "logosAriaLabel": "Official partner logos",
+    "featuredLabel": "Main Partner",
+    "supportingLabel": "Partners",
     "visitAriaLabel": "Visit {name}",
     "cta": "Discover Our Partners",
     "partners": {
+      "milanoRestaurantGroup": {
+        "logoAlt": "Milano Restaurant Group official partner logo"
+      },
       "heroes": {
         "logoAlt": "HEROE'S official partner logo"
       },
@@ -499,8 +504,16 @@
     },
     "chaptersAriaLabel": "Official partners",
     "officialPartner": "Official Partner",
+    "mainPartner": "Main Partner",
+    "partnersHeading": "Partners",
     "visitAriaLabel": "Visit {name}",
     "partners": {
+      "milanoRestaurantGroup": {
+        "visitLabel": "Visit Milano Restaurant Group",
+        "logoAlt": "Milano Restaurant Group official partner logo",
+        "description": "Milano Restaurant Group joins Golden Era as Main Partner, bringing its hospitality expertise and distinctive Italian identity to the Tour.",
+        "featuredImageAlt": "Milano Restaurant Group official partner"
+      },
       "heroes": {
         "visitLabel": "Visit HEROE'S",
         "logoAlt": "HEROE'S official partner logo",
@@ -655,7 +668,8 @@
       },
       "errors": {
         "generic": "We could not send your message. Please try again.",
-        "unavailable": "Online message delivery is not configured yet. Please email us directly."
+        "unavailable": "Online message delivery is not configured yet. Please email us directly.",
+        "rateLimited": "Too many messages were submitted from this connection. Please try again later."
       },
       "success": {
         "title": "THANK YOU.",

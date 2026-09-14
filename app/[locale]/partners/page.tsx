@@ -26,7 +26,7 @@ export async function generateMetadata({
 
 export default function PartnersRoute() {
   return (
-    <PublicPageShell heroTone="light" showOfficialPartners={false}>
+    <PublicPageShell heroTone="light">
       <PartnersPage />
     </PublicPageShell>
   );

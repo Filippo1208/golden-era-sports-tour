@@ -42,9 +42,14 @@
   "OfficialPartners": {
     "title": "Partenaires Officiels",
     "logosAriaLabel": "Logos des partenaires officiels",
+    "featuredLabel": "Partenaire principal",
+    "supportingLabel": "Partenaires",
     "visitAriaLabel": "Visiter {name}",
     "cta": "Découvrir Nos Partenaires",
     "partners": {
+      "milanoRestaurantGroup": {
+        "logoAlt": "Logo de Milano Restaurant Group, partenaire officiel"
+      },
       "heroes": {
         "logoAlt": "Logo de HEROE'S, partenaire officiel"
       },
@@ -499,8 +504,16 @@
     },
     "chaptersAriaLabel": "Partenaires officiels",
     "officialPartner": "Partenaire officiel",
+    "mainPartner": "Partenaire principal",
+    "partnersHeading": "Partenaires",
     "visitAriaLabel": "Visiter {name}",
     "partners": {
+      "milanoRestaurantGroup": {
+        "visitLabel": "Visiter Milano Restaurant Group",
+        "logoAlt": "Logo de Milano Restaurant Group, partenaire officiel",
+        "description": "Milano Restaurant Group rejoint Golden Era en tant que partenaire principal, apportant son expertise de l’hospitalité et son identité italienne distinctive au Tour.",
+        "featuredImageAlt": "Milano Restaurant Group, partenaire officiel"
+      },
       "heroes": {
         "visitLabel": "Visiter HEROE'S",
         "logoAlt": "Logo de HEROE'S, partenaire officiel",
@@ -655,7 +668,8 @@
       },
       "errors": {
         "generic": "Votre message n’a pas pu être envoyé. Veuillez réessayer.",
-        "unavailable": "L’envoi de messages en ligne n’est pas encore configuré. Veuillez nous écrire directement par e-mail."
+        "unavailable": "L’envoi de messages en ligne n’est pas encore configuré. Veuillez nous écrire directement par e-mail.",
+        "rateLimited": "Trop de messages ont été envoyés depuis cette connexion. Veuillez réessayer plus tard."
       },
       "success": {
         "title": "MERCI.",

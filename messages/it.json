@@ -42,9 +42,14 @@
   "OfficialPartners": {
     "title": "Partner Ufficiali",
     "logosAriaLabel": "Loghi dei partner ufficiali",
+    "featuredLabel": "Main Partner",
+    "supportingLabel": "Partner",
     "visitAriaLabel": "Visita {name}",
     "cta": "Scopri i Nostri Partner",
     "partners": {
+      "milanoRestaurantGroup": {
+        "logoAlt": "Logo di Milano Restaurant Group, partner ufficiale"
+      },
       "heroes": {
         "logoAlt": "Logo di HEROE'S, partner ufficiale"
       },
@@ -499,8 +504,16 @@
     },
     "chaptersAriaLabel": "Partner ufficiali",
     "officialPartner": "Partner ufficiale",
+    "mainPartner": "Main Partner",
+    "partnersHeading": "Partner",
     "visitAriaLabel": "Visita {name}",
     "partners": {
+      "milanoRestaurantGroup": {
+        "visitLabel": "Visita Milano Restaurant Group",
+        "logoAlt": "Logo di Milano Restaurant Group, partner ufficiale",
+        "description": "Milano Restaurant Group entra nel Golden Era come Main Partner, portando al Tour la propria esperienza nell’ospitalità e una distintiva identità italiana.",
+        "featuredImageAlt": "Milano Restaurant Group, partner ufficiale"
+      },
       "heroes": {
         "visitLabel": "Visita HEROE'S",
         "logoAlt": "Logo di HEROE'S, partner ufficiale",
@@ -655,7 +668,8 @@
       },
       "errors": {
         "generic": "Si è verificato un errore. Riprova.",
-        "unavailable": "L’invio online non è ancora configurato. Scrivici direttamente via email."
+        "unavailable": "L’invio online non è ancora configurato. Scrivici direttamente via email.",
+        "rateLimited": "Sono stati inviati troppi messaggi da questa connessione. Riprova più tardi."
       },
       "success": {
         "title": "GRAZIE.",

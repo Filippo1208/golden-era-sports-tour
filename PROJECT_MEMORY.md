@@ -454,14 +454,18 @@ Navigation decisions:
 - Official global Golden Era Header logo: `public/images/brand/goldeneralogo.png`.
 - The official image wordmark replaces the previous temporary Header text mark on all pages.
 - Official partners:
+  - MILANO RESTAURANT GROUP (Main Partner, shown first)
+  - Website: `http://www.milanorestaurantgroup.com`
+  - Logo: `public/images/partners/milano-restaurant-group.png`
   - HEROE'S
   - Website: `https://www.heroesbrandsport.com`
   - Logo: `public/images/partners/heroes.png`
   - SEMBRANCHER
   - Website: `https://sembrancher.com`
   - Logo: `public/images/partners/sembrancher.png`
-- Partner architecture: partner data is centralized in `data/partners.ts`, the reusable global `OfficialPartners` component is shown before the Footer on main public pages, `/partners` is the dedicated partners page, and global partner visibility remains distinct from future stage-specific partner associations.
+- Partner architecture: partner data is centralized in `data/partners.ts`. Milano Restaurant Group is designated Main Partner and remains first in the reusable global partner block. On `/partners`, all partners use the same editorial chapter component in the strict order Milano Restaurant Group (01), HEROE'S (02), SEMBRANCHER (03); there is no separate featured Milano block. Global partner visibility remains distinct from future stage-specific partner associations.
 - Partners page editorial assets:
+  - MILANO RESTAURANT GROUP: `public/images/partners/milano-restaurant-group-partner.jpg`
   - HEROE'S: `public/images/partners/heroespartner.jpg`
   - SEMBRANCHER: `public/images/partners/sembrancherpartner.jpg`
 - Partners page direction: partner photography is integrated into the editorial canvas with no partner cards, HEROE'S image reaches the right viewport edge, Sembrancher image reaches the left viewport edge, the global partner strip remains logo-only, and the dedicated `/partners` page is the only place using the editorial partner photographs.
@@ -614,3 +618,11 @@ Add real Golden Era image/video/logo assets, then design the next requested sect
 - The policy reflects only the current Join application, Contact form and limited form-security processing. It identifies Vintage Events Montecarlo S.r.l.s. as data controller and `info@goldenerasportstour.com` as the privacy contact.
 - Privacy metadata, canonical URLs and reciprocal `en` / `fr` / `it` / `x-default` alternates use the production SEO helpers. The three routes are included in the sitemap.
 - The shared Footer contains a discreet locale-aware Privacy Policy link while retaining the existing company information and website credit.
+
+## Security Baseline
+
+- Public responses use a repository-managed Content Security Policy limited to the site's local scripts, styles, images, fonts, media and connections. Inline scripts and styles remain allowed because the statically rendered Next.js application requires them; framing, plugins and external form destinations are blocked.
+- All routes receive `Permissions-Policy`, `Referrer-Policy`, `X-Content-Type-Options` and `X-Frame-Options` headers, and the framework signature header is disabled. Vercel supplies HTTPS redirection and HSTS in production.
+- Contact and Join submissions use server-side validation, same-origin checks, honeypots, request and field size limits, generic error responses, and per-address in-memory rate limiting. The rate-limit store is capped at 500 entries to prevent unbounded memory growth.
+- The in-memory limiter is only an application fallback in a serverless deployment. Production should also keep Vercel Firewall rate-limit rules on `/api/contact` and `/api/join` so limits are shared across instances.
+- Email subjects derived from form data remove carriage returns and line feeds before delivery. Resend credentials remain server-only and environment files remain ignored by Git.

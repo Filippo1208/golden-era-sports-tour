@@ -14,7 +14,7 @@ type PartnerChapterProps = {
   index: number;
   partner: Partner;
   copy: {
-    officialPartner: string;
+    designation: string;
     visitLabel: string;
     visitAriaLabel: string;
     logoAlt: string;
@@ -24,6 +24,7 @@ type PartnerChapterProps = {
 };
 
 const partnerMessageKeys = {
+  "milano-restaurant-group": "milanoRestaurantGroup",
   heroes: "heroes",
   sembrancher: "sembrancher",
 } as const;
@@ -38,7 +39,12 @@ function assetExists(assetPath?: string | null) {
 
 function PartnerChapter({ index, partner, copy }: PartnerChapterProps) {
   const hasFeaturedImage = assetExists(partner.featuredImage);
-  const logoSizes = partner.id === "heroes" ? "212px" : "149px";
+  const logoSizes =
+    partner.id === "heroes"
+      ? "212px"
+      : partner.id === "milano-restaurant-group"
+        ? "208px"
+        : "149px";
 
   return (
     <section
@@ -49,7 +55,7 @@ function PartnerChapter({ index, partner, copy }: PartnerChapterProps) {
         <div className="partner-editorial__content">
           <div className="partner-editorial__meta">
             <span>{String(index + 1).padStart(2, "0")}</span>
-            <p>{copy.officialPartner}</p>
+            <p>{copy.designation}</p>
           </div>
 
           <h2 id={`partner-${partner.id}-title`}>{partner.name}</h2>
@@ -143,7 +149,10 @@ export async function PartnersPage() {
               index={index}
               partner={partner}
               copy={{
-                officialPartner: t("officialPartner"),
+                designation:
+                  partner.id === "milano-restaurant-group"
+                    ? t("mainPartner")
+                    : t("officialPartner"),
                 visitLabel: t(`partners.${messageKey}.visitLabel`),
                 visitAriaLabel: t("visitAriaLabel", { name: partner.name }),
                 logoAlt: t(`partners.${messageKey}.logoAlt`),

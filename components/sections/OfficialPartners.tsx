@@ -13,6 +13,7 @@ type PartnerLogoLinkProps = {
 };
 
 const partnerMessageKeys = {
+  "milano-restaurant-group": "milanoRestaurantGroup",
   heroes: "heroes",
   sembrancher: "sembrancher",
 } as const;
@@ -56,6 +57,13 @@ export async function OfficialPartners() {
     return null;
   }
 
+  const priorityPartner = activeOfficialPartners.find(
+    (partner) => partner.id === "milano-restaurant-group",
+  );
+  const supportingPartners = activeOfficialPartners.filter(
+    (partner) => partner.id !== "milano-restaurant-group",
+  );
+
   return (
     <section className="official-partners" aria-labelledby="official-partners-title">
       <Container className="official-partners__inner">
@@ -63,24 +71,40 @@ export async function OfficialPartners() {
           <h2 id="official-partners-title">{t("title")}</h2>
         </div>
 
-        <div className="official-partners__logos" aria-label={t("logosAriaLabel")}>
-          {activeOfficialPartners.map((partner) => {
-            const messageKey =
-              partnerMessageKeys[partner.id as keyof typeof partnerMessageKeys];
-
-            if (!messageKey) {
-              return null;
-            }
-
-            return (
+        <div className="official-partners__groups" aria-label={t("logosAriaLabel")}>
+          {priorityPartner ? (
+            <div className="official-partners__featured">
+              <span className="official-partners__tier">{t("featuredLabel")}</span>
               <PartnerLogoLink
-                key={partner.id}
-                partner={partner}
-                logoAlt={t(`partners.${messageKey}.logoAlt`)}
-                visitAriaLabel={t("visitAriaLabel", { name: partner.name })}
+                partner={priorityPartner}
+                logoAlt={t("partners.milanoRestaurantGroup.logoAlt")}
+                visitAriaLabel={t("visitAriaLabel", { name: priorityPartner.name })}
               />
-            );
-          })}
+            </div>
+          ) : null}
+
+          <div className="official-partners__supporting">
+            <span className="official-partners__tier">{t("supportingLabel")}</span>
+            <div className="official-partners__logos">
+              {supportingPartners.map((partner) => {
+                const messageKey =
+                  partnerMessageKeys[partner.id as keyof typeof partnerMessageKeys];
+
+                if (!messageKey) {
+                  return null;
+                }
+
+                return (
+                  <PartnerLogoLink
+                    key={partner.id}
+                    partner={partner}
+                    logoAlt={t(`partners.${messageKey}.logoAlt`)}
+                    visitAriaLabel={t("visitAriaLabel", { name: partner.name })}
+                  />
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         <Button
