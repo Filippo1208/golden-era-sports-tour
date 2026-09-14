@@ -25,6 +25,16 @@ export const partners = [
     featuredImageHeight: 1579,
   },
   {
+    id: "finance-consulting-group",
+    name: "Finance Consulting Group",
+    type: "official-partner",
+    status: "active",
+    logo: "/images/partners/finance-consulting-group.png",
+    logoWidth: 1333,
+    logoHeight: 1333,
+    website: "https://financeconsulting.es",
+  },
+  {
     id: "sembrancher",
     name: "SEMBRANCHER",
     type: "official-partner",

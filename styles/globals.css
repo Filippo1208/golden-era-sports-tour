@@ -1214,6 +1214,11 @@ video {
   max-height: 6.35rem;
 }
 
+.official-partners__logo--finance-consulting-group {
+  max-width: min(100%, 8.5rem);
+  max-height: 8.5rem;
+}
+
 .official-partners__fallback {
   color: var(--color-brown-dark);
   font-family: var(--font-serif);
@@ -1340,6 +1345,7 @@ video {
 }
 
 .partner-editorial--milano-restaurant-group .partner-editorial__grid.container--wide,
+.partner-editorial--finance-consulting-group .partner-editorial__grid.container--wide,
 .partner-editorial--heroes .partner-editorial__grid.container--wide {
   width: calc(
     100% - max(var(--page-gutter), calc((100vw - var(--container-wide)) / 2))
@@ -3460,6 +3466,7 @@ video {
   }
 
   .partner-editorial--milano-restaurant-group .partner-editorial__grid.container--wide,
+  .partner-editorial--finance-consulting-group .partner-editorial__grid.container--wide,
   .partner-editorial--heroes .partner-editorial__grid.container--wide,
   .partner-editorial--sembrancher .partner-editorial__grid.container--wide {
     width: min(100% - (var(--page-gutter) * 2), var(--container-wide));
@@ -3474,12 +3481,14 @@ video {
   }
 
   .partner-editorial--milano-restaurant-group .partner-editorial__content,
+  .partner-editorial--finance-consulting-group .partner-editorial__content,
   .partner-editorial--heroes .partner-editorial__content,
   .partner-editorial--sembrancher .partner-editorial__content {
     order: 1;
   }
 
   .partner-editorial--milano-restaurant-group .partner-editorial__media,
+  .partner-editorial--finance-consulting-group .partner-editorial__media,
   .partner-editorial--heroes .partner-editorial__media,
   .partner-editorial--sembrancher .partner-editorial__media {
     order: 2;
@@ -3836,6 +3845,11 @@ video {
   .official-partners__logo--sembrancher {
     max-width: min(100%, 18rem);
     max-height: 5.65rem;
+  }
+
+  .official-partners__logo--finance-consulting-group {
+    max-width: min(100%, 7.5rem);
+    max-height: 7.5rem;
   }
 
   .partners-opening__inner {
@@ -4762,6 +4776,7 @@ video {
 }
 
 .official-partners__supporting .official-partners__logos {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
   min-width: 0;
   gap: clamp(1rem, 3vw, 3rem);
@@ -4825,7 +4840,7 @@ video {
   }
 
   .official-partners__supporting .official-partners__logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
 
@@ -4848,23 +4863,37 @@ video {
   }
 
   .partners-page
-    .partner-editorial--milano-restaurant-group
+    :is(
+      .partner-editorial--milano-restaurant-group,
+      .partner-editorial--finance-consulting-group
+    )
     .partner-editorial__content {
     display: contents;
   }
 
   .partners-page
-    .partner-editorial--milano-restaurant-group
+    :is(
+      .partner-editorial--milano-restaurant-group,
+      .partner-editorial--finance-consulting-group
+    )
     .partner-editorial__meta {
     order: 1;
   }
 
-  .partners-page .partner-editorial--milano-restaurant-group h2 {
+  .partners-page
+    :is(
+      .partner-editorial--milano-restaurant-group,
+      .partner-editorial--finance-consulting-group
+    )
+    h2 {
     order: 2;
   }
 
   .partners-page
-    .partner-editorial--milano-restaurant-group
+    :is(
+      .partner-editorial--milano-restaurant-group,
+      .partner-editorial--finance-consulting-group
+    )
     .partner-editorial__media--logo {
     order: 3;
     width: 100%;
@@ -4875,20 +4904,29 @@ video {
   }
 
   .partners-page
-    .partner-editorial--milano-restaurant-group
+    :is(
+      .partner-editorial--milano-restaurant-group,
+      .partner-editorial--finance-consulting-group
+    )
     .partner-editorial__media-logo-link {
     width: min(56%, 16rem);
   }
 
   .partners-page
-    .partner-editorial--milano-restaurant-group
+    :is(
+      .partner-editorial--milano-restaurant-group,
+      .partner-editorial--finance-consulting-group
+    )
     .partner-editorial__copy {
     order: 4;
     max-width: 42rem;
   }
 
   .partners-page
-    .partner-editorial--milano-restaurant-group
+    :is(
+      .partner-editorial--milano-restaurant-group,
+      .partner-editorial--finance-consulting-group
+    )
     .partner-editorial__visit {
     order: 5;
   }
@@ -4905,7 +4943,7 @@ video {
 
 @media (max-width: 680px) {
   .official-partners__supporting .official-partners__logos {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .official-partners__logo--milano-restaurant-group {

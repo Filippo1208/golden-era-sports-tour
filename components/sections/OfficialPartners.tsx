@@ -15,6 +15,7 @@ type PartnerLogoLinkProps = {
 const partnerMessageKeys = {
   "milano-restaurant-group": "milanoRestaurantGroup",
   heroes: "heroes",
+  "finance-consulting-group": "financeConsultingGroup",
   sembrancher: "sembrancher",
 } as const;
 

@@ -26,6 +26,7 @@ type PartnerChapterProps = {
 const partnerMessageKeys = {
   "milano-restaurant-group": "milanoRestaurantGroup",
   heroes: "heroes",
+  "finance-consulting-group": "financeConsultingGroup",
   sembrancher: "sembrancher",
 } as const;
 
@@ -38,7 +39,9 @@ function assetExists(assetPath?: string | null) {
 }
 
 function PartnerChapter({ index, partner, copy }: PartnerChapterProps) {
-  const usesLogoVisual = partner.id === "milano-restaurant-group";
+  const usesLogoVisual =
+    partner.id === "milano-restaurant-group" ||
+    partner.id === "finance-consulting-group";
   const hasFeaturedImage = !usesLogoVisual && assetExists(partner.featuredImage);
   const logoSizes = partner.id === "heroes" ? "212px" : "149px";
 

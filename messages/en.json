@@ -53,6 +53,9 @@
       "heroes": {
         "logoAlt": "HEROE'S official partner logo"
       },
+      "financeConsultingGroup": {
+        "logoAlt": "Finance Consulting Group official partner logo"
+      },
       "sembrancher": {
         "logoAlt": "Sembrancher official partner logo"
       }
@@ -519,6 +522,12 @@
         "logoAlt": "HEROE'S official partner logo",
         "description": "A sportswear partner within the Golden Era Sports Tour.",
         "featuredImageAlt": "Golden Era tennis portrait featuring HEROE'S sportswear and a vintage racquet"
+      },
+      "financeConsultingGroup": {
+        "visitLabel": "Visit Finance Consulting Group",
+        "logoAlt": "Finance Consulting Group official partner logo",
+        "description": "Finance Consulting Group supports international clients navigating property financing in Spain, combining local banking expertise with a highly personalised advisory approach.",
+        "featuredImageAlt": "Finance Consulting Group official partner"
       },
       "sembrancher": {
         "visitLabel": "Visit SEMBRANCHER",
