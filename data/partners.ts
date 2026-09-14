@@ -10,9 +10,6 @@ export const partners = [
     logoWidth: 658,
     logoHeight: 324,
     website: "http://www.milanorestaurantgroup.com",
-    featuredImage: "/images/partners/milano-restaurant-group-partner.jpg",
-    featuredImageWidth: 1130,
-    featuredImageHeight: 1340,
   },
   {
     id: "heroes",

@@ -465,10 +465,10 @@ Navigation decisions:
   - Logo: `public/images/partners/sembrancher.png`
 - Partner architecture: partner data is centralized in `data/partners.ts`. Milano Restaurant Group is designated Main Partner and remains first in the reusable global partner block. On `/partners`, all partners use the same editorial chapter component in the strict order Milano Restaurant Group (01), HEROE'S (02), SEMBRANCHER (03); there is no separate featured Milano block. Global partner visibility remains distinct from future stage-specific partner associations.
 - Partners page editorial assets:
-  - MILANO RESTAURANT GROUP: `public/images/partners/milano-restaurant-group-partner.jpg`
+  - MILANO RESTAURANT GROUP uses its logo-only visual: `public/images/partners/milano-restaurant-group.png`; `milano-restaurant-group-partner.jpg` remains stored but is not rendered.
   - HEROE'S: `public/images/partners/heroespartner.jpg`
   - SEMBRANCHER: `public/images/partners/sembrancherpartner.jpg`
-- Partners page direction: partner photography is integrated into the editorial canvas with no partner cards, HEROE'S image reaches the right viewport edge, Sembrancher image reaches the left viewport edge, the global partner strip remains logo-only, and the dedicated `/partners` page is the only place using the editorial partner photographs.
+- Partners page direction: MRG uses a centered logo-only right column on the existing background with no card; HEROE'S image reaches the right viewport edge and Sembrancher image reaches the left viewport edge. The global partner strip remains logo-only, and the dedicated `/partners` page is the only place using the remaining editorial partner photographs.
 - Partners mobile order is strict per partner: HEROE'S content, HEROE'S image, Sembrancher content, Sembrancher image. Visit links are text-only with no arrow or icon.
 
 ## The Concept Page

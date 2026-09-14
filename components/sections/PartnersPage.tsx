@@ -38,13 +38,9 @@ function assetExists(assetPath?: string | null) {
 }
 
 function PartnerChapter({ index, partner, copy }: PartnerChapterProps) {
-  const hasFeaturedImage = assetExists(partner.featuredImage);
-  const logoSizes =
-    partner.id === "heroes"
-      ? "212px"
-      : partner.id === "milano-restaurant-group"
-        ? "208px"
-        : "149px";
+  const usesLogoVisual = partner.id === "milano-restaurant-group";
+  const hasFeaturedImage = !usesLogoVisual && assetExists(partner.featuredImage);
+  const logoSizes = partner.id === "heroes" ? "212px" : "149px";
 
   return (
     <section
@@ -60,26 +56,28 @@ function PartnerChapter({ index, partner, copy }: PartnerChapterProps) {
 
           <h2 id={`partner-${partner.id}-title`}>{partner.name}</h2>
 
-          <a
-            className="partner-editorial__logo-link"
-            href={partner.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={copy.visitAriaLabel}
-          >
-            {partner.logo ? (
-              <Image
-                src={partner.logo}
-                alt={copy.logoAlt}
-                width={partner.logoWidth}
-                height={partner.logoHeight}
-                sizes={logoSizes}
-                className={`partner-editorial__logo partner-editorial__logo--${partner.id}`}
-              />
-            ) : (
-              <span className="partner-editorial__fallback">{partner.name}</span>
-            )}
-          </a>
+          {!usesLogoVisual ? (
+            <a
+              className="partner-editorial__logo-link"
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={copy.visitAriaLabel}
+            >
+              {partner.logo ? (
+                <Image
+                  src={partner.logo}
+                  alt={copy.logoAlt}
+                  width={partner.logoWidth}
+                  height={partner.logoHeight}
+                  sizes={logoSizes}
+                  className={`partner-editorial__logo partner-editorial__logo--${partner.id}`}
+                />
+              ) : (
+                <span className="partner-editorial__fallback">{partner.name}</span>
+              )}
+            </a>
+          ) : null}
 
           <p className="partner-editorial__copy">{copy.description}</p>
 
@@ -95,10 +93,31 @@ function PartnerChapter({ index, partner, copy }: PartnerChapterProps) {
 
         <figure
           className={`partner-editorial__media ${
-            hasFeaturedImage ? "" : "partner-editorial__media--fallback"
+            usesLogoVisual
+              ? "partner-editorial__media--logo"
+              : hasFeaturedImage
+                ? ""
+                : "partner-editorial__media--fallback"
           }`.trim()}
         >
-          {hasFeaturedImage && partner.featuredImage ? (
+          {usesLogoVisual && partner.logo ? (
+            <a
+              className="partner-editorial__media-logo-link"
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={copy.visitAriaLabel}
+            >
+              <Image
+                src={partner.logo}
+                alt={copy.logoAlt}
+                width={partner.logoWidth}
+                height={partner.logoHeight}
+                sizes="(max-width: 980px) 56vw, 30vw"
+                className="partner-editorial__media-logo"
+              />
+            </a>
+          ) : hasFeaturedImage && partner.featuredImage ? (
             <Image
               src={partner.featuredImage}
               alt={copy.featuredImageAlt}
