@@ -7,6 +7,7 @@ import { TourStageLanding } from "@/components/sections/TourStageLanding";
 import { tourEvents } from "@/data/events";
 import type { AppLocale } from "@/i18n/routing";
 import { getLocalizedMetadata } from "@/lib/metadata";
+import { getSportsEventStructuredData } from "@/lib/structured-data";
 import type { TourEvent, TourEventLandingContent } from "@/types/content";
 
 type TourStagePageProps = {
@@ -77,9 +78,41 @@ export default async function TourStagePage({ params }: TourStagePageProps) {
     notFound();
   }
 
+  const sportsEventStructuredData =
+    event.slug === "monte-carlo"
+      ? getSportsEventStructuredData({
+          canonicalPath: "/en/tour/monte-carlo",
+          event,
+          location: {
+            name: "Monte-Carlo Country Club",
+            address: {
+              streetAddress: "155 avenue Princesse Grace",
+              postalCode: "06190",
+              addressLocality: "Roquebrune-Cap-Martin",
+              addressCountry: "FR",
+            },
+          },
+          name: "Golden Era Sports Tour — Monte-Carlo",
+          sport: "Tennis",
+        })
+      : null;
+
   return (
-    <PublicPageShell heroTone="light">
-      <TourStageLanding event={event} />
-    </PublicPageShell>
+    <>
+      {sportsEventStructuredData ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(sportsEventStructuredData).replace(
+              /</g,
+              "\\u003c",
+            ),
+          }}
+        />
+      ) : null}
+      <PublicPageShell heroTone="light">
+        <TourStageLanding event={event} />
+      </PublicPageShell>
+    </>
   );
 }
