@@ -817,40 +817,56 @@
       "title": "Dati raccolti",
       "intro": "I dati raccolti dipendono dal modo in cui utilizzi il sito.",
       "applicationTitle": "Candidature per partecipare al Tour",
-      "applicationCopy": "Una candidatura può includere nome, cognome, genere, indirizzo e-mail, numero di telefono o WhatsApp, paese, livello di tennis, circolo o esperienza tennistica, mano di gioco, taglia della T-shirt, taglia di pantaloncini o pantaloni, evento selezionato, fonte di provenienza, messaggio facoltativo, lingua del sito e data e ora dell’invio.",
+    "applicationCopy": "Una candidatura può includere nome, cognome, genere, indirizzo e-mail, numero di telefono o WhatsApp, paese, livello di tennis, circolo o esperienza tennistica, mano di gioco, taglie dell’abbigliamento, evento selezionato, fonte di provenienza, messaggio facoltativo, lingua o locale del sito, registrazione del consenso, identificativo della candidatura e data e ora dell’invio.",
       "contactTitle": "Richieste di contatto",
       "contactCopy": "Una richiesta di contatto può includere nome, cognome, indirizzo e-mail, oggetto e messaggio.",
       "technicalTitle": "Dati tecnici e di sicurezza",
-      "technicalCopy": "Quando viene inviato un modulo, alcuni dati tecnici della richiesta, tra cui l’indirizzo IP e i relativi metadati, possono essere trattati temporaneamente per recapitare la richiesta, prevenire abusi e proteggere il sito."
-    },
+    "technicalCopy": "Quando viene inviato un modulo, alcuni dati tecnici della richiesta, tra cui l’indirizzo IP e i relativi metadati, possono essere trattati temporaneamente per motivi di sicurezza e prevenzione degli abusi."
+  },
+  "cookies": {
+    "title": "Cookie e tecnologie di tracciamento",
+    "copy": "Il sito non utilizza intenzionalmente cookie analitici, pubblicitari o di profilazione e l’applicazione non utilizza attualmente localStorage o sessionStorage. Non sono intenzionalmente impiegate tecnologie di tracciamento non essenziali; per questo il sito non richiede attualmente un banner per il consenso ai cookie. Se in futuro venissero introdotte tecnologie analitiche, pubblicitarie o altre tecnologie di tracciamento non essenziali, questa informativa e il meccanismo di consenso saranno aggiornati prima della loro attivazione, ove richiesto."
+  },
     "purposes": {
       "title": "Come utilizziamo i dati",
-      "application": "Esaminare le candidature al Tour, valutare la partecipazione e contattare i candidati in merito all’evento selezionato.",
-      "contact": "Rispondere a richieste generali, proposte di partnership, richieste stampa e collaborazioni.",
-      "security": "Gestire e proteggere il sito e i suoi moduli, anche prevenendo invii ripetuti o abusivi."
+    "application": "Trattare le candidature di partecipazione e agli eventi, organizzare e gestire gli eventi Golden Era Sports Tour e contattare i candidati in merito all’evento selezionato.",
+    "contact": "Rispondere a richieste e comunicazioni richieste, incluse proposte di partnership, richieste stampa e collaborazioni.",
+    "security": "Gestire, proteggere e mantenere il sito e i suoi moduli, anche prevenendo invii ripetuti o abusivi e adempiendo, ove applicabile, a obblighi legali o amministrativi."
     },
-    "basis": {
-      "title": "Base del trattamento",
-      "copy": "I dati della candidatura sono trattati sulla base del consenso espresso nel modulo e, quando pertinente, per adottare misure richieste dall’interessato prima della partecipazione. Le richieste di contatto e i trattamenti essenziali per la sicurezza sono gestiti per rispondere alle richieste e nel legittimo interesse della società a far funzionare e proteggere il sito.",
-      "withdrawal": "Puoi revocare il consenso in qualsiasi momento contattandoci. La revoca non pregiudica i trattamenti già effettuati prima della richiesta."
-    },
+  "basis": {
+    "title": "Base del trattamento",
+    "copy": "I dati necessari per valutare e trattare una richiesta di partecipazione a un evento sono trattati per adottare misure precontrattuali su richiesta dell’interessato e, quando si instaura un rapporto contrattuale, per l’esecuzione di tale rapporto. La casella obbligatoria nel modulo Join documenta la presa visione della presente Informativa sulla Privacy; non costituisce consenso al marketing né la base giuridica del trattamento necessario a gestire la richiesta. Le richieste di contatto sono trattate per rispondere alla richiesta. I trattamenti per la sicurezza e la prevenzione degli abusi sono svolti nel legittimo interesse della società a proteggere il sito e i suoi moduli. I trattamenti legali o amministrativi sono svolti per adempiere agli obblighi di legge applicabili. Il consenso è utilizzato solo quando una specifica attività di trattamento lo richiede effettivamente.",
+    "withdrawal": "Quando una specifica attività di trattamento si basa sul consenso, puoi revocarlo in qualsiasi momento contattandoci. La revoca non pregiudica i trattamenti già effettuati prima della richiesta."
+  },
+  "security": {
+    "title": "Sicurezza",
+    "copy": "Il sito utilizza HTTPS, validazione lato server e protezioni anti-abuso per i propri moduli. L’accesso ai dati personali è limitato al personale autorizzato e ai fornitori di servizi, quando necessario per fornire i loro servizi."
+  },
     "sharing": {
       "title": "Chi può trattare i dati",
-      "copy": "I dati possono essere consultati dal personale autorizzato della società e da fornitori che supportano l’hosting del sito, la consegna delle e-mail, i servizi informatici e la sicurezza. Tali fornitori trattano i dati soltanto quando necessario per fornire i propri servizi e per conto della società. I dati personali non vengono venduti."
-    },
+    "copy": "I dati possono essere consultati dal personale autorizzato della società e, quando necessario, dai seguenti fornitori: Vercel, per l’hosting e l’infrastruttura del sito, che può trattare i normali metadati HTTP/delle richieste e i log di piattaforma; e Resend / Plus Five Five, Inc., per la consegna delle e-mail transazionali relative agli invii dei moduli, che riceve le informazioni necessarie a consegnare la relativa e-mail. I dati personali non vengono venduti."
+  },
+  "transfers": {
+    "title": "Trasferimenti internazionali",
+    "copy": "Resend / Plus Five Five, Inc. mette a disposizione un Data Processing Addendum che incorpora adeguate garanzie per i trasferimenti internazionali, comprese le Clausole Contrattuali Standard ove applicabili. Vercel fornisce l’infrastruttura di hosting del sito e può trattare metadati delle richieste al di fuori dello Spazio Economico Europeo. I trasferimenti internazionali sono gestiti in conformità alla normativa applicabile in materia di protezione dei dati e alle garanzie contrattuali o legali effettivamente applicabili a ciascun fornitore."
+  },
     "retention": {
       "title": "Periodo di conservazione",
-      "copy": "I dati vengono conservati soltanto per il tempo ragionevolmente necessario alle finalità descritte e all’adempimento degli obblighi legali o amministrativi applicabili. Successivamente vengono cancellati o anonimizzati, ove opportuno."
+    "copy": "Le richieste di contatto sono normalmente conservate per non più di 12 mesi dall’ultima comunicazione pertinente, salvo che una conservazione più lunga sia necessaria per una pretesa o un obbligo legale. Le candidature agli eventi o al Tour sono conservate per il tempo necessario a organizzare l’evento selezionato e normalmente per non più di 12 mesi dopo tale evento, salvo che il partecipante instauri un rapporto contrattuale o amministrativo che richieda una conservazione legale più lunga. I dati di sicurezza e rate limit sono trattati in memoria e normalmente eliminati automaticamente entro circa 10 minuti. I registri amministrativi o contrattuali sono conservati per i periodi previsti dalla legge applicabile, ove applicabile."
     },
     "rights": {
       "title": "I tuoi diritti",
-      "copy": "Quando applicabile, puoi chiedere l’accesso ai tuoi dati personali, la rettifica, la cancellazione, la limitazione o la portabilità, opporti a determinati trattamenti oppure revocare il consenso. Puoi inoltre presentare un reclamo all’autorità competente per la protezione dei dati.",
+    "copy": "Quando applicabile, puoi chiedere l’accesso ai tuoi dati personali, la rettifica, la cancellazione, la limitazione o la portabilità, opporti a determinati trattamenti oppure revocare il consenso quando il trattamento si basa sul consenso. Puoi inoltre presentare un reclamo all’autorità di controllo competente.",
       "contact": "Per esercitare i tuoi diritti o porre una domanda sulla privacy, scrivi a"
     },
-    "marketing": {
-      "title": "Comunicazioni di marketing",
-      "copy": "L’invio di un modulo di contatto o di candidatura non comporta l’iscrizione automatica a comunicazioni di marketing. Qualora venissero introdotte in futuro, sarebbe richiesto un consenso separato."
-    }
+  "marketing": {
+    "title": "Comunicazioni di marketing",
+    "copy": "L’invio di un modulo di contatto o di candidatura non comporta l’iscrizione automatica a comunicazioni di marketing. Qualora venissero introdotte in futuro, sarebbe richiesto un consenso separato."
+  },
+  "updated": {
+    "title": "Ultimo aggiornamento",
+    "copy": "16 settembre 2026"
+  }
   },
   "Metadata": {
     "home": {

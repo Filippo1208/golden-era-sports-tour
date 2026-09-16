@@ -817,40 +817,56 @@
       "title": "Données collectées",
       "intro": "Les données collectées dépendent de la manière dont vous utilisez le site.",
       "applicationTitle": "Candidatures pour participer au Tour",
-      "applicationCopy": "Une candidature peut comprendre vos prénom, nom, genre, adresse e-mail, numéro de téléphone ou WhatsApp, pays, niveau de tennis, club ou parcours tennistique, main de jeu, taille de T-shirt, taille de short ou pantalon, étape sélectionnée, source de recommandation, message facultatif, langue du site et horodatage de l’envoi.",
+    "applicationCopy": "Une candidature peut comprendre vos prénom, nom, genre, adresse e-mail, numéro de téléphone ou WhatsApp, pays, niveau de tennis, club ou parcours tennistique, main de jeu, tailles de vêtements, étape sélectionnée, source de recommandation, message facultatif, langue ou paramètre régional du site, enregistrement du consentement, identifiant de candidature et horodatage de l’envoi.",
       "contactTitle": "Demandes de contact",
       "contactCopy": "Une demande de contact peut comprendre vos prénom, nom, adresse e-mail, objet et message.",
       "technicalTitle": "Données techniques et de sécurité",
-      "technicalCopy": "Lorsqu’un formulaire est envoyé, des données techniques limitées, notamment l’adresse IP et les métadonnées de la requête, peuvent être traitées temporairement afin d’acheminer la demande, de prévenir les abus et de protéger le site."
-    },
+    "technicalCopy": "Lorsqu’un formulaire est envoyé, des données techniques limitées, notamment l’adresse IP et les métadonnées de la requête, peuvent être traitées temporairement à des fins de sécurité et de prévention des abus."
+  },
+  "cookies": {
+    "title": "Cookies et technologies de suivi",
+    "copy": "Le site n’utilise pas intentionnellement de cookies analytiques, publicitaires ou de profilage, et l’application n’utilise actuellement ni localStorage ni sessionStorage. Aucune technologie de suivi non essentielle n’est intentionnellement déployée ; le site ne nécessite donc pas actuellement de bannière de consentement aux cookies. Si des technologies analytiques, publicitaires ou d’autres technologies de suivi non essentielles sont introduites à l’avenir, cette politique et le mécanisme de consentement seront mis à jour avant leur activation, lorsque cela est requis."
+  },
     "purposes": {
       "title": "Utilisation des données",
-      "application": "Examiner les candidatures au Tour, évaluer la participation et contacter les candidats au sujet de l’étape sélectionnée.",
-      "contact": "Répondre aux demandes générales, aux propositions de partenariat, aux demandes des médias et aux collaborations.",
-      "security": "Faire fonctionner et protéger le site et ses formulaires, notamment contre les envois répétés ou abusifs."
+    "application": "Traiter les candidatures de participation et aux événements, organiser et gérer les événements Golden Era Sports Tour, et contacter les candidats au sujet de l’étape sélectionnée.",
+    "contact": "Répondre aux demandes et communications sollicitées, y compris les propositions de partenariat, les demandes des médias et les collaborations.",
+    "security": "Faire fonctionner, sécuriser et protéger le site et ses formulaires, notamment contre les envois répétés ou abusifs, et respecter les obligations légales ou administratives applicables."
     },
-    "basis": {
-      "title": "Base du traitement",
-      "copy": "Les données de candidature sont traitées sur la base du consentement donné dans le formulaire et, le cas échéant, afin de prendre des mesures à votre demande avant votre participation. Les demandes de contact et les traitements de sécurité essentiels sont gérés afin de vous répondre et dans l’intérêt légitime de la société à exploiter et protéger le site.",
-      "withdrawal": "Vous pouvez retirer votre consentement à tout moment en nous contactant. Ce retrait n’affecte pas les traitements déjà réalisés avant votre demande."
-    },
+  "basis": {
+    "title": "Base du traitement",
+    "copy": "Les données nécessaires à l’évaluation et au traitement d’une demande de participation à un événement sont traitées afin de prendre des mesures précontractuelles à votre demande et, lorsqu’une relation contractuelle est établie, pour l’exécution de cette relation. La case obligatoire du formulaire Join atteste que vous avez pris connaissance de la présente Politique de Confidentialité ; elle ne constitue ni un consentement au marketing ni la base juridique du traitement nécessaire à la gestion de la demande. Les demandes de contact sont traitées afin de répondre à votre demande. Les traitements de sécurité et de prévention des abus sont effectués dans l’intérêt légitime de la société à protéger le site et ses formulaires. Les traitements légaux ou administratifs sont effectués afin de respecter les obligations légales applicables. Le consentement n’est utilisé que lorsqu’une activité spécifique de traitement le requiert réellement.",
+    "withdrawal": "Lorsqu’une activité spécifique de traitement repose sur le consentement, vous pouvez le retirer à tout moment en nous contactant. Ce retrait n’affecte pas les traitements déjà réalisés avant votre demande."
+  },
+  "security": {
+    "title": "Sécurité",
+    "copy": "Le site utilise HTTPS, une validation côté serveur et des protections anti-abus pour ses formulaires. L’accès aux données personnelles est limité au personnel autorisé et aux prestataires lorsque cela est nécessaire à la fourniture de leurs services."
+  },
     "sharing": {
       "title": "Destinataires et prestataires",
-      "copy": "Les données peuvent être consultées par le personnel autorisé de la société et par des prestataires chargés de l’hébergement du site, de l’acheminement des e-mails, de l’informatique et de la sécurité. Ces prestataires les traitent uniquement lorsque cela est nécessaire à leurs services et pour le compte de la société. Les données personnelles ne sont pas vendues."
-    },
+    "copy": "Les données peuvent être consultées par le personnel autorisé de la société et, lorsque cela est nécessaire, par les prestataires suivants : Vercel, pour l’hébergement et l’infrastructure du site, qui peut traiter les métadonnées HTTP/de requête ordinaires et les journaux de plateforme ; et Resend / Plus Five Five, Inc., pour l’acheminement des e-mails transactionnels relatifs aux envois des formulaires, qui reçoit les informations nécessaires à l’acheminement de l’e-mail concerné. Les données personnelles ne sont pas vendues."
+  },
+  "transfers": {
+    "title": "Transferts internationaux",
+    "copy": "Resend / Plus Five Five, Inc. met à disposition un Data Processing Addendum intégrant des garanties appropriées pour les transferts internationaux, y compris les Clauses Contractuelles Types lorsqu’elles s’appliquent. Vercel fournit l’infrastructure d’hébergement du site et peut traiter des métadonnées de requête en dehors de l’Espace économique européen. Les transferts internationaux sont gérés conformément au droit applicable en matière de protection des données et aux garanties contractuelles ou légales effectivement applicables à chaque prestataire."
+  },
     "retention": {
       "title": "Durée de conservation",
-      "copy": "Les données sont conservées uniquement pendant la durée raisonnablement nécessaire aux finalités décrites ci-dessus et au respect des obligations légales ou administratives applicables. Elles sont ensuite supprimées ou anonymisées lorsque cela est approprié."
+    "copy": "Les demandes de contact sont normalement conservées pendant une durée maximale de 12 mois après la dernière communication pertinente, sauf si une conservation plus longue est requise pour une réclamation ou une obligation légale. Les candidatures à un événement ou au Tour sont conservées pendant la durée nécessaire à l’organisation de l’événement sélectionné et normalement pendant une durée maximale de 12 mois après cet événement, sauf si le participant entre dans une relation contractuelle ou administrative nécessitant une conservation légale plus longue. Les données de sécurité et de limitation de débit sont traitées en mémoire et normalement supprimées automatiquement dans un délai d’environ 10 minutes. Les documents administratifs ou contractuels sont conservés pendant les durées requises par le droit applicable, lorsqu’il y a lieu."
     },
     "rights": {
       "title": "Vos droits",
-      "copy": "Selon les conditions applicables, vous pouvez demander l’accès à vos données personnelles, leur rectification, leur effacement, leur limitation ou leur portabilité, vous opposer à certains traitements ou retirer votre consentement. Vous pouvez également introduire une réclamation auprès de l’autorité de protection des données compétente.",
+    "copy": "Selon les conditions applicables, vous pouvez demander l’accès à vos données personnelles, leur rectification, leur effacement, leur limitation ou leur portabilité, vous opposer à certains traitements ou retirer votre consentement lorsque le traitement repose sur le consentement. Vous pouvez également introduire une réclamation auprès de l’autorité de contrôle compétente.",
       "contact": "Pour exercer vos droits ou poser une question sur la confidentialité, contactez"
     },
-    "marketing": {
-      "title": "Communications marketing",
-      "copy": "L’envoi d’un formulaire de contact ou de candidature ne vous inscrit pas automatiquement à des communications marketing. Un consentement distinct serait demandé avant la mise en place de tout abonnement marketing."
-    }
+  "marketing": {
+    "title": "Communications marketing",
+    "copy": "L’envoi d’un formulaire de contact ou de candidature ne vous inscrit pas automatiquement à des communications marketing. Un consentement distinct serait demandé avant la mise en place de tout abonnement marketing."
+  },
+  "updated": {
+    "title": "Dernière mise à jour",
+    "copy": "16 septembre 2026"
+  }
   },
   "Metadata": {
     "home": {

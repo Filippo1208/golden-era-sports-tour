@@ -817,40 +817,56 @@
       "title": "Information We Collect",
       "intro": "The information collected depends on how you use the website.",
       "applicationTitle": "Join the Tour applications",
-      "applicationCopy": "An application may include your first name, last name, gender, email address, phone or WhatsApp number, country, tennis level, club or tennis background, playing hand, T-shirt size, shorts or pants size, selected event, referral source, optional message, website language and submission timestamp.",
+    "applicationCopy": "An application may include your first name, last name, gender, email address, telephone or WhatsApp number, country, tennis level, club or tennis background, playing hand, clothing sizes, selected event, referral source, optional message, website language or locale, consent record, submission identifier and submission timestamp.",
       "contactTitle": "Contact enquiries",
       "contactCopy": "A contact enquiry may include your first name, last name, email address, subject and message.",
       "technicalTitle": "Technical and security data",
-      "technicalCopy": "When a form is submitted, limited technical request data, including an IP address and request metadata, may be processed temporarily to deliver the request, prevent abuse and protect the website."
-    },
+    "technicalCopy": "When a form is submitted, limited technical request data, including an IP address and request metadata, may be processed temporarily for security and abuse prevention."
+  },
+  "cookies": {
+    "title": "Cookies and Tracking Technologies",
+    "copy": "The website does not intentionally use analytics, advertising or profiling cookies, and the application does not currently use localStorage or sessionStorage. No non-essential tracking technologies are intentionally deployed, so the website does not currently require a cookie-consent banner. If analytics, advertising or other non-essential tracking technologies are introduced in the future, this policy and the consent mechanism will be updated before they are activated where required."
+  },
     "purposes": {
       "title": "How We Use Information",
-      "application": "To review Tour applications, assess participation and contact applicants about their selected event.",
-      "contact": "To respond to general enquiries, partnership requests, media enquiries and collaborations.",
-      "security": "To operate, secure and protect the website and its forms, including preventing repeated or abusive submissions."
+    "application": "To process participation and event applications, organise and manage Golden Era Sports Tour events, and contact applicants about their selected event.",
+    "contact": "To respond to enquiries and requested communications, including partnership, media and collaboration requests.",
+    "security": "To operate, secure and protect the website and its forms, including preventing repeated or abusive submissions and complying with applicable legal or administrative obligations."
     },
-    "basis": {
-      "title": "Basis for Processing",
-      "copy": "Application information is processed with the consent provided through the form and, where relevant, to take steps at your request before participation. Contact enquiries and essential security processing are handled to respond to your request and for the company’s legitimate interest in operating and protecting the website.",
-      "withdrawal": "You may withdraw consent at any time by contacting us. Withdrawal does not affect processing already carried out before the request."
-    },
+  "basis": {
+    "title": "Basis for Processing",
+    "copy": "Data necessary to evaluate and process a request to participate in an event is processed to take pre-contractual steps at your request and, where a contractual relationship is established, for the performance of that relationship. The required checkbox in the Join form documents that you have read this Privacy Policy; it is neither marketing consent nor the legal basis for processing necessary to manage the request. Contact enquiries are processed to respond to your request. Security and abuse-prevention processing is carried out for the company’s legitimate interest in protecting the website and its forms. Legal or administrative processing is carried out to comply with applicable legal obligations. Consent is used only where a specific processing activity genuinely requires it.",
+    "withdrawal": "Where a specific processing activity relies on consent, you may withdraw that consent at any time by contacting us. Withdrawal does not affect processing already carried out before the request."
+  },
+  "security": {
+    "title": "Security",
+    "copy": "The website uses HTTPS, server-side validation and anti-abuse protections for its forms. Access to personal information is limited to authorised personnel and service providers where necessary to provide their services."
+  },
     "sharing": {
       "title": "Who May Process It",
-      "copy": "Information may be accessed by authorised company personnel and by service providers supporting website hosting, email delivery, IT and security. They process information only where necessary to provide those services and on behalf of the company. Personal information is not sold."
-    },
+    "copy": "Information may be accessed by authorised company personnel and by the following service providers where necessary: Vercel, for website hosting and infrastructure, which may process ordinary HTTP/request metadata and platform logs; and Resend / Plus Five Five, Inc., for transactional email delivery of form submissions, which receives the information necessary to deliver the relevant email. Personal information is not sold."
+  },
+  "transfers": {
+    "title": "International Transfers",
+    "copy": "Resend / Plus Five Five, Inc. provides a Data Processing Addendum that incorporates appropriate international-transfer safeguards, including Standard Contractual Clauses where applicable. Vercel provides the website hosting infrastructure and may process request metadata outside the European Economic Area. International transfers are handled in accordance with applicable data-protection law and the contractual or legal safeguards actually applicable to each provider."
+  },
     "retention": {
       "title": "How Long We Keep It",
-      "copy": "Information is retained only for as long as reasonably necessary for the purposes described above and for any applicable legal or administrative obligations. It is then deleted or anonymised where appropriate."
+    "copy": "Contact enquiries are normally retained for no longer than 12 months after the last relevant communication, unless longer retention is required for a legal claim or obligation. Event and Join applications are retained for the time necessary to organise the selected event and normally no longer than 12 months after that event, unless the participant becomes part of a contractual or administrative relationship requiring longer legal retention. Security and rate-limit data is processed in memory and normally deleted automatically within approximately 10 minutes. Administrative or contractual records are retained for the periods required by applicable law where applicable."
     },
     "rights": {
       "title": "Your Rights",
-      "copy": "Where applicable, you may request access to your personal information, correction, deletion, restriction or portability, object to certain processing, or withdraw consent. You may also lodge a complaint with the competent data protection authority.",
+    "copy": "Where applicable, you may request access to your personal information, rectification, erasure, restriction or portability, object to certain processing, or withdraw consent where processing relies on consent. You may also lodge a complaint with the competent supervisory authority.",
       "contact": "To make a request or ask a privacy question, contact"
     },
-    "marketing": {
+  "marketing": {
       "title": "Marketing Communications",
-      "copy": "Submitting a contact or application form does not automatically subscribe you to marketing communications. Separate consent would be requested before any marketing subscription is introduced."
-    }
+    "copy": "Submitting a contact or application form does not automatically subscribe you to marketing communications. Separate consent would be requested before any marketing subscription is introduced."
+  },
+  "updated": {
+    "title": "Last Updated",
+    "copy": "16 September 2026"
+  }
   },
   "Metadata": {
     "home": {

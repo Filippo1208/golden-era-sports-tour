@@ -51,6 +51,13 @@ export async function PrivacyPage() {
         </section>
 
         <section className="privacy-policy__section">
+          <h2>{t("cookies.title")}</h2>
+          <div className="privacy-policy__body">
+            <p>{t("cookies.copy")}</p>
+          </div>
+        </section>
+
+        <section className="privacy-policy__section">
           <h2>{t("purposes.title")}</h2>
           <div className="privacy-policy__body">
             <ul>
@@ -70,9 +77,23 @@ export async function PrivacyPage() {
         </section>
 
         <section className="privacy-policy__section">
+          <h2>{t("security.title")}</h2>
+          <div className="privacy-policy__body">
+            <p>{t("security.copy")}</p>
+          </div>
+        </section>
+
+        <section className="privacy-policy__section">
           <h2>{t("sharing.title")}</h2>
           <div className="privacy-policy__body">
             <p>{t("sharing.copy")}</p>
+          </div>
+        </section>
+
+        <section className="privacy-policy__section">
+          <h2>{t("transfers.title")}</h2>
+          <div className="privacy-policy__body">
+            <p>{t("transfers.copy")}</p>
           </div>
         </section>
 
@@ -98,6 +119,13 @@ export async function PrivacyPage() {
           <h2>{t("marketing.title")}</h2>
           <div className="privacy-policy__body">
             <p>{t("marketing.copy")}</p>
+          </div>
+        </section>
+
+        <section className="privacy-policy__section">
+          <h2>{t("updated.title")}</h2>
+          <div className="privacy-policy__body">
+            <p>{t("updated.copy")}</p>
           </div>
         </section>
       </Container>
