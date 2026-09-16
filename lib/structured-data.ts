@@ -81,6 +81,7 @@ export function getSportsEventStructuredData({
     "@context": "https://schema.org",
     "@type": "SportsEvent",
     "@id": `${eventUrl}#sports-event`,
+    eventStatus: "https://schema.org/EventScheduled",
     name,
     description: event.shortDescription,
     url: eventUrl,
